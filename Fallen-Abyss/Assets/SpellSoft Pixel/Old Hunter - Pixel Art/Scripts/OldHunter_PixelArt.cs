@@ -1,8 +1,10 @@
 /*
- * Author: Dimitrios Gkaltsidis
- * Date: 27 Sept 2023
+ * Author: Dimitrios Gkaltsidis (Original), Gemini (Modification)
+ * Date: 27 Sept 2023 (Original) / Nov 10 2025 (Modification)
  * Disclaimer: This code is not fully optimized. For production-level 2D character functionality, consider crafting your own.
- * Version: 1.0.0
+ * Version: 1.0.2 (Modified for Timed Block)
+ * Note: Death and related inputs/logic have been removed. All other inputs are now public KeyCodes.
+ * Block is now a timed action, not a hold action.
  */
 
 using System.Collections;
@@ -17,6 +19,16 @@ public class OldHunter_PixelArt : MonoBehaviour
     // VFX
     [SerializeField] GameObject vfxObject;
 
+    // --- PUBLIC KEY INPUTS (Inspector에서 설정 가능) ---
+    [Header("Input Key Bindings")]
+    public KeyCode jumpKey = KeyCode.Space;
+    public KeyCode rollKey = KeyCode.E;
+    public KeyCode getHitKey = KeyCode.T;
+    public KeyCode blockKey = KeyCode.Q;
+    public KeyCode attackKey = KeyCode.P;
+    public KeyCode specialAttackKey = KeyCode.O;
+    // 움직임 키(A, D)는 Input.GetAxis("Horizontal")을 사용하므로 별도 KeyCode는 불필요합니다.
+
     // Animation names for animator
     private string idleAnim = "Idle";
     private string runAnim = "Run";
@@ -25,8 +37,6 @@ public class OldHunter_PixelArt : MonoBehaviour
     private string hurtAnim = "Hurt";
     private string blockAnim = "Block";
     private string blockImpactAnim = "BlockImpact";
-    private string deathAnim = "Death";
-    private string deathNoBloodAnim = "DeathNoBlood";
     private string attack1Anim = "Attack1";
     private string attack2Anim = "Attack2";
     private string attack3Anim = "Attack3";
@@ -46,10 +56,15 @@ public class OldHunter_PixelArt : MonoBehaviour
     // Rolling variables
     private float rollForce = 25f;
 
+    // --- MODIFICATION START ---
+    [Header("Action Settings")]
+    [Tooltip("막기(Block)가 자동으로 해제되기까지 걸리는 시간(초)")]
+    [SerializeField] private float blockDuration = 0.5f; // 막기 지속 시간
+    // --- MODIFICATION END ---
+
     // Other variables
     private bool isGrounded;
     private bool isHoldingBlock;
-    private bool isDead;
     private bool canContinueAttackCombo;
     private int currentAttackAnim;
 
@@ -62,7 +77,6 @@ public class OldHunter_PixelArt : MonoBehaviour
         animator = GetComponent<Animator>();
         canReceiveInput = true;
         isHoldingBlock = false;
-        isDead = false;
         canContinueAttackCombo = false;
         currentAttackAnim = 0;
     }
@@ -74,7 +88,6 @@ public class OldHunter_PixelArt : MonoBehaviour
         GetRollInput();
         GetGetHitInput();
         GetHoldBlockInput();
-        GetDeadInput();
         GetAttackInput();
         GetSpecialAttackInput();
         FlipSprite();
@@ -104,6 +117,7 @@ public class OldHunter_PixelArt : MonoBehaviour
                 isRunningLeft = false;
             }
 
+            // Input.GetAxis는 키를 떼도 서서히 0으로 돌아오므로, 키를 눌렀는지 명시적으로 확인하여 멈춤 처리를 합니다.
             if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
             {
                 StopMovement();
@@ -114,7 +128,7 @@ public class OldHunter_PixelArt : MonoBehaviour
     {
         if (canReceiveInput)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(jumpKey))
             {
                 if (isGrounded)
                 {
@@ -127,7 +141,7 @@ public class OldHunter_PixelArt : MonoBehaviour
     {
         if (canReceiveInput)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(rollKey))
             {
                 Roll();
             }
@@ -137,66 +151,50 @@ public class OldHunter_PixelArt : MonoBehaviour
     {
         if (canReceiveInput)
         {
-            if (Input.GetKeyDown(KeyCode.T))
+            if (Input.GetKeyDown(getHitKey))
             {
                 GetHit();
             }
         }
     }
+
+    // --- MODIFICATION START ---
     private void GetHoldBlockInput()
     {
         if (canReceiveInput)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(blockKey))
             {
                 HoldBlock();
             }
         }
         else
         {
-            if (isHoldingBlock && Input.GetKeyDown(KeyCode.E))
+            // 블록 중 블록 임팩트 처리는 canReceiveInput이 false일 때도 가능해야 합니다.
+            if (isHoldingBlock && Input.GetKeyDown(rollKey)) // 롤 키(E)를 블록 임팩트 테스트용으로 활용
             {
                 GetHitWhileBlocking();
             }
-            else if (isHoldingBlock && Input.GetKeyUp(KeyCode.Q))
-            {
-                EndBlocking();
-            }
+            
+            // Input.GetKeyUp(blockKey)로 EndBlocking()을 호출하던 로직을 제거했습니다.
+            // 이제 HoldBlock() 내부의 Invoke가 자동으로 EndBlocking()을 호출합니다.
         }
     }
-    private void GetDeadInput()
-    {
-        if (canReceiveInput)
-        {
-            if (Input.GetKeyDown(KeyCode.Y))
-            {
-                Die();
-            }
-            else if (Input.GetKeyDown(KeyCode.U))
-            {
-                DieNoBlood();
-            }
-        }
-        else if (!canReceiveInput && isDead)
-        {
-            if (Input.GetKeyDown(KeyCode.Y) || Input.GetKeyDown(KeyCode.U))
-            {
-                ResetDeath();
-            }
-        }
-    }
+    // --- MODIFICATION END ---
+
     private void GetAttackInput()
     {
         if (canReceiveInput)
         {
-            if (Input.GetKeyDown(KeyCode.P))
+            if (Input.GetKeyDown(attackKey))
             {
                 Attack();
             }
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.P) && canContinueAttackCombo)
+            // 공격 중 연계 입력은 canReceiveInput이 false일 때도 받아야 합니다.
+            if (Input.GetKeyDown(attackKey) && canContinueAttackCombo)
             {
                 Attack();
             }
@@ -206,7 +204,7 @@ public class OldHunter_PixelArt : MonoBehaviour
     {
         if (canReceiveInput)
         {
-            if (Input.GetKeyDown(KeyCode.O))
+            if (Input.GetKeyDown(specialAttackKey))
             {
                 SpecialAttack();
             }
@@ -222,6 +220,7 @@ public class OldHunter_PixelArt : MonoBehaviour
     #region IDLE & RUN LOGIC
     private void Run()
     {
+        // ... (Run 로직은 변경 없음)
         if (isRunningLeft)
         {
             rb2D.velocity = new Vector2(-moveSpeed, rb2D.velocity.y);
@@ -248,6 +247,7 @@ public class OldHunter_PixelArt : MonoBehaviour
     }
     private void StopMovement()
     {
+        // ... (StopMovement 로직은 변경 없음)
         if (isRunningLeft || isRunningRight)
         {
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
@@ -287,6 +287,7 @@ public class OldHunter_PixelArt : MonoBehaviour
         StopMovement();
         rb2D.velocity = new Vector2(rollForce * GetPlayerDirection(), rb2D.velocity.y);
         animator.Play(rollAnim);
+        // 애니메이션 이벤트나 Invoke를 사용하여 ReEnableInput() 호출 필요
     }
     #endregion
 
@@ -296,53 +297,55 @@ public class OldHunter_PixelArt : MonoBehaviour
         canReceiveInput = false;
         StopMovement();
         animator.Play(hurtAnim);
+        // 애니메이션 이벤트나 Invoke를 사용하여 ReEnableInput() 호출 필요
     }
     #endregion
 
     #region HOLDBLOCK LOGIC
+
+    // --- MODIFICATION START ---
     private void HoldBlock()
     {
         isHoldingBlock = true;
         canReceiveInput = false;
         StopMovement();
         animator.Play(blockAnim);
+
+        // blockDuration (예: 0.5초) 후에 EndBlocking을 호출하여 막기를 자동으로 해제합니다.
+        Invoke("EndBlocking", blockDuration);
     }
+    // --- MODIFICATION END ---
+
     private void GetHitWhileBlocking()
     {
-        // isGettingHit = true;
+        // EndBlocking을 호출하는 Invoke가 예약되어 있다면 취소합니다.
+        // (피격 임팩트 애니메이션이 끝나고 ContinueBlocking이나 EndBlocking이 
+        //  애니메이션 이벤트로 호출될 것을 예상)
+        CancelInvoke("EndBlocking");
         animator.Play(blockImpactAnim);
     }
     private void ContinueBlocking()
     {
-        //isGettingHit = false;
+        // BlockImpact 애니메이션이 끝난 후 다시 Block 애니메이션을 재생할 때 호출됩니다.
+        // (이 함수가 애니메이션 이벤트로 연결되어 있다고 가정)
+        // timed block으로 변경되었으므로, 여기서 다시 EndBlocking 타이머를 걸 수 있습니다.
+        // 하지만, 원래 로직(HoldBlock)을 최대한 유지하기 위해 여기서는 애니메이션만 재생합니다.
+        // 만약 BlockImpact 후에도 다시 정해진 시간만큼 막기를 원한다면
+        // 여기서 Invoke("EndBlocking", blockDuration); 를 다시 호출해야 합니다.
         animator.Play(blockAnim);
+
+        // BlockImpact 후에도 정해진 시간만큼 막기를 유지하도록 수정합니다.
+        Invoke("EndBlocking", blockDuration);
     }
     private void EndBlocking()
     {
-        ReEnableInput();
-        isHoldingBlock = false;
-    }
-    #endregion
-
-    #region DEATH LOGIC
-    private void Die()
-    {
-        isDead = true;
-        canReceiveInput = false;
-        StopMovement();
-        animator.Play(deathAnim);
-    }
-    private void DieNoBlood()
-    {
-        isDead = true;
-        canReceiveInput = false;
-        StopMovement();
-        animator.Play(deathNoBloodAnim);
-    }
-    private void ResetDeath()
-    {
-        isDead = false;
-        ReEnableInput();
+        // 다른 Invoke 호출에 의해 이미 EndBlocking이 실행되었을 수 있으므로,
+        // isHoldingBlock 상태를 확인합니다.
+        if (isHoldingBlock)
+        {
+            ReEnableInput();
+            isHoldingBlock = false;
+        }
     }
     #endregion
 
@@ -360,7 +363,7 @@ public class OldHunter_PixelArt : MonoBehaviour
         }
         else
         {
-            if (currentAttackAnim == 0)
+            if (currentAttackAnim == 0) // 이 부분은 첫 공격이 끝난 후 Combo가 true일 때만 실행되어야 하지만, 원본 로직을 유지
             {
                 DisableCanContinueAttackCombo();
                 animator.Play(attack1Anim);
@@ -396,6 +399,7 @@ public class OldHunter_PixelArt : MonoBehaviour
         canReceiveInput = false;
         StopMovement();
         animator.Play(specialAttack);
+        // 애니메이션 이벤트나 Invoke를 사용하여 ReEnableInput() 호출 필요
     }
     #endregion
 
