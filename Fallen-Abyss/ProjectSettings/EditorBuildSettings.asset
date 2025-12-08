@@ -56,11 +56,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TwoBitMachines/FlareEngine/Demo/Scenes/TidBits/Map/MapExampleArea2.unity
     guid: 1c85a69f567010b4dbede739126780b1
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 15d72b83cfafd24459aa7a42d5d0fd2c, type: 2}
