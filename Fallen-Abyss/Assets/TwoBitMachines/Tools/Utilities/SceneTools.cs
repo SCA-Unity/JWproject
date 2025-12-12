@@ -304,7 +304,7 @@ namespace TwoBitMachines
                         Vector2 value = handle + new Vector2(direction, 0) * handleSize;
                         if (!blockHandles)
                         {
-                                var fmh_307_79_638987445726038235 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.RectangleHandleCap);
+                                var fmh_307_79_639011652318158501 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.RectangleHandleCap);
                                 if (percent > 0)
                                         Handles.DrawLine(handle + Vector2.down * size.y * 0.5f, handle + Vector2.up * size.y * 0.5f);
                                 if (moved != value)
@@ -331,7 +331,7 @@ namespace TwoBitMachines
                         Vector2 value = handle + new Vector2(0, direction) * handleSize;
                         if (!blockHandles)
                         {
-                                var fmh_334_79_638987445726082642 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.RectangleHandleCap);
+                                var fmh_334_79_639011652318218961 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.RectangleHandleCap);
                                 if (percent > 0)
                                         Handles.DrawLine(handle + Vector2.right * size.x * 0.5f, handle - Vector2.right * size.x * 0.5f);
                                 if (moved != value)
@@ -354,7 +354,7 @@ namespace TwoBitMachines
                                 return false;
 
                         Vector2 value = position.vector2Value + offset * handleSize;
-                        var fmh_357_71_638987445726087801 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, handle);
+                        var fmh_357_71_639011652318225558 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, handle);
                         if (value != moved)
                         {
                                 if (repaint && editor != null)
@@ -371,7 +371,7 @@ namespace TwoBitMachines
                         if (blockHandles)
                                 return position;
                         Vector2 value = position + offset * handleSize;
-                        var fmh_374_71_638987445726092583 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.RectangleHandleCap);
+                        var fmh_374_71_639011652318230958 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.RectangleHandleCap);
                         if (value != moved)
                         {
                                 if (repaint && editor != null)
@@ -387,7 +387,7 @@ namespace TwoBitMachines
                         if (blockHandles)
                                 return position;
                         Vector2 value = position + offset * handleSize;
-                        var fmh_390_71_638987445726097319 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.DotHandleCap);
+                        var fmh_390_71_639011652318236401 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.DotHandleCap);
 
                         if (value != moved)
                         {
@@ -406,7 +406,7 @@ namespace TwoBitMachines
                         if (blockHandles)
                                 return position;
                         Vector2 value = position + offset * handleSize;
-                        var fmh_409_71_638987445726102008 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.CircleHandleCap);
+                        var fmh_409_71_639011652318241902 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.CircleHandleCap);
 
                         if (value != moved)
                         {
@@ -427,7 +427,7 @@ namespace TwoBitMachines
                         Color previousColor = Handles.color;
                         Handles.color = color;
                         Vector2 value = position;
-                        var fmh_430_71_638987445726106635 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.CircleHandleCap);
+                        var fmh_430_71_639011652318247155 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.CircleHandleCap);
                         Handles.color = previousColor;
                         SceneTools.Circle(value, handleSize * 0.4f, Color.white);
                         if (value != moved)
@@ -446,7 +446,7 @@ namespace TwoBitMachines
                         Color previousColor = Handles.color;
                         Handles.color = color;
                         Vector2 value = position + offset * handleSize;
-                        var fmh_449_71_638987445726110959 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, cap);
+                        var fmh_449_71_639011652318252136 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, cap);
                         Handles.color = previousColor;
                         if (value.x != moved.x || value.y != moved.y)
                         {
@@ -465,7 +465,7 @@ namespace TwoBitMachines
                         Color previousColor = Handles.color;
                         Handles.color = color;
                         Vector2 value = position + offset * handleSize;
-                        var fmh_468_71_638987445726115790 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.CircleHandleCap);
+                        var fmh_468_71_639011652318257583 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.CircleHandleCap);
                         Handles.color = previousColor;
                         SceneTools.Circle(value, handleSize * 0.4f, Color.white);
                         if (value.x != moved.x || value.y != moved.y)
@@ -501,7 +501,7 @@ namespace TwoBitMachines
                         if (blockHandles)
                                 return;
                         Vector2 value = position + offset * handleSize;
-                        var fmh_504_71_638987445726120937 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, handle);
+                        var fmh_504_71_639011652318262230 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, handle);
                         if (value != moved)
                         {
                                 moved = Compute.Round(moved, snap) - offset * snap;
@@ -518,7 +518,7 @@ namespace TwoBitMachines
                         if (blockHandles)
                                 return size;
                         Vector2 value = position + offset * handleSize;
-                        var fmh_521_71_638987445726125750 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.RectangleHandleCap);
+                        var fmh_521_71_639011652318266377 = Quaternion.identity; Vector2 moved = Handles.FreeMoveHandle(value, handleSize, Vector3.one, Handles.RectangleHandleCap);
                         if (value != moved)
                         {
                                 moved = Compute.Round(moved, snap) - offset * snap;

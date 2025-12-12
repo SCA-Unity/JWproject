@@ -11036,6 +11036,7 @@ GameObject:
   - component: {fileID: 461366385}
   - component: {fileID: 461366384}
   - component: {fileID: 461366390}
+  - component: {fileID: 461366391}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -11095,12 +11096,12 @@ MonoBehaviour:
     - jumping
     - velX
     - onGround
-    - velXLeft
     - velXRight
-    search: vel
+    - velXLeft
+    search: 
     active: 0
     createState: 0
-    stateFoldOut: 1
+    stateFoldOut: 0
     signalFoldOut: 1
     signalIndex: 0
     scrollIndex: 77
@@ -11383,11 +11384,11 @@ MonoBehaviour:
       foldOutExtra: 0
       button: 0
       createSignal: 
-  setToFirst: 1
+  setToFirst: 0
   sort: 0
   add: 0
   active: 0
-  foldOut: 1
+  foldOut: 0
   open: 0
   delete: 0
   deleteAsk: 0
@@ -11860,6 +11861,19 @@ MonoBehaviour:
   eventFoldOut: 1
   jumpFoldOut: 0
   forceJump: 0
+--- !u!114 &461366391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461366383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d68b03635dcb44ebc90263e80962c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 461366385}
 --- !u!1 &565994532
 GameObject:
   m_ObjectHideFlags: 0
