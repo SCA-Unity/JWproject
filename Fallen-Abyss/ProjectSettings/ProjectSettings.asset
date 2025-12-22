@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 6090ca0e0a275394a8edd720c8f9fab6
+  productGUID: 84b7e71f4e80e5549b43893e527fcb8c
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -783,7 +783,7 @@ PlayerSettings:
   cloudProjectId: 8a6fa3c9-2387-472b-ab64-41d4e9844155
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Fallen-Abyss
+  projectName: 
   organizationId: songjw08
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
