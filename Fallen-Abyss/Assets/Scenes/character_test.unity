@@ -10977,6 +10977,73 @@ Transform:
   - {fileID: 1600867720}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &158430257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 158430259}
+  - component: {fileID: 158430258}
+  m_Layer: 9
+  m_Name: AttackCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!58 &158430258
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158430257}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.6, y: -0.87}
+  serializedVersion: 2
+  m_Radius: 0.84
+--- !u!4 &158430259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158430257}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 461366389}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &431745268
 GameObject:
   m_ObjectHideFlags: 0
@@ -11036,7 +11103,12 @@ GameObject:
   - component: {fileID: 461366385}
   - component: {fileID: 461366384}
   - component: {fileID: 461366390}
-  - component: {fileID: 461366391}
+  - component: {fileID: 461366393}
+  - component: {fileID: 461366392}
+  - component: {fileID: 461366395}
+  - component: {fileID: 461366398}
+  - component: {fileID: 461366400}
+  - component: {fileID: 461366401}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -11059,15 +11131,63 @@ MonoBehaviour:
   render: {fileID: 0}
   tree:
     spriteFlip:
-    - nodes: []
+    - nodes:
+      - nodes: []
+        sprite: flipLeft
+        signal: velXLeft
+        add: 0
+        active: 0
+        delete: 0
+        foldOut: 1
+        signalIndex: 0
+      - nodes: []
+        sprite: flipRight
+        signal: velXRight
+        add: 0
+        active: 0
+        delete: 0
+        foldOut: 1
+        signalIndex: 0
       sprite: 
-      signal: jumping
+      signal: alwaysTrue
       add: 0
       active: 0
       delete: 0
-      foldOut: 0
+      foldOut: 1
       signalIndex: 0
     branch:
+    - nodes: []
+      sprite: Attack3
+      signal: attack3
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
+    - nodes: []
+      sprite: Attack2
+      signal: attack2
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
+    - nodes: []
+      sprite: Attack1
+      signal: attack1
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
+    - nodes: []
+      sprite: Roll
+      signal: dashing
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
     - nodes: []
       sprite: Jump
       signal: jumping
@@ -11098,13 +11218,24 @@ MonoBehaviour:
     - onGround
     - velXRight
     - velXLeft
+    - alwaysTrue
+    - roll
+    - block
+    - attack
+    - specialAttack
+    - blockImpact
+    - dashX
+    - dashing
+    - attack1
+    - attack2
+    - attack3
     search: 
     active: 0
     createState: 0
-    stateFoldOut: 0
+    stateFoldOut: 1
     signalFoldOut: 1
     signalIndex: 0
-    scrollIndex: 77
+    scrollIndex: 85
     signalRef:
       all:
       - name: airGlide
@@ -11117,7 +11248,7 @@ MonoBehaviour:
         use: 0
         canDelete: 0
       - name: alwaysTrue
-        use: 0
+        use: 1
         canDelete: 0
       - name: autoCornerJump
         use: 0
@@ -11147,13 +11278,13 @@ MonoBehaviour:
         use: 0
         canDelete: 0
       - name: dashX
-        use: 0
+        use: 1
         canDelete: 0
       - name: dashY
         use: 0
         canDelete: 0
       - name: dashing
-        use: 0
+        use: 1
         canDelete: 0
       - name: facingLeft
         use: 0
@@ -11375,6 +11506,30 @@ MonoBehaviour:
       - name: velXLeft
         use: 1
         canDelete: 1
+      - name: roll
+        use: 1
+        canDelete: 1
+      - name: block
+        use: 1
+        canDelete: 1
+      - name: attack
+        use: 1
+        canDelete: 1
+      - name: specialAttack
+        use: 1
+        canDelete: 1
+      - name: blockImpact
+        use: 1
+        canDelete: 1
+      - name: attack1
+        use: 1
+        canDelete: 1
+      - name: attack2
+        use: 1
+        canDelete: 1
+      - name: attack3
+        use: 1
+        canDelete: 1
       foldOutVelocity: 0
       foldOutWall: 0
       foldOutWorld: 0
@@ -11388,7 +11543,7 @@ MonoBehaviour:
   sort: 0
   add: 0
   active: 0
-  foldOut: 0
+  foldOut: 1
   open: 0
   delete: 0
   deleteAsk: 0
@@ -11638,6 +11793,9 @@ MonoBehaviour:
   setVelocity: {x: 0, y: 0}
   ability:
   - {fileID: 461366390}
+  - {fileID: 461366393}
+  - {fileID: 461366392}
+  - {fileID: 461366395}
   priority: []
   inputs:
     inputSO:
@@ -11647,6 +11805,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 362ce92028d4fd14984eacf9884f5b99, type: 2}
     - {fileID: 11400000, guid: 67749334196a0ae42a4c5b0e4aeb0d28, type: 2}
     - {fileID: 11400000, guid: 7b219fa909eed644aa708d99e7916747, type: 2}
+    - {fileID: 11400000, guid: 74c443fde0e1b954fb038912f1aab417, type: 2}
+    - {fileID: 11400000, guid: 4b82215a3ac43774d8de4a66656ab05a, type: 2}
+    - {fileID: 11400000, guid: 97148b685e33d6449b8d51a167b4d4e7, type: 2}
+    - {fileID: 11400000, guid: f78528212f2e9d14798f4f645db2c122, type: 2}
   abilities:
     walk:
       walk: 1
@@ -11697,7 +11859,7 @@ MonoBehaviour:
       onCoolDownFoldOut: 0
       useRightOnly: 0
       useLeftOnly: 0
-      foldOut: 1
+      foldOut: 0
       eventFoldOut: 1
       groundFoldOut: 0
       notGroundFoldOut: 0
@@ -11796,7 +11958,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 0
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!4 &461366389
 Transform:
   m_ObjectHideFlags: 0
@@ -11810,7 +11972,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4473618139004113968}
+  - {fileID: 158430259}
   - {fileID: 8073453030922771015}
+  - {fileID: 1663155131}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &461366390
@@ -11829,7 +11994,7 @@ MonoBehaviour:
   abilityName: Jump
   pause: 0
   exception: []
-  foldOut: 0
+  foldOut: 1
   delete: 0
   editMask: 0
   deleteAsk: 0
@@ -11856,12 +12021,136 @@ MonoBehaviour:
   onAirJump:
     m_PersistentCalls:
       m_Calls: []
-  buttonTrigger: 0
+  buttonTrigger: 1
   airJumpFoldOut: 0
   eventFoldOut: 1
   jumpFoldOut: 0
   forceJump: 0
---- !u!114 &461366391
+--- !u!114 &461366392
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461366383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d822e00f4a1ea4ab53c18ae738397b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
+  abilityName: Melee
+  pause: 0
+  exception: []
+  foldOut: 1
+  delete: 0
+  editMask: 0
+  deleteAsk: 0
+  viewScript: 0
+  tempName: 
+  foldOuts: 
+  melee: []
+  coolDown: 0
+--- !u!114 &461366393
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461366383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67afe2f3c6d1d7e448bc34d5914946cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
+  abilityName: Dash
+  pause: 0
+  exception: []
+  foldOut: 1
+  delete: 0
+  editMask: 0
+  deleteAsk: 0
+  viewScript: 0
+  tempName: 
+  foldOuts: 
+  type: 1
+  taps: 0
+  directionType: 0
+  mustBeOnGround: 0
+  nullifyGravity: 0
+  canTakeDamage: 0
+  crouch: 0
+  exitOnJump: 0
+  dashInPlace: 0
+  changeDirectionOnWall: 0
+  airDashLimit: 1
+  crouchHeight: 0.5
+  time: 0.5
+  coolDown: 0
+  dashDistance: 8
+  tapThreshold: 0.35
+  up: None
+  down: None
+  left: None
+  right: None
+  extraDashButton: Roll
+  damage: 1
+  horizontalJump: 0
+  damageLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  canDealDamage: 0
+  exitOnContact: 0
+  exitLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  onStartWE: 
+  onEndWE: 
+  onDashRate: 0
+  worldEffect: 
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  onDash:
+    m_PersistentCalls:
+      m_Calls: []
+  eventsFoldOut: 0
+  dashFoldOut: 0
+  onStartFoldOut: 0
+  onEndFoldOut: 0
+--- !u!114 &461366395
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461366383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097f4a5d949ff0c449795b65f05b1d16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
+  abilityName: PushBlock
+  pause: 0
+  exception: []
+  foldOut: 0
+  delete: 0
+  editMask: 0
+  deleteAsk: 0
+  viewScript: 0
+  tempName: 
+  foldOuts: 
+  type: 1
+  pushButton: Block
+  pushSpeed: 0.5
+  pullSpeed: 0.5
+  exitOnJump: 0
+--- !u!114 &461366398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11874,6 +12163,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 461366385}
+--- !u!114 &461366400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461366383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fa2f79168b6d841a7bc2b2cf90ca84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldhunter: {fileID: 8073453030922771015}
+  jumpThreshold: 1
+--- !u!114 &461366401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461366383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb693dcc98d6e144d94b23bbd922422e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &565994532
 GameObject:
   m_ObjectHideFlags: 0
@@ -22211,6 +22526,103 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1001 &990595459
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4224491341670536067, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: m_Name
+      value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784851419537275403, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784851419537275403, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784851419537275403, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784851419537275403, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784851419537275403, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784851419537275403, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784851419537275403, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784851419537275403, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784851419537275403, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784851419537275403, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653588842380507375, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.23584908
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653588842380507375, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.13296607
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653588842380507375, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.061187267
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686441122951930880, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: pixelFoldOut
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686441122951930880, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: rooms.foldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686441122951930880, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: shake.foldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686441122951930880, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: follow.foldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686441122951930880, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: targetTransform
+      value: 
+      objectReference: {fileID: 461366389}
+    - target: {fileID: 7686441122951930880, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: worldClamp.foldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686441122951930880, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
+      propertyPath: rooms.rooms.Array.data[0].canExit
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73d49883145d45b4db3ddb79cfca5268, type: 3}
 --- !u!1 &1069075169
 GameObject:
   m_ObjectHideFlags: 0
@@ -22635,6 +23047,205 @@ RectTransform:
   m_AnchoredPosition: {x: -8.96, y: 2.48}
   m_SizeDelta: {x: 4, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1663155130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1663155131}
+  - component: {fileID: 1663155132}
+  m_Layer: 9
+  m_Name: MeleeWeapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1663155131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663155130}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 461366389}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1663155132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663155130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86212f74d75b15d4c8d0d5c245a22833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeName: axe
+  collider2DRef: {fileID: 158430258}
+  melee:
+    layer:
+      serializedVersion: 2
+      m_Bits: 256
+    input: {fileID: 11400000, guid: 97148b685e33d6449b8d51a167b4d4e7, type: 2}
+    input2: {fileID: 0}
+    delayTime: 0.25
+    earlyTime: 0.25
+    hitToContinue: 0
+    oneHitPerCombo: 0
+    enableCollider: 0
+    combo:
+    - velX: 0
+      velY: 0
+      damage: 0
+      earlyTime: 0
+      earlyNext: 0
+      isLocked: 0
+      animationSignal: attack1
+      meleeWE: 
+      hitWE: 
+      condition: 0
+      velXType: 0
+      velYType: 0
+      onMeleeBegin:
+        m_PersistentCalls:
+          m_Calls: []
+      onHit:
+        m_PersistentCalls:
+          m_Calls: []
+      forceDirection: {x: 0, y: 0}
+      canRecoilX: 0
+      canRecoilY: 0
+      recoilX: 0
+      recoilY: 0
+      exitOnStateChange: 0
+      keepInitialDirection: 0
+      impulseDuration: 0
+      impulseForce: 0
+      fixedDuration: 0
+      fixedDistance: 0
+      delete: 0
+      foldOut: 1
+      eventFoldOut: 0
+      hitFoldOut: 0
+      eventsFoldOut: 0
+      optionsFoldOut: 1
+    - velX: 0
+      velY: 0
+      damage: 0
+      earlyTime: 0
+      earlyNext: 0
+      isLocked: 0
+      animationSignal: attack2
+      meleeWE: 
+      hitWE: 
+      condition: 0
+      velXType: 0
+      velYType: 0
+      onMeleeBegin:
+        m_PersistentCalls:
+          m_Calls: []
+      onHit:
+        m_PersistentCalls:
+          m_Calls: []
+      forceDirection: {x: 0, y: 0}
+      canRecoilX: 0
+      canRecoilY: 0
+      recoilX: 0
+      recoilY: 0
+      exitOnStateChange: 0
+      keepInitialDirection: 0
+      impulseDuration: 0
+      impulseForce: 0
+      fixedDuration: 0
+      fixedDistance: 0
+      delete: 0
+      foldOut: 1
+      eventFoldOut: 0
+      hitFoldOut: 0
+      eventsFoldOut: 0
+      optionsFoldOut: 1
+    - velX: 0
+      velY: 0
+      damage: 0
+      earlyTime: 0
+      earlyNext: 0
+      isLocked: 0
+      animationSignal: attack3
+      meleeWE: 
+      hitWE: 
+      condition: 0
+      velXType: 0
+      velYType: 0
+      onMeleeBegin:
+        m_PersistentCalls:
+          m_Calls: []
+      onHit:
+        m_PersistentCalls:
+          m_Calls: []
+      forceDirection: {x: 0, y: 0}
+      canRecoilX: 0
+      canRecoilY: 0
+      recoilX: 0
+      recoilY: 0
+      exitOnStateChange: 0
+      keepInitialDirection: 0
+      impulseDuration: 0
+      impulseForce: 0
+      fixedDuration: 0
+      fixedDistance: 0
+      delete: 0
+      foldOut: 1
+      eventFoldOut: 0
+      hitFoldOut: 0
+      eventsFoldOut: 0
+      optionsFoldOut: 1
+    trigger: 1
+    trigger2: 1
+    attackFromSleep: 1
+    cancelOtherAttacks: 0
+    active: 0
+    foldOut: 1
+    comboFoldOut: 1
+    inputFoldOut: 1
+    propertiesFoldOut: 0
+    eventsFoldOut: 0
+    signalIndex: 0
+  block:
+    canBlock: 0
+    canRecoil: 0
+    cancelCombo: 0
+    stopVelocityX: 0
+    canDeflect: 0
+    blockSignal: 
+    recoilTag: 
+    recoilVelocity: 10
+    recoilDuration: 0.1
+    input: {fileID: 0}
+    inputTwo: {fileID: 0}
+    blockLayer:
+      serializedVersion: 2
+      m_Bits: 0
+    mustHold: 0
+    foldOut: 1
+  onCoolDown:
+    m_PersistentCalls:
+      m_Calls: []
+  coolDown: 0
+  pause: 0
+  attackNow: 0
+  foldOut: 0
+  blockFoldOut: 0
 --- !u!1 &1709114802
 GameObject:
   m_ObjectHideFlags: 0
@@ -27635,11 +28246,11 @@ Transform:
   m_GameObject: {fileID: 6439156271925182494}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: -10}
+  m_LocalPosition: {x: 0, y: 0.87, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8073453030922771015}
+  m_Father: {fileID: 461366389}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4524881887282641568
 SpriteRenderer:
@@ -27718,7 +28329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8073453030922771015
 Transform:
   m_ObjectHideFlags: 0
@@ -27731,8 +28342,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4473618139004113968}
+  m_Children: []
   m_Father: {fileID: 461366389}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8196572071013219572
@@ -27746,6 +28356,7 @@ GameObject:
   - component: {fileID: 8073453030922771015}
   - component: {fileID: 4524881887282641568}
   - component: {fileID: 2193992130020625175}
+  - component: {fileID: 8196572071013219573}
   m_Layer: 9
   m_Name: oldhunter
   m_TagString: Untagged
@@ -27753,6 +28364,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8196572071013219573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8196572071013219572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e746919bc3598b94c82e1e387f53f769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  melee: {fileID: 1663155132}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -27762,3 +28386,4 @@ SceneRoots:
   - {fileID: 461366389}
   - {fileID: 1069075170}
   - {fileID: 139548358}
+  - {fileID: 990595459}
