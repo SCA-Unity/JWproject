@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/WorkSpace/Zmisc/FlareDemoTest.unity
     guid: 64cd99dc440b62148a05656a42cba4f3
-  - enabled: 1
+  - enabled: 0
     path: Assets/TwoBitMachines/FlareEngine/Demo/Scenes/FlareDemo.unity
     guid: 0f620283b14abdd4698a8c3122946f8f
   - enabled: 0
@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TwoBitMachines/FlareEngine/Demo/Scenes/TidBits/SceneDoors/SceneDoorB.unity
     guid: d8765b8fa7137fc46a76fb57aebb0721
-  - enabled: 1
+  - enabled: 0
     path: Assets/TwoBitMachines/FlareEngine/Demo/Scenes/FlareDemo2.unity
     guid: c87657fc0a44c2243914ee3f56f062c0
   - enabled: 0
@@ -35,32 +35,44 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/TwoBitMachines/FlareEngine/Demo/Scenes/TidBits/OptionsBindingMenu.unity
     guid: 051d8eba702fcec44a35fdf115ef9036
-  - enabled: 1
+  - enabled: 0
     path: Assets/TwoBitMachines/FlareEngine/Demo/Scenes/TidBits/OverworldMap/OverworldBeginMap.unity
     guid: 3f3cb5a98da222f459534440cdd20b85
-  - enabled: 1
+  - enabled: 0
     path: Assets/TwoBitMachines/FlareEngine/Demo/Scenes/TidBits/OverworldMap/OverworldLevel1.unity
     guid: 8561308834596d64cafee3e5ce72d857
-  - enabled: 1
+  - enabled: 0
     path: Assets/TwoBitMachines/FlareEngine/Demo/Scenes/TidBits/OverworldMap/OverworldLevel2.unity
     guid: df931fbdb2638c14bb41a6476ad6a72a
-  - enabled: 1
+  - enabled: 0
     path: Assets/TwoBitMachines/FlareEngine/Demo/Scenes/TidBits/OverworldMap/OverworldLevel3.unity
     guid: 2159bab5e7353504cbabc8a114a482ee
-  - enabled: 1
+  - enabled: 0
     path: Assets/TwoBitMachines/FlareEngine/Demo/Scenes/TidBits/OverworldMap/OverworldLevel4.unity
     guid: fde87f6f9a9ef864bb18ce5b7a7df27b
-  - enabled: 1
+  - enabled: 0
     path: Assets/TwoBitMachines/FlareEngine/Demo/Scenes/TidBits/Map/MapExampleArea1.unity
     guid: 392a118f430985841921f19282818b61
-  - enabled: 1
+  - enabled: 0
     path: Assets/TwoBitMachines/FlareEngine/Demo/Scenes/TidBits/Map/MapExampleArea2.unity
     guid: 1c85a69f567010b4dbede739126780b1
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/1-4.unity
+    guid: 0af7507ab9735a74b808e938f8e5704e
+  - enabled: 1
+    path: Assets/Scenes/Bossroom.unity
+    guid: 97efc2873bde095408667ff602f9a234
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: 39450623239b317408a94461aa2290ab
+  - enabled: 1
+    path: Assets/Scenes/1-1.unity
+    guid: 08776163b169d3747a2d0d79a63de575
+  - enabled: 1
+    path: Assets/Scenes/1-2.unity
+    guid: 21b6bca651b40de4dbb8f9d13d080940
+  - enabled: 1
+    path: Assets/Scenes/1-3.unity
+    guid: df01e2c8f9fc2fd4da00297a3aadf719
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 15d72b83cfafd24459aa7a42d5d0fd2c, type: 2}
