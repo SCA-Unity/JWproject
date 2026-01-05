@@ -3537,7 +3537,7 @@ MonoBehaviour:
   save:
     slot:
     - initialized: 0
-      totalTime: 10072.608
+      totalTime: 10187.882
       level: 0
     - initialized: 0
       totalTime: 0
@@ -3556,14 +3556,14 @@ MonoBehaviour:
   gameNameRef: TheGame
   createWorldEvent: 0
   foldOut: 0
-  worldFoldOut: 0
-  deleteFoldOut: 0
+  worldFoldOut: 1
+  deleteFoldOut: 1
   onAwakeFoldOut: 0
   onStartFoldOut: 0
   onPauseFoldOut: 0
   onUnpauseFoldOut: 0
   onResetAllFoldOut: 0
-  saveSlotsFoldOut: 0
+  saveSlotsFoldOut: 1
   navigateRef: 0
   viewDebug: 0
 --- !u!4 &5489671466024759203

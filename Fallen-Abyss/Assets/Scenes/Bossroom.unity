@@ -12383,6 +12383,10 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0.05490196
       objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.scrollIndex
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 6617402351649326564, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -12526,6 +12530,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3691499431708207720, guid: cd3a19ceb6a9e134da37f3b551457321, type: 3}
+      propertyPath: worldFoldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691499431708207720, guid: cd3a19ceb6a9e134da37f3b551457321, type: 3}
+      propertyPath: deleteFoldOut
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691499431708207720, guid: cd3a19ceb6a9e134da37f3b551457321, type: 3}
+      propertyPath: saveSlotsFoldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691499431708207720, guid: cd3a19ceb6a9e134da37f3b551457321, type: 3}
+      propertyPath: save.slot.Array.data[0].totalTime
+      value: 10187.882
+      objectReference: {fileID: 0}
     - target: {fileID: 7537153459214179189, guid: cd3a19ceb6a9e134da37f3b551457321, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -15003,7 +15023,6 @@ GameObject:
   - component: {fileID: 2130719793}
   - component: {fileID: 2130719792}
   - component: {fileID: 2130719791}
-  - component: {fileID: 2130719797}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Untagged
@@ -15063,7 +15082,7 @@ MonoBehaviour:
   directional: 1
   sceneName: 1-4
   doorIndex: 1
-  area: {x: 1, y: 2, z: 0}
+  area: {x: 133.6, y: -3.45, z: 0}
   playAnimation: 0
   signalName: 
   signalTime: 0
@@ -15467,57 +15486,12 @@ Transform:
   m_GameObject: {fileID: 2130719790}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.54, y: -10.42, z: 0}
+  m_LocalPosition: {x: 53.54, y: -10.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2130719797
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130719790}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2}
-  m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
