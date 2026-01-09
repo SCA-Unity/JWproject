@@ -12371,6 +12371,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6257725737834135156, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257725737834135156, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.06
+      objectReference: {fileID: 0}
     - target: {fileID: 8145703737529638039, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 71.47872
@@ -13923,8 +13931,6 @@ GameObject:
   - component: {fileID: 1981879018}
   - component: {fileID: 1981879020}
   - component: {fileID: 1981879019}
-  - component: {fileID: 1981879022}
-  - component: {fileID: 1981879021}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -14788,64 +14794,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1981879021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1981879017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a0dbe2032632fc4ba94500e4d59f7b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: 1-4
---- !u!61 &1981879022
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1981879017}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 53.39805, y: -8.180046}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.80675125, y: 3.6825829}
-  m_EdgeRadius: 0
 --- !u!1 &1982206680
 GameObject:
   m_ObjectHideFlags: 0
