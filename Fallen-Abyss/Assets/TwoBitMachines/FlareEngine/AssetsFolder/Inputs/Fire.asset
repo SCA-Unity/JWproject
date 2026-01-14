@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   buttonName: Fire
-  type: 1
+  type: 0
   mouse: 0
-  key: 0
-  bindings: []
+  key: 108
   axisName: 
+  bindings: []
   axisToRead: 0
   maxThreshold: 99
   minThreshold: -99

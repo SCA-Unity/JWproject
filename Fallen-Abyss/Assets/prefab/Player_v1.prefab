@@ -77,6 +77,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8208776133919538559}
   - component: {fileID: 5517387608991370413}
+  - component: {fileID: 5271755487611796384}
   m_Layer: 9
   m_Name: MeleeWeapon
   m_TagString: Untagged
@@ -149,7 +150,7 @@ MonoBehaviour:
       recoilX: 0
       recoilY: 0
       exitOnStateChange: 0
-      keepInitialDirection: 0
+      keepInitialDirection: 1
       impulseDuration: 0
       impulseForce: 0
       fixedDuration: 0
@@ -258,6 +259,68 @@ MonoBehaviour:
       m_Bits: 0
     mustHold: 0
     foldOut: 1
+  onCoolDown:
+    m_PersistentCalls:
+      m_Calls: []
+  coolDown: 0
+  pause: 0
+  attackNow: 0
+  foldOut: 0
+  blockFoldOut: 0
+--- !u!114 &5271755487611796384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3411377491562179281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86212f74d75b15d4c8d0d5c245a22833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeName: gun
+  collider2DRef: {fileID: 0}
+  melee:
+    layer:
+      serializedVersion: 2
+      m_Bits: 0
+    input: {fileID: 0}
+    input2: {fileID: 0}
+    delayTime: 0.25
+    earlyTime: 0.25
+    hitToContinue: 0
+    oneHitPerCombo: 0
+    enableCollider: 0
+    combo: []
+    trigger: 1
+    trigger2: 1
+    attackFromSleep: 1
+    cancelOtherAttacks: 0
+    active: 0
+    foldOut: 1
+    comboFoldOut: 0
+    inputFoldOut: 0
+    propertiesFoldOut: 0
+    eventsFoldOut: 0
+    signalIndex: 0
+  block:
+    canBlock: 0
+    canRecoil: 0
+    cancelCombo: 0
+    stopVelocityX: 0
+    canDeflect: 0
+    blockSignal: 
+    recoilTag: 
+    recoilVelocity: 10
+    recoilDuration: 0.1
+    input: {fileID: 0}
+    inputTwo: {fileID: 0}
+    blockLayer:
+      serializedVersion: 2
+      m_Bits: 0
+    mustHold: 0
+    foldOut: 0
   onCoolDown:
     m_PersistentCalls:
       m_Calls: []
@@ -403,7 +466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8649581273638354421
 Transform:
   m_ObjectHideFlags: 0
