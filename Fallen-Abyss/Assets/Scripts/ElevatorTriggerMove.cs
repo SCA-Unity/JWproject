@@ -1,49 +1,39 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
-public class TilemapTriggerMoveY : MonoBehaviour
+public class Elevator2D_AutoStart : MonoBehaviour
 {
-    [Header("ÀÌµ¿ ¼³Á¤")]
-    public float moveY = -1f;          // ÇÑ ¹ø¿¡ ÀÌµ¿ÇÒ Y°ª (À§:+ / ¾Æ·¡:-)
-    public float speed = 1f;           // ÀÌµ¿ ¼Óµµ
-    public float maxMoveDistance = 5f; // ÃÑ ÃÖ´ë ÀÌµ¿ °Å¸®
+    public float moveY = 5f;   // ì´ë™í•  ì´ ê±°ë¦¬
+    public float speed = 2f;   // ì´ë™ ì†ë„
 
-    private Vector3 targetPos;
-    private bool isMoving = false;
-    private float movedDistance = 0f;
+    private Vector3 startPos;
+    private bool finished = false;
 
     void Start()
     {
-        targetPos = transform.position;
+        startPos = transform.position;
     }
 
     void Update()
     {
-        if (!isMoving) return;
+        if (finished) return;
 
-        transform.position = Vector3.MoveTowards(
-            transform.position,
-            targetPos,
-            speed * Time.deltaTime
-        );
+        // ì´ë™
+        transform.position += Vector3.up * Mathf.Sign(moveY) * speed * Time.deltaTime;
 
-        if (transform.position == targetPos)
+        // ì§€ê¸ˆê¹Œì§€ ì´ë™í•œ ê±°ë¦¬
+        float moved = Mathf.Abs(transform.position.y - startPos.y);
+
+        // ì§€ì •í•œ ê±°ë¦¬ ë„ë‹¬í•˜ë©´ ì •ì§€
+        if (moved >= Mathf.Abs(moveY))
         {
-            isMoving = false;
+            transform.position = new Vector3(
+                transform.position.x,
+                startPos.y + moveY,
+                transform.position.z
+            );
+
+            finished = true;
+            Debug.Log("ì •í™•íˆ ì§€ì •í•œ ê±°ë¦¬ë§Œí¼ ì´ë™ í›„ ì •ì§€");
         }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (!other.CompareTag("Player")) return;
-        if (isMoving) return;
-
-        float remaining = maxMoveDistance - movedDistance;
-        if (remaining <= 0f) return;
-
-        float step = Mathf.Clamp(moveY, -remaining, remaining);
-
-        targetPos = transform.position + new Vector3(0f, step, 0f);
-        movedDistance += Mathf.Abs(step);
-        isMoving = true;
     }
 }
