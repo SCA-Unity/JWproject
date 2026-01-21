@@ -1,0 +1,2146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &75049191904508574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2868839854395337365}
+  - component: {fileID: 211568628806012741}
+  - component: {fileID: 2574590390572301745}
+  - component: {fileID: 3964904900326500669}
+  - component: {fileID: 983770616419153305}
+  m_Layer: 9
+  m_Name: oldhunter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2868839854395337365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75049191904508574}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.63, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6902215293381504703}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &211568628806012741
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75049191904508574}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 1499899418, guid: 2f430406f0aec0d43bd9ad726baa1a01, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 8.59375, y: 2.4375}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!95 &2574590390572301745
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75049191904508574}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c52b6c9a88132946a74d772020ff662, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3964904900326500669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75049191904508574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e746919bc3598b94c82e1e387f53f769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  melee: {fileID: 3527254234658685144}
+--- !u!114 &983770616419153305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75049191904508574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51e70ed89e77b8046b63012e6393135b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firearm: {fileID: 5159096889297201077}
+  autoFindIfMissing: 1
+--- !u!1 &1314935371320874335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 685888308661352762}
+  - component: {fileID: 1134179537489117506}
+  m_Layer: 9
+  m_Name: VFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &685888308661352762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314935371320874335}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6, y: -0.93, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4796859970918024187}
+  m_Father: {fileID: 3297878060200573951}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1134179537489117506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314935371320874335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd6d9dd7445fb948b1344ce2817d484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0.45
+  onRestart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onEnable:
+    m_PersistentCalls:
+      m_Calls: []
+  restartFoldOut: 1
+  enableFoldOut: 0
+--- !u!1 &1493875081013262204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4796859970918024187}
+  - component: {fileID: 5031186500222903078}
+  - component: {fileID: 8948247300682450983}
+  m_Layer: 0
+  m_Name: Vfx
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4796859970918024187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493875081013262204}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 685888308661352762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &5031186500222903078
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493875081013262204}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 863366614, guid: e677c038ace42b640a3022db3f99bd00, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.75, y: 2.71875}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!95 &8948247300682450983
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493875081013262204}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5401964a21dbf524fb0f8e7929fedae8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1857036602837371501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3297878060200573951}
+  - component: {fileID: 5159096889297201077}
+  m_Layer: 9
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3297878060200573951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857036602837371501}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7793333062038480223}
+  - {fileID: 685888308661352762}
+  m_Father: {fileID: 6902215293381504703}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5159096889297201077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857036602837371501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 239fcbc5d71d7ab4f81a2ea5b0efadeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolName: Gun
+  input: {fileID: 11400000, guid: 7b219fa909eed644aa708d99e7916747, type: 2}
+  localPosition: {x: 0, y: 0}
+  buttonTrigger: 1
+  pickUpLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  pickUpType: 0
+  pause: 0
+  pickUp: 0
+  foldOut: 1
+  mainFoldOut: 1
+  eventFoldOut: 1
+  rotateFoldOut: 0
+  autoseekFoldOut: 0
+  projectileFoldOut: 0
+  optionsFoldOut: 1
+  latchFoldOut: 0
+  lineOfSightFoldOut: 1
+  buttonName: 
+  projectileInventory: {fileID: 0}
+  defaultProjectile:
+    waitForAnimation:
+      wait: 1
+      waitTime: 0
+      weaponAnimation: specialAttack
+      extraSignal: 
+      spriteEngine: {fileID: 0}
+    recoil:
+      type: 0
+      condition: 0
+      recoilDistance: 0.125
+      recoilTime: 0.1
+      hasGravity: 0
+      recoil: 0
+      foldOut: 1
+    projectile: {fileID: 0}
+    onFireSuccess:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1134179537489117506}
+          m_TargetAssemblyTypeName: TwoBitMachines.BasicTimer, Assembly-CSharp
+          m_MethodName: Restart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onOutOfAmmo:
+      m_PersistentCalls:
+        m_Calls: []
+    autoDischarge: 0
+    foldOut: 0
+    eventsFoldOut: 0
+    fireFoldOut: 1
+    outOfAmmoFoldOut: 1
+  chargedProjectile:
+    waitForAnimation:
+      wait: 0
+      waitTime: 0
+      weaponAnimation: 
+      extraSignal: 
+      spriteEngine: {fileID: 0}
+    recoil:
+      type: 0
+      condition: 0
+      recoilDistance: 0.125
+      recoilTime: 0.1
+      hasGravity: 0
+      recoil: 0
+      foldOut: 1
+    canCharge: 1
+    chargeMaxTime: 2
+    chargeMinTime: 2
+    dischargeTime: 3
+    coolDownTime: 0
+    damageBoost: 0
+    projectile: {fileID: 0}
+    recoilOnDischarge: 0
+    onCoolingDown:
+      m_PersistentCalls:
+        m_Calls: []
+    onDischarging:
+      m_PersistentCalls:
+        m_Calls: []
+    onCharging:
+      m_PersistentCalls:
+        m_Calls: []
+    onDischargingComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    onDischargingFailed:
+      m_PersistentCalls:
+        m_Calls: []
+    onChargingComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    onChargingBegin:
+      m_PersistentCalls:
+        m_Calls: []
+    percentCharged: 0
+    onDischargingCompleteFoldOut: 0
+    onDischargingFailedFoldOut: 0
+    onChargingCompleteFoldOut: 0
+    onChargingBeginFoldOut: 0
+    onDischargingFoldOut: 0
+    onChargingFoldOut: 0
+    onCoolDownFoldOut: 0
+    modifyFoldOut: 0
+    recoilFoldOut: 0
+    eventsFoldOut: 0
+    chargeFoldOut: 1
+  lineOfSight:
+    beam: {fileID: 0}
+    beamEnd: {fileID: 0}
+    lineOfSight: 0
+    onTargetHit:
+      m_PersistentCalls:
+        m_Calls: []
+    onBeamHit:
+      m_PersistentCalls:
+        m_Calls: []
+    onNothingHit:
+      m_PersistentCalls:
+        m_Calls: []
+    reticleType: 0
+    reticle: {fileID: 0}
+    layer:
+      serializedVersion: 2
+      m_Bits: 0
+    targetLayer:
+      serializedVersion: 2
+      m_Bits: 0
+    reticleDistance: 10
+    maxLength: 100
+    autoShoot: 0
+    autoShootRate: 0.1
+    eventsFoldOut: 0
+    onBeamHitFoldOut: 0
+    onNothingHitFoldOut: 0
+    onTargetHitFoldOut: 0
+  rotate:
+    autoSeek:
+      layer:
+        serializedVersion: 2
+        m_Bits: 0
+      maxRadius: 10
+      searchRate: 0.5
+      autoShoot: 0
+      onFoundTarget:
+        m_PersistentCalls:
+          m_Calls: []
+      eventsFoldOut: 0
+      onFoundTargetFoldOut: 0
+    transformDirection: {fileID: 0}
+    orientation: 0
+    rotate: 1
+    angleOffset: 0
+    maxLimit: 0
+    minLimit: 0
+    fixedAngle: 0
+    fixedDirection: {x: 0, y: 0}
+    joyStickDirection: {x: 0, y: 0}
+    diagonal: 1
+    usingMouse: 1
+    up: {fileID: 11400000, guid: 2ed2e3f095d88bc44862868f96fcf5e0, type: 2}
+    down: {fileID: 11400000, guid: 362ce92028d4fd14984eacf9884f5b99, type: 2}
+    left: {fileID: 11400000, guid: 75cc63fbb89395b43a8d6f137d9c4ad2, type: 2}
+    right: {fileID: 11400000, guid: 24202ac33d1df2140a712afc4953a966, type: 2}
+    joyStick: {fileID: 0}
+    roundMouseDirection: 0
+    setRotationSignals: 0
+    roundMouse: 45
+  onActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  firePoint: {fileID: 7793333062038480223}
+  stopTime: 0.7
+  stopVelocity: 1
+  turnOffNearWall: 0
+  offOnShoot: 0
+  stopType: 0
+--- !u!1 &5366989507221002962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7657623818202546189}
+  - component: {fileID: 7126587631582560693}
+  - component: {fileID: 1291482862525294090}
+  m_Layer: 9
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7657623818202546189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5366989507221002962}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.87, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6902215293381504703}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &7126587631582560693
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5366989507221002962}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.05490196, g: 0.08235294, b: 0.10980392, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!81 &1291482862525294090
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5366989507221002962}
+  m_Enabled: 1
+--- !u!1 &5944440558934088962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5391726412740783077}
+  - component: {fileID: 3527254234658685144}
+  m_Layer: 9
+  m_Name: MeleeWeapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5391726412740783077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944440558934088962}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6902215293381504703}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3527254234658685144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944440558934088962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86212f74d75b15d4c8d0d5c245a22833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeName: axe
+  collider2DRef: {fileID: 4217268661699793624}
+  melee:
+    layer:
+      serializedVersion: 2
+      m_Bits: 256
+    input: {fileID: 11400000, guid: 97148b685e33d6449b8d51a167b4d4e7, type: 2}
+    input2: {fileID: 0}
+    delayTime: 0.25
+    earlyTime: 0.25
+    hitToContinue: 0
+    oneHitPerCombo: 0
+    enableCollider: 0
+    combo:
+    - velX: 0
+      velY: 0
+      damage: 0
+      earlyTime: 0
+      earlyNext: 0
+      isLocked: 0
+      animationSignal: attack1
+      meleeWE: 
+      hitWE: 
+      condition: 0
+      velXType: 2
+      velYType: 0
+      onMeleeBegin:
+        m_PersistentCalls:
+          m_Calls: []
+      onHit:
+        m_PersistentCalls:
+          m_Calls: []
+      forceDirection: {x: 0, y: 0}
+      canRecoilX: 0
+      canRecoilY: 0
+      recoilX: 0
+      recoilY: 0
+      exitOnStateChange: 0
+      keepInitialDirection: 1
+      impulseDuration: 0
+      impulseForce: 0
+      fixedDuration: 0
+      fixedDistance: 0
+      delete: 0
+      foldOut: 1
+      eventFoldOut: 0
+      hitFoldOut: 0
+      eventsFoldOut: 0
+      optionsFoldOut: 1
+    - velX: 0
+      velY: 0
+      damage: 0
+      earlyTime: 0
+      earlyNext: 0
+      isLocked: 0
+      animationSignal: attack2
+      meleeWE: 
+      hitWE: 
+      condition: 0
+      velXType: 2
+      velYType: 0
+      onMeleeBegin:
+        m_PersistentCalls:
+          m_Calls: []
+      onHit:
+        m_PersistentCalls:
+          m_Calls: []
+      forceDirection: {x: 0, y: 0}
+      canRecoilX: 0
+      canRecoilY: 0
+      recoilX: 0
+      recoilY: 0
+      exitOnStateChange: 0
+      keepInitialDirection: 0
+      impulseDuration: 0
+      impulseForce: 0
+      fixedDuration: 0
+      fixedDistance: 0
+      delete: 0
+      foldOut: 1
+      eventFoldOut: 0
+      hitFoldOut: 0
+      eventsFoldOut: 0
+      optionsFoldOut: 1
+    - velX: 0
+      velY: 0
+      damage: 0
+      earlyTime: 0
+      earlyNext: 0
+      isLocked: 0
+      animationSignal: attack3
+      meleeWE: 
+      hitWE: 
+      condition: 0
+      velXType: 2
+      velYType: 0
+      onMeleeBegin:
+        m_PersistentCalls:
+          m_Calls: []
+      onHit:
+        m_PersistentCalls:
+          m_Calls: []
+      forceDirection: {x: 0, y: 0}
+      canRecoilX: 0
+      canRecoilY: 0
+      recoilX: 0
+      recoilY: 0
+      exitOnStateChange: 0
+      keepInitialDirection: 0
+      impulseDuration: 0
+      impulseForce: 0
+      fixedDuration: 0
+      fixedDistance: 0
+      delete: 0
+      foldOut: 1
+      eventFoldOut: 0
+      hitFoldOut: 0
+      eventsFoldOut: 0
+      optionsFoldOut: 1
+    trigger: 1
+    trigger2: 1
+    attackFromSleep: 1
+    cancelOtherAttacks: 0
+    active: 0
+    foldOut: 1
+    comboFoldOut: 1
+    inputFoldOut: 1
+    propertiesFoldOut: 0
+    eventsFoldOut: 0
+    signalIndex: 0
+  block:
+    canBlock: 0
+    canRecoil: 0
+    cancelCombo: 0
+    stopVelocityX: 0
+    canDeflect: 0
+    blockSignal: 
+    recoilTag: 
+    recoilVelocity: 10
+    recoilDuration: 0.1
+    input: {fileID: 0}
+    inputTwo: {fileID: 0}
+    blockLayer:
+      serializedVersion: 2
+      m_Bits: 0
+    mustHold: 0
+    foldOut: 1
+  onCoolDown:
+    m_PersistentCalls:
+      m_Calls: []
+  coolDown: 0
+  pause: 0
+  attackNow: 0
+  foldOut: 0
+  blockFoldOut: 0
+--- !u!1 &6147014072521976915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6902215293381504703}
+  - component: {fileID: 4940244147691889750}
+  - component: {fileID: 2700975359448443073}
+  - component: {fileID: 5881420209112145141}
+  - component: {fileID: 1817237210846444443}
+  - component: {fileID: 5777290511072127128}
+  - component: {fileID: 2138457087467511849}
+  - component: {fileID: 2379969778475602423}
+  - component: {fileID: 1294037391917451673}
+  - component: {fileID: 4900967482639950123}
+  - component: {fileID: 4139350301036652380}
+  - component: {fileID: 4591407161908096344}
+  - component: {fileID: 9122553252467310993}
+  - component: {fileID: 716653733200294158}
+  m_Layer: 9
+  m_Name: Player_v3
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6902215293381504703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.031965, y: 0.09228051, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7657623818202546189}
+  - {fileID: 990625340707798196}
+  - {fileID: 2868839854395337365}
+  - {fileID: 5391726412740783077}
+  - {fileID: 3297878060200573951}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &4940244147691889750
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &2700975359448443073
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -1.0788558}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.8517289}
+  m_EdgeRadius: 0
+--- !u!114 &5881420209112145141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a95127ac67a976649aaa7fc47b2dde44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  world:
+    climbSlopes: 0
+    rotateToSlope: 0
+    rectifyInAir: 0
+    collideWorldOnly: 0
+    horizontalCorners: 0
+    useMovingPlatform: 0
+    useMovingPlatformMomentum: 1
+    rotateToWall: 0
+    useBridges: 1
+    jumpThroughEdge: 1
+    maxSlopeAngle: 45
+    rotateRate: 0.5
+    crushedWE: 
+    skipDownEdge: 0
+    onCrushed:
+      m_PersistentCalls:
+        m_Calls: []
+    box:
+      rays: {x: 3, y: 2}
+    rotateTo: 0
+    foldOut: 0
+    eventsFoldOut: 0
+    crushedFoldOut: 0
+  signals:
+    spriteEngine: {fileID: 0}
+  turnOffSignals: 0
+  pushBackActive: 0
+  executeInLateUpdate: 0
+  mainFoldOut: 0
+  canUseTool: 1
+  onToolSet:
+    m_PersistentCalls:
+      m_Calls: []
+  setVelocity: {x: 0, y: 0}
+  ability:
+  - {fileID: 5777290511072127128}
+  - {fileID: 2138457087467511849}
+  - {fileID: 2379969778475602423}
+  - {fileID: 9122553252467310993}
+  priority: []
+  inputs:
+    inputSO:
+    - {fileID: 11400000, guid: 75cc63fbb89395b43a8d6f137d9c4ad2, type: 2}
+    - {fileID: 11400000, guid: 24202ac33d1df2140a712afc4953a966, type: 2}
+    - {fileID: 11400000, guid: 2ed2e3f095d88bc44862868f96fcf5e0, type: 2}
+    - {fileID: 11400000, guid: 362ce92028d4fd14984eacf9884f5b99, type: 2}
+    - {fileID: 11400000, guid: 67749334196a0ae42a4c5b0e4aeb0d28, type: 2}
+    - {fileID: 11400000, guid: 7b219fa909eed644aa708d99e7916747, type: 2}
+    - {fileID: 11400000, guid: 74c443fde0e1b954fb038912f1aab417, type: 2}
+    - {fileID: 11400000, guid: 4b82215a3ac43774d8de4a66656ab05a, type: 2}
+    - {fileID: 11400000, guid: 97148b685e33d6449b8d51a167b4d4e7, type: 2}
+    - {fileID: 11400000, guid: f78528212f2e9d14798f4f645db2c122, type: 2}
+  abilities:
+    walk:
+      walk: 1
+      speed: 15
+      smooth: 1
+      impedeChange: 0
+      runType: 0
+      run: 0
+      runLimit: 0
+      runTimeLimit: 3
+      runCoolDown: 5
+      runRechargeRate: 0.5
+      smoothIntoRun: 0
+      buttonIsLeftRight: 0
+      runFromStop: 0
+      speedBoost: 1
+      tapTime: 0
+      lerpRunTime: 0
+      lerpWalkTime: 0
+      runThreshold: 0
+      runJumpBoost: 0
+      runButton: None
+      groundHitWE: 
+      notOnGroundWE: 
+      walkingOnGroundWE: 
+      directionChangedWE: 
+      onGroundHit:
+        m_PersistentCalls:
+          m_Calls: []
+      onNotOnGround:
+        m_PersistentCalls:
+          m_Calls: []
+      onWalkingOnGround:
+        m_PersistentCalls:
+          m_Calls: []
+      onDirectionChanged:
+        m_PersistentCalls:
+          m_Calls: []
+      onRunTimeLimit:
+        m_PersistentCalls:
+          m_Calls: []
+      onCoolDown:
+        m_PersistentCalls:
+          m_Calls: []
+      runFoldOut: 0
+      runLimitFoldOut: 0
+      onRunTimeLimitFoldOut: 0
+      onCoolDownFoldOut: 0
+      useRightOnly: 0
+      useLeftOnly: 0
+      foldOut: 0
+      eventFoldOut: 1
+      groundFoldOut: 1
+      notGroundFoldOut: 1
+      directionFoldOut: 1
+      walkingOnGroundFoldOut: 0
+      editTransitions: 0
+    gravity:
+      jumpHeight: 4
+      jumpTime: 0.75
+      multiplier: 1.5
+      terminalVelocity: 40
+  isVehicle: 0
+  signalIndex: 0
+  shift: 0
+  index: 0
+  viewIndex: 0
+  hide: 0
+  active: 0
+  view: 0
+  addAbility: 0
+  initInputs: 1
+  inputFoldOut: 1
+  settings: 0
+  abilityFoldOut: 1
+  collisionFoldOut: 0
+  priorityFoldOut: 0
+  clearInputs: 0
+--- !u!114 &1817237210846444443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0274613e7f0104a418defea4148c5346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  render: {fileID: 0}
+  tree:
+    spriteFlip:
+    - nodes:
+      - nodes: []
+        sprite: flipLeft
+        signal: velXLeft
+        add: 0
+        active: 0
+        delete: 0
+        foldOut: 1
+        signalIndex: 0
+      - nodes: []
+        sprite: flipRight
+        signal: velXRight
+        add: 0
+        active: 0
+        delete: 0
+        foldOut: 1
+        signalIndex: 0
+      sprite: 
+      signal: alwaysTrue
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
+    branch:
+    - nodes: []
+      sprite: Block
+      signal: block
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
+    - nodes: []
+      sprite: SpecialAttack
+      signal: specialAttack
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
+    - nodes: []
+      sprite: Attack3
+      signal: attack3
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
+    - nodes: []
+      sprite: Attack2
+      signal: attack2
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
+    - nodes: []
+      sprite: Attack1
+      signal: attack1
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
+    - nodes: []
+      sprite: Roll
+      signal: dashing
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
+    - nodes: []
+      sprite: Jump
+      signal: jumping
+      add: 0
+      active: 0
+      delete: 1
+      foldOut: 1
+      signalIndex: 0
+    - nodes: []
+      sprite: Run
+      signal: velX
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
+    - nodes: []
+      sprite: Idle
+      signal: onGround
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
+    signals:
+    - jumping
+    - velX
+    - onGround
+    - velXRight
+    - velXLeft
+    - alwaysTrue
+    - roll
+    - block
+    - attack
+    - specialAttack
+    - blockImpact
+    - dashX
+    - dashing
+    - attack1
+    - attack2
+    - attack3
+    search: 
+    active: 0
+    createState: 0
+    stateFoldOut: 1
+    signalFoldOut: 1
+    signalIndex: 0
+    scrollIndex: 85
+    signalRef:
+      all:
+      - name: airGlide
+        use: 0
+        canDelete: 0
+      - name: airJump
+        use: 0
+        canDelete: 0
+      - name: alwaysFalse
+        use: 0
+        canDelete: 0
+      - name: alwaysTrue
+        use: 1
+        canDelete: 0
+      - name: autoCornerJump
+        use: 0
+        canDelete: 0
+      - name: autoGround
+        use: 0
+        canDelete: 0
+      - name: cannonBlast
+        use: 0
+        canDelete: 0
+      - name: ceilingClimb
+        use: 0
+        canDelete: 0
+      - name: changedDirection
+        use: 0
+        canDelete: 0
+      - name: crouch
+        use: 0
+        canDelete: 0
+      - name: crouchSlide
+        use: 0
+        canDelete: 0
+      - name: crouchWalk
+        use: 0
+        canDelete: 0
+      - name: dashDiagonal
+        use: 0
+        canDelete: 0
+      - name: dashX
+        use: 1
+        canDelete: 0
+      - name: dashY
+        use: 0
+        canDelete: 0
+      - name: dashing
+        use: 1
+        canDelete: 0
+      - name: facingLeft
+        use: 0
+        canDelete: 0
+      - name: facingRight
+        use: 0
+        canDelete: 0
+      - name: floating
+        use: 0
+        canDelete: 0
+      - name: flutter
+        use: 0
+        canDelete: 0
+      - name: friction
+        use: 0
+        canDelete: 0
+      - name: highFallDamage
+        use: 0
+        canDelete: 0
+      - name: highJump
+        use: 0
+        canDelete: 0
+      - name: holdingBlock
+        use: 0
+        canDelete: 0
+      - name: hover
+        use: 0
+        canDelete: 0
+      - name: inWater
+        use: 0
+        canDelete: 0
+      - name: inputX
+        use: 0
+        canDelete: 0
+      - name: inputXZero
+        use: 0
+        canDelete: 0
+      - name: jumpOnEnemy
+        use: 0
+        canDelete: 0
+      - name: jumping
+        use: 1
+        canDelete: 0
+      - name: ladderClimb
+        use: 0
+        canDelete: 0
+      - name: meleeCombo
+        use: 0
+        canDelete: 0
+      - name: meleeLeft
+        use: 0
+        canDelete: 0
+      - name: meleeRight
+        use: 0
+        canDelete: 0
+      - name: mouseDirectionLeft
+        use: 0
+        canDelete: 0
+      - name: mouseDirectionRight
+        use: 0
+        canDelete: 0
+      - name: onGround
+        use: 1
+        canDelete: 0
+      - name: onGroundWall
+        use: 0
+        canDelete: 0
+      - name: onRail
+        use: 0
+        canDelete: 0
+      - name: onVehicle
+        use: 0
+        canDelete: 0
+      - name: pickAndThrowBlock
+        use: 0
+        canDelete: 0
+      - name: pickingUpBlock
+        use: 0
+        canDelete: 0
+      - name: pullBlock
+        use: 0
+        canDelete: 0
+      - name: pushBack
+        use: 0
+        canDelete: 0
+      - name: pushBackLeft
+        use: 0
+        canDelete: 0
+      - name: pushBackRight
+        use: 0
+        canDelete: 0
+      - name: pushBlock
+        use: 0
+        canDelete: 0
+      - name: recoil
+        use: 0
+        canDelete: 0
+      - name: recoilDown
+        use: 0
+        canDelete: 0
+      - name: recoilLeft
+        use: 0
+        canDelete: 0
+      - name: recoilRight
+        use: 0
+        canDelete: 0
+      - name: recoilShake
+        use: 0
+        canDelete: 0
+      - name: recoilSlide
+        use: 0
+        canDelete: 0
+      - name: recoilUp
+        use: 0
+        canDelete: 0
+      - name: rope
+        use: 0
+        canDelete: 0
+      - name: ropeClimbing
+        use: 0
+        canDelete: 0
+      - name: ropeHanging
+        use: 0
+        canDelete: 0
+      - name: ropeHolding
+        use: 0
+        canDelete: 0
+      - name: ropeSwinging
+        use: 0
+        canDelete: 0
+      - name: running
+        use: 0
+        canDelete: 0
+      - name: sameDirection
+        use: 0
+        canDelete: 0
+      - name: slamOnEnemy
+        use: 0
+        canDelete: 0
+      - name: slamRecover
+        use: 0
+        canDelete: 0
+      - name: sliding
+        use: 0
+        canDelete: 0
+      - name: slopeSlide
+        use: 0
+        canDelete: 0
+      - name: slopeSlideAuto
+        use: 0
+        canDelete: 0
+      - name: staticFlying
+        use: 0
+        canDelete: 0
+      - name: swimming
+        use: 0
+        canDelete: 0
+      - name: throwingBlock
+        use: 0
+        canDelete: 0
+      - name: vehicleMounted
+        use: 0
+        canDelete: 0
+      - name: velX
+        use: 1
+        canDelete: 0
+      - name: velXZero
+        use: 0
+        canDelete: 0
+      - name: velY
+        use: 0
+        canDelete: 0
+      - name: velYDown
+        use: 0
+        canDelete: 0
+      - name: velYUp
+        use: 0
+        canDelete: 0
+      - name: velYZero
+        use: 0
+        canDelete: 0
+      - name: wall
+        use: 0
+        canDelete: 0
+      - name: wallClimb
+        use: 0
+        canDelete: 0
+      - name: wallCornerGrab
+        use: 0
+        canDelete: 0
+      - name: wallHang
+        use: 0
+        canDelete: 0
+      - name: wallHold
+        use: 0
+        canDelete: 0
+      - name: wallLeft
+        use: 0
+        canDelete: 0
+      - name: wallRight
+        use: 0
+        canDelete: 0
+      - name: wallSlide
+        use: 0
+        canDelete: 0
+      - name: wallSlideJump
+        use: 0
+        canDelete: 0
+      - name: windJump
+        use: 0
+        canDelete: 0
+      - name: zipline
+        use: 0
+        canDelete: 0
+      extra:
+      - name: velXRight
+        use: 1
+        canDelete: 1
+      - name: velXLeft
+        use: 1
+        canDelete: 1
+      - name: roll
+        use: 1
+        canDelete: 1
+      - name: block
+        use: 1
+        canDelete: 1
+      - name: attack
+        use: 1
+        canDelete: 1
+      - name: specialAttack
+        use: 1
+        canDelete: 1
+      - name: blockImpact
+        use: 1
+        canDelete: 1
+      - name: attack1
+        use: 1
+        canDelete: 1
+      - name: attack2
+        use: 1
+        canDelete: 1
+      - name: attack3
+        use: 1
+        canDelete: 1
+      foldOutVelocity: 0
+      foldOutWall: 0
+      foldOutWorld: 0
+      foldOutRecoil: 0
+      foldOutAttack: 0
+      foldOutUtility: 0
+      foldOutExtra: 0
+      button: 0
+      createSignal: 
+  setToFirst: 0
+  sort: 0
+  add: 0
+  active: 0
+  foldOut: 1
+  open: 0
+  delete: 0
+  deleteAsk: 0
+  spriteMenu: 0
+  eventFoldOut: 0
+  spritesFoldOut: 0
+  loopOnceFoldOut: 0
+  transitionFoldOut: 1
+  createTransition: 0
+  shiftNames: 0
+  shiftProperty: 0
+  signalIndex: 0
+  tabIndex: 0
+  previewArea: 1
+  scrollPosition: {x: 0, y: 0}
+  offsetPosition: {x: 0, y: 0}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  playInInspector: 0
+  playInScene: 0
+  resetPlayFrame: 0
+  frameCounter: 0
+  frameTimer: 0
+  zoom: 1
+  propertyFoldOut: 0
+  resetSprites: 0
+  propertyIndex: 0
+  rendererSprite: {fileID: 0}
+  settingRenderer: 0
+  spriteIndex: 0
+  scrollIndex: 0
+  animator: {fileID: 2574590390572301745}
+  flipX: 0
+  flipAngle: 0
+  animations:
+  - name: Idle
+    hasTransition: 0
+    hasChangedDirection: 0
+    transition: []
+    randomAnimations: []
+    isRandom: 0
+    canSync: 0
+    syncID: 0
+    frameIndex: 0
+    signalIndex: 0
+    active: 0
+    foldOut: 0
+    addTransition: 0
+    deleteTransition: 0
+    transitionFoldOut: 0
+  - name: Run
+    hasTransition: 0
+    hasChangedDirection: 0
+    transition: []
+    randomAnimations: []
+    isRandom: 0
+    canSync: 0
+    syncID: 0
+    frameIndex: 0
+    signalIndex: 0
+    active: 0
+    foldOut: 0
+    addTransition: 0
+    deleteTransition: 0
+    transitionFoldOut: 0
+  - name: Jump
+    hasTransition: 0
+    hasChangedDirection: 0
+    transition: []
+    randomAnimations: []
+    isRandom: 0
+    canSync: 0
+    syncID: 0
+    frameIndex: 0
+    signalIndex: 0
+    active: 0
+    foldOut: 0
+    addTransition: 0
+    deleteTransition: 0
+    transitionFoldOut: 0
+  - name: Roll
+    hasTransition: 0
+    hasChangedDirection: 0
+    transition: []
+    randomAnimations: []
+    isRandom: 0
+    canSync: 0
+    syncID: 0
+    frameIndex: 0
+    signalIndex: 0
+    active: 0
+    foldOut: 0
+    addTransition: 0
+    deleteTransition: 0
+    transitionFoldOut: 0
+  - name: Hurt
+    hasTransition: 0
+    hasChangedDirection: 0
+    transition: []
+    randomAnimations: []
+    isRandom: 0
+    canSync: 0
+    syncID: 0
+    frameIndex: 0
+    signalIndex: 0
+    active: 0
+    foldOut: 0
+    addTransition: 0
+    deleteTransition: 0
+    transitionFoldOut: 0
+  - name: Block
+    hasTransition: 0
+    hasChangedDirection: 0
+    transition: []
+    randomAnimations: []
+    isRandom: 0
+    canSync: 0
+    syncID: 0
+    frameIndex: 0
+    signalIndex: 0
+    active: 0
+    foldOut: 1
+    addTransition: 0
+    deleteTransition: 0
+    transitionFoldOut: 0
+  - name: BlockImpact
+    hasTransition: 0
+    hasChangedDirection: 0
+    transition: []
+    randomAnimations: []
+    isRandom: 0
+    canSync: 0
+    syncID: 0
+    frameIndex: 0
+    signalIndex: 0
+    active: 0
+    foldOut: 0
+    addTransition: 0
+    deleteTransition: 0
+    transitionFoldOut: 0
+  - name: Attack1
+    hasTransition: 0
+    hasChangedDirection: 0
+    transition: []
+    randomAnimations: []
+    isRandom: 0
+    canSync: 0
+    syncID: 0
+    frameIndex: 0
+    signalIndex: 0
+    active: 0
+    foldOut: 0
+    addTransition: 0
+    deleteTransition: 0
+    transitionFoldOut: 0
+  - name: Attack2
+    hasTransition: 0
+    hasChangedDirection: 0
+    transition: []
+    randomAnimations: []
+    isRandom: 0
+    canSync: 0
+    syncID: 0
+    frameIndex: 0
+    signalIndex: 0
+    active: 0
+    foldOut: 0
+    addTransition: 0
+    deleteTransition: 0
+    transitionFoldOut: 0
+  - name: Attack3
+    hasTransition: 0
+    hasChangedDirection: 0
+    transition: []
+    randomAnimations: []
+    isRandom: 0
+    canSync: 0
+    syncID: 0
+    frameIndex: 0
+    signalIndex: 0
+    active: 0
+    foldOut: 0
+    addTransition: 0
+    deleteTransition: 0
+    transitionFoldOut: 0
+  - name: SpecialAttack
+    hasTransition: 0
+    hasChangedDirection: 0
+    transition: []
+    randomAnimations: []
+    isRandom: 0
+    canSync: 0
+    syncID: 0
+    frameIndex: 0
+    signalIndex: 0
+    active: 0
+    foldOut: 0
+    addTransition: 0
+    deleteTransition: 0
+    transitionFoldOut: 0
+--- !u!114 &5777290511072127128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6673ca2f6b9dcf4a9c181b93f60a558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
+  abilityName: Jump
+  pause: 0
+  exception: []
+  foldOut: 0
+  delete: 0
+  editMask: 0
+  deleteAsk: 0
+  viewScript: 0
+  tempName: 
+  foldOuts: 
+  airJumps: 0
+  airMomentum: 0
+  jumpBuffer: 0.25
+  coyoteTime: 0.05
+  airJumpScale: 1
+  glideBoost: 0.15
+  jumpHeight: 4
+  minJumpHeight: 0
+  glideScale: 0
+  jumpFromFall: 0
+  glideImmediately: 0
+  glideButton: None
+  airJumpWE: 
+  jumpWE: 
+  onJump:
+    m_PersistentCalls:
+      m_Calls: []
+  onAirJump:
+    m_PersistentCalls:
+      m_Calls: []
+  buttonTrigger: 1
+  airJumpFoldOut: 0
+  eventFoldOut: 1
+  jumpFoldOut: 0
+  forceJump: 0
+--- !u!114 &2138457087467511849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67afe2f3c6d1d7e448bc34d5914946cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
+  abilityName: Dash
+  pause: 0
+  exception: []
+  foldOut: 0
+  delete: 0
+  editMask: 0
+  deleteAsk: 0
+  viewScript: 0
+  tempName: 
+  foldOuts: 
+  type: 1
+  taps: 0
+  directionType: 0
+  mustBeOnGround: 0
+  nullifyGravity: 0
+  canTakeDamage: 0
+  crouch: 0
+  exitOnJump: 0
+  dashInPlace: 0
+  changeDirectionOnWall: 0
+  airDashLimit: 1
+  crouchHeight: 0.5
+  time: 0.5
+  coolDown: 0
+  dashDistance: 8
+  tapThreshold: 0.35
+  up: None
+  down: None
+  left: None
+  right: None
+  extraDashButton: Roll
+  damage: 1
+  horizontalJump: 0
+  damageLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  canDealDamage: 0
+  exitOnContact: 0
+  exitLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  onStartWE: 
+  onEndWE: 
+  onDashRate: 0
+  worldEffect: 
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  onDash:
+    m_PersistentCalls:
+      m_Calls: []
+  eventsFoldOut: 0
+  dashFoldOut: 0
+  onStartFoldOut: 0
+  onEndFoldOut: 0
+--- !u!114 &2379969778475602423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d822e00f4a1ea4ab53c18ae738397b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
+  abilityName: Melee
+  pause: 0
+  exception: []
+  foldOut: 0
+  delete: 0
+  editMask: 0
+  deleteAsk: 0
+  viewScript: 0
+  tempName: 
+  foldOuts: 
+  melee: []
+  coolDown: 0
+--- !u!114 &1294037391917451673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d68b03635dcb44ebc90263e80962c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 5881420209112145141}
+--- !u!114 &4900967482639950123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fa2f79168b6d841a7bc2b2cf90ca84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldhunter: {fileID: 2868839854395337365}
+  jumpThreshold: 1
+--- !u!114 &4139350301036652380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb693dcc98d6e144d94b23bbd922422e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4591407161908096344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 6afcbb8251a99eb42ba79d5b2da5063c, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5a7e8b73-ba5b-4897-8547-87580e4a20be
+    m_ActionName: Player/Jump
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6451d78d-43c3-4be8-9782-1fcfadac3927
+    m_ActionName: Player/Fire
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5302974d-4574-4977-a3d2-3bf74b8c9240
+    m_ActionName: Player/Left
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8eda8603-3a84-4eda-8b90-0955623c0118
+    m_ActionName: Player/Right
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2ed519e2-ecc4-4c3d-bc2e-3aa8576ca11a
+    m_ActionName: Player/Down
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0a3dccfd-243c-4772-93fd-76d9e649d246
+    m_ActionName: Player/Up
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cc069285-e96c-43c7-9946-f97c884ab0f1
+    m_ActionName: Player/Start
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f438685c-e050-456c-8905-fca91c7d1c8e
+    m_ActionName: Player/ToggleInventory
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 770c52f7-f3d8-4c31-bb9e-0376cf6f9958
+    m_ActionName: Player/UseItem
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2064a66b-2304-49a5-a7ba-52a40f5ad569
+    m_ActionName: Player/Lift
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 39c3496f-1614-4150-9e86-84374a201e04
+    m_ActionName: Player/Push
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c907d937-8837-4606-88bb-61292fe234cb
+    m_ActionName: Player/JoyStick
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &9122553252467310993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e58debfc30d0d6449e5f44545a7c5c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
+  abilityName: Firearms
+  pause: 0
+  exception:
+  - Jump
+  foldOut: 0
+  delete: 0
+  editMask: 0
+  deleteAsk: 0
+  viewScript: 0
+  tempName: 
+  foldOuts: 
+  checkIfLowerPriority: 0
+  onCancel:
+    m_PersistentCalls:
+      m_Calls: []
+  foldOutCancel: 1
+  toolSetFoldOut: 0
+--- !u!114 &716653733200294158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5383d1075e7d23a4ca9946690d39d22c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  blockKey: 106
+  blockDuration: 0.5
+  lockInputsDuringBlock: 1
+  forceStopXDuringBlock: 1
+--- !u!1 &7421906572565296983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7793333062038480223}
+  m_Layer: 9
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7793333062038480223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7421906572565296983}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6, y: -0.93, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3297878060200573951}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8155799299834673593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 990625340707798196}
+  - component: {fileID: 4217268661699793624}
+  m_Layer: 9
+  m_Name: AttackCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &990625340707798196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8155799299834673593}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6902215293381504703}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &4217268661699793624
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8155799299834673593}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.6, y: -0.87}
+  serializedVersion: 2
+  m_Radius: 0.84

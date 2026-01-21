@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10859,10 +10859,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 93746127919566749, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 207824697026656915, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: ability.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 207824697026656915, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: ability.Array.data[3]
+      value: 
+      objectReference: {fileID: 501661882}
     - target: {fileID: 207824697026656915, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: ability.Array.data[4]
       value: 
@@ -10895,45 +10903,65 @@ PrefabInstance:
       propertyPath: foldOut
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2840694469054302290, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2840694469054302290, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: foldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2840694469054302290, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: deleteAsk
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.scrollIndex
       value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.size
-      value: 8
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: animations.Array.data[5].foldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.branch.Array.data[0].delete
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[0].signal
-      value: specialAttack
+      value: block
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[0].sprite
-      value: SpecialAttack
+      value: Block
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[1].signal
-      value: attack3
+      value: specialAttack
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[1].sprite
-      value: Attack3
+      value: SpecialAttack
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[2].signal
-      value: attack2
+      value: attack3
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[2].sprite
-      value: Attack2
+      value: Attack3
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[3].signal
-      value: attack1
+      value: attack2
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[3].sprite
-      value: Attack1
+      value: Attack2
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[4].delete
@@ -10941,38 +10969,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[4].signal
-      value: dashing
+      value: attack1
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[4].sprite
-      value: Roll
+      value: Attack1
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[5].delete
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[5].signal
-      value: jumping
+      value: dashing
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[5].sprite
-      value: Jump
+      value: Roll
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.branch.Array.data[6].delete
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[6].signal
-      value: velX
+      value: jumping
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[6].sprite
-      value: Run
+      value: Jump
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[7].signal
-      value: onGround
+      value: velX
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[7].sprite
+      value: Run
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.branch.Array.data[8].signal
+      value: onGround
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.branch.Array.data[8].sprite
       value: Idle
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
@@ -10981,6 +11021,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       propertyPath: tree.branch.Array.data[7].foldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.branch.Array.data[8].foldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.spriteFlip.Array.data[0].nodes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.spriteFlip.Array.data[0].nodes.Array.data[0].delete
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.spriteFlip.Array.data[0].nodes.Array.data[0].signal
+      value: velXLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.spriteFlip.Array.data[0].nodes.Array.data[0].sprite
+      value: flipLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.spriteFlip.Array.data[0].nodes.Array.data[1].signal
+      value: velXRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.spriteFlip.Array.data[0].nodes.Array.data[1].sprite
+      value: flipRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.spriteFlip.Array.data[0].nodes.Array.data[2].signal
+      value: velXRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.spriteFlip.Array.data[0].nodes.Array.data[2].sprite
+      value: flipRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.spriteFlip.Array.data[0].nodes.Array.data[0].foldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817519011212303839, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      propertyPath: tree.spriteFlip.Array.data[0].nodes.Array.data[2].foldOut
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4858429085127751415, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
@@ -11045,6 +11129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5271755487611796384, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+    - {fileID: 2840694469054302290, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8145703737529638039, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
@@ -11054,6 +11139,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8185623589305300426, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 501661882}
+    - targetCorrespondingSourceObject: {fileID: 8185623589305300426, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 501661895}
     - targetCorrespondingSourceObject: {fileID: 5207991227268002438, guid: a526b65e83fc9de4b8467dae8979fdd0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1138032144}
@@ -11080,7 +11168,7 @@ MonoBehaviour:
   pause: 0
   exception:
   - Jump
-  foldOut: 1
+  foldOut: 0
   delete: 0
   editMask: 0
   deleteAsk: 0
@@ -11091,8 +11179,25 @@ MonoBehaviour:
   onCancel:
     m_PersistentCalls:
       m_Calls: []
-  foldOutCancel: 0
+  foldOutCancel: 1
   toolSetFoldOut: 0
+--- !u!114 &501661895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501661880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5383d1075e7d23a4ca9946690d39d22c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  blockKey: 106
+  blockDuration: 0.5
+  lockInputsDuringBlock: 1
+  forceStopXDuringBlock: 1
 --- !u!1 &637653314
 GameObject:
   m_ObjectHideFlags: 0
