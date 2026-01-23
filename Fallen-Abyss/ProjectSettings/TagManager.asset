@@ -21,6 +21,7 @@ TagManager:
   - Avoid
   - RailRight
   - RailLeft
+  - Elevator
   layers:
   - Default
   - TransparentFX

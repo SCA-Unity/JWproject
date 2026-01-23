@@ -183,10 +183,17 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8246548229518250916, guid: 14d1cbf55880a5a4ea3fe371bb658a70, type: 3}
+      propertyPath: tree.scrollIndex
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3310562492225129671, guid: 14d1cbf55880a5a4ea3fe371bb658a70, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2110613314}
   m_SourcePrefab: {fileID: 100100000, guid: 14d1cbf55880a5a4ea3fe371bb658a70, type: 3}
 --- !u!1 &447869306
 GameObject:
@@ -200,6 +207,7 @@ GameObject:
   - component: {fileID: 447869310}
   - component: {fileID: 447869309}
   - component: {fileID: 447869308}
+  - component: {fileID: 447869311}
   m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
@@ -8719,6 +8727,51 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &447869311
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447869306}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 72.50101, y: -55.50351}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0135498, y: 67.01346}
+  m_EdgeRadius: 0
 --- !u!1 &591505621
 GameObject:
   m_ObjectHideFlags: 0
@@ -8848,7 +8901,7 @@ GameObject:
   - component: {fileID: 1140486568}
   m_Layer: 6
   m_Name: elv
-  m_TagString: Untagged
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12119,6 +12172,24 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2110613300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3310562492225129671, guid: 14d1cbf55880a5a4ea3fe371bb658a70, type: 3}
+  m_PrefabInstance: {fileID: 306741231}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2110613314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110613300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321fb22e7f4b4a84c96795f50255c0c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockJumpOnElevator: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
