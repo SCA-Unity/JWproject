@@ -1,41 +1,43 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Elevator2D_TriggerMove : MonoBehaviour
 {
     public float moveY = 5f;   // + 위로 / - 아래로
     public float speed = 2f;
 
-    private Vector3 startPos;
+    private Vector2 startPos;
+    private Rigidbody2D rb;
+
     private bool isMoving = false;
     private bool finished = false;
     private bool triggered = false;
 
     void Start()
     {
-        startPos = transform.position;
+        rb = GetComponent<Rigidbody2D>();
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        rb.gravityScale = 0;
+
+        startPos = rb.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (!isMoving || finished) return;
 
-        // 이동 방향은 moveY의 부호로 결정
-        transform.position += Vector3.up * Mathf.Sign(moveY) * speed * Time.deltaTime;
+        Vector2 targetPos = startPos + Vector2.up * moveY;
 
-        float moved = Mathf.Abs(transform.position.y - startPos.y);
+        rb.MovePosition(
+            Vector2.MoveTowards(rb.position, targetPos, speed * Time.fixedDeltaTime)
+        );
 
-        // 목표 거리 도달
-        if (moved >= Mathf.Abs(moveY))
+        if (Vector2.Distance(rb.position, targetPos) < 0.01f)
         {
-            transform.position = new Vector3(
-                transform.position.x,
-                startPos.y + moveY,
-                transform.position.z
-            );
-
-            finished = true;
+            rb.MovePosition(targetPos);
             isMoving = false;
+            finished = true;
         }
     }
 
@@ -53,6 +55,4 @@ public class Elevator2D_TriggerMove : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         isMoving = true;
     }
-
-
 }
