@@ -10692,6 +10692,15 @@ GameObject:
   - component: {fileID: 2078138157}
   - component: {fileID: 2078138166}
   - component: {fileID: 2078138165}
+  - component: {fileID: 2078138173}
+  - component: {fileID: 2078138172}
+  - component: {fileID: 2078138171}
+  - component: {fileID: 2078138170}
+  - component: {fileID: 2078138169}
+  - component: {fileID: 2078138168}
+  - component: {fileID: 2078138167}
+  - component: {fileID: 2078138175}
+  - component: {fileID: 2078138174}
   m_Layer: 0
   m_Name: Bringer-of-Death
   m_TagString: Untagged
@@ -10795,7 +10804,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078138156}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -10859,6 +10868,655 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25931227, y: 0.5354766}
   m_EdgeRadius: 0
+--- !u!114 &2078138167
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078138156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797b0ad4304058c4890405a249972e7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: MeleeAttack
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 1
+  canHaveChildren: 1
+  refName: []
+  message: []
+  colliderRef: {fileID: 2078138166}
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+  animationSignal: 
+  damage: 1
+  enableCollider: 0
+  forceDirection: {x: 1, y: 0}
+  velocity: {x: 0, y: 0}
+--- !u!114 &2078138168
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078138156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d468cec011ddabd468d10383d2f8e1f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: FaceTarget
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName:
+  - Player
+  message: []
+  target: {fileID: 2078138171}
+  type: 0
+  spriteRenderer: {fileID: 2078138158}
+--- !u!114 &2078138169
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078138156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46d574aa91f9d14b8bd72c15ad1a7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: Move
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 0
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  velocity: {x: 0, y: 0}
+  hasTimer: 0
+  time: 1
+  flipVelX: 0
+--- !u!114 &2078138170
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078138156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b4911ca7c8102469524d7aa86ca4f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: Idle
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+--- !u!114 &2078138171
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078138156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c035ee5e169a2c4187de1497e45f669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataName: Player
+  blackboardType: 0
+  hasNoTargets: 0
+  foldOut: 1
+  delete: 0
+  deleteAsk: 0
+  refName: []
+  type: 0
+  offset: {x: 0, y: 0}
+  randomIndex: 0
+--- !u!114 &2078138172
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078138156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1353c2b8524781a42a64ea27a9fd7d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 0
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: Root
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 0
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  canInterrupt: 0
+  onInterrupt: 0
+  children: []
+  defaultSignal: Signal
+  useSignal: 0
+  currentChildIndex: 0
+  pause: 0
+--- !u!114 &2078138173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078138156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a6abfb407f89240b4fe45a1f0a99e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  world:
+    climbSlopes: 0
+    rotateToSlope: 0
+    rectifyInAir: 0
+    collideWorldOnly: 0
+    horizontalCorners: 0
+    useMovingPlatform: 0
+    useMovingPlatformMomentum: 1
+    rotateToWall: 0
+    useBridges: 1
+    jumpThroughEdge: 1
+    maxSlopeAngle: 45
+    rotateRate: 0.5
+    crushedWE: 
+    skipDownEdge: 0
+    onCrushed:
+      m_PersistentCalls:
+        m_Calls: []
+    box:
+      rays: {x: 3, y: 2}
+    rotateTo: 0
+    foldOut: 0
+    eventsFoldOut: 0
+    crushedFoldOut: 0
+  signals:
+    spriteEngine: {fileID: 0}
+  turnOffSignals: 0
+  pushBackActive: 0
+  executeInLateUpdate: 0
+  mainFoldOut: 0
+  canUseTool: 1
+  onToolSet:
+    m_PersistentCalls:
+      m_Calls: []
+  setVelocity: {x: 0, y: 0}
+  root: {fileID: 2078138172}
+  thisIsPlayer: 0
+  resetToActive: 0
+  movingPlatformGravity: 0
+  gravity:
+    jumpHeight: 4
+    jumpTime: 0.75
+    multiplier: 1.5
+    terminalVelocity: 40
+  damage:
+    layer:
+      serializedVersion: 2
+      m_Bits: 0
+    direction: 0
+    canDealDamage: 0
+    pauseTimer: 0
+    damage: 1
+    force: 1
+    counter: 0
+    damageFoldOut: 0
+    pauseDamage: 0
+    pauseDamageTimer: 0
+  data:
+  - {fileID: 2078138171}
+  tempChildren: []
+  units: []
+  inspectNode: {fileID: 0}
+  nodeMessage:
+    position: {x: 0, y: 0}
+    size: {x: 0, y: 0}
+    message: 
+    isDragged: 0
+  oldGUIMatrix:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  tempNameType: 
+  inspectNameType: 
+  barIndex: 0
+  tempUnits: 0
+  menuIndex: 0
+  deleteIndex: 0
+  signalIndex: 0
+  panX: 0
+  panY: 0
+  snapToGrid: 10
+  scaling: 1
+  add: 0
+  active: 0
+  foldOut: 0
+  foundNodes: 0
+  settingsFoldOut: 0
+  showNodeMessage: 0
+  isSelectingNodes: 0
+  blackboardFoldOut: 0
+  collisionSettings: 0
+  aNodeIsBeingDragged: 0
+  window: {fileID: 0}
+  selectSize: {x: 0, y: 0}
+  selectPosition: {x: 0, y: 0}
+  ScrollPosition: {x: 0, y: 0}
+  startHoldPoint: {x: 0, y: 0}
+  stateActionIndex: {x: 1, y: 1}
+  state: []
+  alwaysState:
+  - action:
+    - node: {fileID: 2078138170}
+      onSuccess: 
+      onFailure: 
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 2078138175}
+      onSuccess: 
+      onFailure: 
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    stateName: Idle
+    defaultSignal: 
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 1
+    childIndex: 0
+    type: 0
+    showStateExtra: 0
+    editName: 0
+    signal: 0
+    changeState: 0
+    deleteAsk: 0
+    foldOut: 1
+    active: 0
+    delete: 0
+    add: 0
+    menu: 0
+    signalIndex: 0
+  - action:
+    - node: {fileID: 2078138169}
+      onSuccess: 
+      onFailure: 
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 2078138168}
+      onSuccess: 
+      onFailure: 
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 2078138174}
+      onSuccess: 
+      onFailure: 
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    stateName: 'Chase '
+    defaultSignal: 
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 1
+    childIndex: 0
+    type: 0
+    showStateExtra: 0
+    editName: 0
+    signal: 0
+    changeState: 0
+    deleteAsk: 0
+    foldOut: 1
+    active: 0
+    delete: 0
+    add: 0
+    menu: 0
+    signalIndex: 1
+  - action:
+    - node: {fileID: 2078138167}
+      onSuccess: 
+      onFailure: 
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    stateName: 'MeleeAttack '
+    defaultSignal: 
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 1
+    childIndex: 0
+    type: 0
+    showStateExtra: 0
+    editName: 0
+    signal: 0
+    changeState: 0
+    deleteAsk: 0
+    foldOut: 0
+    active: 0
+    delete: 0
+    add: 0
+    menu: 0
+    signalIndex: 0
+  resetState:
+    action: []
+    stateName: State Name
+    defaultSignal: Signal
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 1
+    childIndex: 0
+    type: 0
+    showStateExtra: 0
+    editName: 0
+    signal: 0
+    changeState: 0
+    deleteAsk: 0
+    foldOut: 0
+    active: 0
+    delete: 0
+    add: 0
+    menu: 1
+    signalIndex: -1
+  resetToFirst: 0
+--- !u!114 &2078138174
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078138156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2d7549e6884f040a147156b3b3d482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 3
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: FindTarget
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 1
+  canHaveChildren: 1
+  refName:
+  - Player
+  message: []
+  target: {fileID: 2078138171}
+  findType: 1
+  radius: 0
+  mirror: 0
+  offset: {x: 0, y: 0}
+  distance: {x: 1.2, y: 1.2}
+  territory: {fileID: 0}
+--- !u!114 &2078138175
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078138156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2d7549e6884f040a147156b3b3d482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 3
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: FindTarget
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName:
+  - Player
+  message: []
+  target: {fileID: 2078138171}
+  findType: 1
+  radius: 0
+  mirror: 0
+  offset: {x: 0, y: 0}
+  distance: {x: 5, y: 5}
+  territory: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
