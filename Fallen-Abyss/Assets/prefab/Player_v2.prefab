@@ -338,7 +338,7 @@ MonoBehaviour:
     rectifyInAir: 0
     collideWorldOnly: 0
     horizontalCorners: 0
-    useMovingPlatform: 0
+    useMovingPlatform: 1
     useMovingPlatformMomentum: 1
     rotateToWall: 0
     useBridges: 1
@@ -389,7 +389,7 @@ MonoBehaviour:
   abilities:
     walk:
       walk: 1
-      speed: 15
+      speed: 5
       smooth: 1
       impedeChange: 0
       runType: 0
@@ -459,7 +459,7 @@ MonoBehaviour:
   addAbility: 0
   initInputs: 1
   inputFoldOut: 1
-  settings: 0
+  settings: 1
   abilityFoldOut: 1
   collisionFoldOut: 0
   priorityFoldOut: 0
@@ -1163,7 +1163,7 @@ MonoBehaviour:
   abilityName: Dash
   pause: 0
   exception: []
-  foldOut: 0
+  foldOut: 1
   delete: 0
   editMask: 0
   deleteAsk: 0
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   changeDirectionOnWall: 0
   airDashLimit: 1
   crouchHeight: 0.5
-  time: 0.5
+  time: 1
   coolDown: 0
   dashDistance: 8
   tapThreshold: 0.35
@@ -1793,7 +1793,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2211908070411167309
 Transform:
   m_ObjectHideFlags: 0

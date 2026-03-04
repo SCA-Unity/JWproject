@@ -1,4 +1,5 @@
 using UnityEngine;
+using TwoBitMachines.FlareEngine.ThePlayer;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -11,12 +12,35 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        // FlareEngine Player 시스템과 우선 연동
+        Transform mainPlayer = Player.PlayerTransform();
+        if (mainPlayer != null)
+        {
+            player = mainPlayer;
+        }
+        else
+        {
+            // 예전 방식(태그)도 백업용으로 유지
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+                player = playerObj.transform;
+        }
+
         anim = GetComponent<Animator>();
     }
 
     void Update()
     {
+        if (player == null)
+        {
+            // 플레이어가 사라졌거나 아직 초기화 안 되었을 때는 다시 시도
+            Transform mainPlayer = Player.PlayerTransform();
+            if (mainPlayer != null)
+                player = mainPlayer;
+            else
+                return;
+        }
+
         float distance = Vector2.Distance(transform.position, player.position);
 
         if (distance <= attackRange)
@@ -49,7 +73,7 @@ public class EnemyAI : MonoBehaviour
             moveSpeed * Time.deltaTime
         );
 
-        // 방향 전환
+        // ???? ???
         if (dir.x > 0)
             transform.localScale = new Vector3(1, 1, 1);
         else
