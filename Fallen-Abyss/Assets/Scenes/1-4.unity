@@ -13071,6 +13071,96 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fce9d7364f7ef6c44a9425993cab4c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1113993169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1113993172}
+  - component: {fileID: 1113993171}
+  - component: {fileID: 1113993170}
+  m_Layer: 0
+  m_Name: DeadZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1113993170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113993169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ce577dfe2f40e4dab0ebefb63b291a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1113993171
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113993169}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.676857, y: -1.9614983}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 37.933823, y: 4.9229965}
+  m_EdgeRadius: 0
+--- !u!4 &1113993172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113993169}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 67.6, y: -38.14, z: 0.057835445}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1229234883
 GameObject:
   m_ObjectHideFlags: 0
@@ -13164,6 +13254,102 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd3a19ceb6a9e134da37f3b551457321, type: 3}
+--- !u!1 &1338813364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338813367}
+  - component: {fileID: 1338813366}
+  - component: {fileID: 1338813368}
+  m_Layer: 0
+  m_Name: Trap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1338813366
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338813364}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.85531235, y: 0.15341568}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.3331223, y: 1.3068314}
+  m_EdgeRadius: 0
+--- !u!4 &1338813367
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338813364}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28.5, y: -16.3, z: -0.15343614}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1338813368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338813364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a000cd5aa1ca2654e9d5e58b76d00dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 512
+  direction: 1
+  damage: 1
+  force: 1
 --- !u!1 &1362479114
 GameObject:
   m_ObjectHideFlags: 0
@@ -13516,687 +13702,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1441547298
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1441547299}
-  - component: {fileID: 1441547303}
-  - component: {fileID: 1441547302}
-  - component: {fileID: 1441547301}
-  - component: {fileID: 1441547300}
-  m_Layer: 0
-  m_Name: Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1441547299
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441547298}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.1699982, y: 1.4099998, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1467045437}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1441547300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441547298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9106d07ed27f96247a04c5e2cb49fa82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTransform: {fileID: 1467045437}
-  cameraRef: {fileID: 1441547302}
-  zoom:
-    type: 0
-  peek:
-    enable: 0
-    ignoreClamps: 0
-    time: 0.25
-    distance: 5
-    buttonA: 119
-    buttonB: 115
-    directionA: {x: 0, y: 1}
-    directionB: {x: 0, y: -1}
-    foldOut: 0
-    close: 0
-    edit: 0
-    add: 0
-  rooms:
-    enable: 1
-    rooms:
-    - name: 
-      canExit: 1
-      clampTop: 1
-      clampLeft: 1
-      clampRight: 1
-      clampBottom: 1
-      holdTarget: 0
-      lazyClamp: 0
-      transitionTime: 1
-      delay: 0
-      tween: 0
-      multipleTargets:
-        enable: 0
-        detect: 0
-        zoomToFit: 0
-        targets: []
-        add: 0
-        foldOut: 0
-      restrict: 0
-      canZoom: 0
-      zoomValue: 0
-      zoomScale: 0
-      onExit:
-        m_PersistentCalls:
-          m_Calls: []
-      onEnter:
-        m_PersistentCalls:
-          m_Calls: []
-      onTransitionComplete:
-        m_PersistentCalls:
-          m_Calls: []
-      onTransitionStart:
-        m_PersistentCalls:
-          m_Calls: []
-      bounds:
-        position: {x: 393, y: -2}
-        size: {x: 40, y: 22.5}
-        detectTop: 0
-        detectLeft: 0
-        detectRight: 0
-        detectBottom: 0
-        boundsTop: 0
-        boundsLeft: 0
-        boundsRight: 0
-        boundsBottom: 0
-      eventsFoldOut: 0
-      completeFoldOut: 0
-      startFoldOut: 0
-      enterFoldOut: 0
-      exitFoldOut: 0
-      open: 0
-      select: -1
-    - name: 
-      canExit: 1
-      clampTop: 1
-      clampLeft: 1
-      clampRight: 1
-      clampBottom: 1
-      holdTarget: 0
-      lazyClamp: 0
-      transitionTime: 1
-      delay: 0
-      tween: 0
-      multipleTargets:
-        enable: 0
-        detect: 0
-        zoomToFit: 0
-        targets: []
-        add: 0
-        foldOut: 0
-      restrict: 0
-      canZoom: 0
-      zoomValue: 0
-      zoomScale: 0
-      onExit:
-        m_PersistentCalls:
-          m_Calls: []
-      onEnter:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
-            m_Mode: 6
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 1
-            m_CallState: 2
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
-            m_Mode: 6
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 1
-            m_CallState: 2
-      onTransitionComplete:
-        m_PersistentCalls:
-          m_Calls: []
-      onTransitionStart:
-        m_PersistentCalls:
-          m_Calls: []
-      bounds:
-        position: {x: 431, y: -2}
-        size: {x: 40, y: 22.5}
-        detectTop: 0
-        detectLeft: 0
-        detectRight: 0
-        detectBottom: 0
-        boundsTop: 0
-        boundsLeft: 0
-        boundsRight: 0
-        boundsBottom: 0
-      eventsFoldOut: 1
-      completeFoldOut: 0
-      startFoldOut: 0
-      enterFoldOut: 0
-      exitFoldOut: 0
-      open: 0
-      select: -1
-    - name: 
-      canExit: 1
-      clampTop: 1
-      clampLeft: 1
-      clampRight: 1
-      clampBottom: 1
-      holdTarget: 0
-      lazyClamp: 0
-      transitionTime: 1
-      delay: 0
-      tween: 0
-      multipleTargets:
-        enable: 0
-        detect: 0
-        zoomToFit: 0
-        targets: []
-        add: 0
-        foldOut: 0
-      restrict: 0
-      canZoom: 0
-      zoomValue: 0
-      zoomScale: 0
-      onExit:
-        m_PersistentCalls:
-          m_Calls: []
-      onEnter:
-        m_PersistentCalls:
-          m_Calls: []
-      onTransitionComplete:
-        m_PersistentCalls:
-          m_Calls: []
-      onTransitionStart:
-        m_PersistentCalls:
-          m_Calls: []
-      bounds:
-        position: {x: 469, y: -2}
-        size: {x: 40, y: 22.5}
-        detectTop: 0
-        detectLeft: 0
-        detectRight: 0
-        detectBottom: 0
-        boundsTop: 0
-        boundsLeft: 0
-        boundsRight: 0
-        boundsBottom: 0
-      eventsFoldOut: 0
-      completeFoldOut: 0
-      startFoldOut: 0
-      enterFoldOut: 0
-      exitFoldOut: 0
-      open: 0
-      select: -1
-    - name: 
-      canExit: 1
-      clampTop: 1
-      clampLeft: 1
-      clampRight: 0
-      clampBottom: 1
-      holdTarget: 0
-      lazyClamp: 0
-      transitionTime: 1
-      delay: 0
-      tween: 0
-      multipleTargets:
-        enable: 0
-        detect: 0
-        zoomToFit: 0
-        targets: []
-        add: 0
-        foldOut: 0
-      restrict: 0
-      canZoom: 0
-      zoomValue: 0
-      zoomScale: 0
-      onExit:
-        m_PersistentCalls:
-          m_Calls: []
-      onEnter:
-        m_PersistentCalls:
-          m_Calls: []
-      onTransitionComplete:
-        m_PersistentCalls:
-          m_Calls: []
-      onTransitionStart:
-        m_PersistentCalls:
-          m_Calls: []
-      bounds:
-        position: {x: 31.75, y: -17.25}
-        size: {x: 104, y: 24.75}
-        detectTop: 0
-        detectLeft: 0
-        detectRight: 0
-        detectBottom: 0
-        boundsTop: 0
-        boundsLeft: 0
-        boundsRight: 0
-        boundsBottom: 0
-      eventsFoldOut: 0
-      completeFoldOut: 0
-      startFoldOut: 0
-      enterFoldOut: 0
-      exitFoldOut: 0
-      open: 1
-      select: 3
-    add: 0
-    edit: 1
-    close: 0
-    foldOut: 0
-    view: 1
-  shake:
-    enable: 1
-    shake: {fileID: 0}
-    add: 0
-    edit: 1
-    close: 0
-    foldOut: 0
-  follow:
-    enable: 1
-    followType: 0
-    speed: 10
-    smoothX: 0.9
-    smoothY: 0.9
-    returnSmooth: 0.75
-    useUnscaledTime: 0
-    offset: {x: 0, y: 1}
-    autoScroll: {x: 0, y: 0}
-    rails:
-      enable: 0
-      rails: []
-      add: 0
-      edit: 0
-      close: 0
-      foldOut: 0
-      view: 1
-      select: -1
-    regions:
-      enable: 0
-      regions: []
-      add: 0
-      edit: 0
-      close: 0
-      foldOut: 0
-      view: 1
-    deadZone:
-      size: {x: 0, y: 0}
-    pushZone:
-      zoneX: 0
-      zoneY: 0
-      horizontal: 0
-      vertical: 0
-    lookAhead:
-      enable: 0
-      type: 0
-      zoneType: 0
-      threshold: {x: 0, y: 0}
-      smooth: 0.5
-      distanceX: 0
-      distanceY: 0
-      radius: 0
-      edit: 0
-      close: 0
-      foldOut: 0
-      view: 1
-    screenZone:
-      size: {x: 0, y: 0}
-    detectWalls:
-      direction: 0
-      layerMask:
-        serializedVersion: 2
-        m_Bits: 0
-    followBlocks:
-      enable: 0
-      block: []
-      view: 1
-      foldOut: 0
-      close: 0
-      edit: 0
-      add: 0
-    highlightTarget:
-      enable: 0
-      targets: []
-      add: 0
-      edit: 0
-      close: 0
-      foldOut: 0
-    userPan:
-      enable: 0
-      useEdge: 0
-      useTouch: 0
-      useMouse: 0
-      useKeyboard: 0
-      useInputButtonSO: 0
-      bottomEdge: 0
-      rightEdge: 0
-      leftEdge: 0
-      topEdge: 0
-      boost: 1
-      right: 100
-      down: 115
-      left: 97
-      up: 119
-      inputLeft: {fileID: 0}
-      inputRight: {fileID: 0}
-      inputUp: {fileID: 0}
-      inputDown: {fileID: 0}
-      pan: 0
-      panTouch: 0
-      mouseButton: 0
-      holdButton: 1
-      edit: 0
-      close: 0
-      foldOut: 0
-      touchFoldOut: 0
-      mouseFoldOut: 0
-      edgeFoldOut: 0
-      keyboardFoldOut: 0
-      inputFoldOut: 0
-    userZoom:
-      enable: 0
-      speed: 1
-      smooth: 0.5
-      maxZoomIn: 1
-      maxZoomOut: 2
-      useTouch: 0
-      useMouse: 0
-      useKeyboard: 0
-      useInputButtonSO: 0
-      saveZoom: 0
-      zoomIn: 113
-      zoomOut: 101
-      inputIn: {fileID: 0}
-      inputOut: {fileID: 0}
-      edit: 0
-      close: 0
-      foldOut: 0
-      extraFoldOut: 0
-      keyboardFoldOut: 0
-      inputFoldOut: 0
-    userRotate:
-      enable: 0
-      speed: 10
-      smooth: 0.25
-      useTouch: 0
-      useMouse: 0
-      useKeyboard: 0
-      useInputButtonSO: 0
-      touchAxis: 0
-      mouseButton: 0
-      rotateLeft: 122
-      rotateRight: 120
-      inputIn: {fileID: 0}
-      inputOut: {fileID: 0}
-      edit: 0
-      close: 0
-      foldOut: 0
-      mouseFoldOut: 0
-      touchFoldOut: 0
-      keyboardFoldOut: 0
-      inputFoldOut: 0
-    edit: 0
-    close: 0
-    foldOut: 0
-    view: 1
-  parallax:
-    enable: 1
-    parallax:
-    - transform: {fileID: 0}
-      parallaxRate: {x: 0.1, y: 0}
-      autoScroll: 0
-      open: 0
-    - transform: {fileID: 0}
-      parallaxRate: {x: 0.4, y: 0}
-      autoScroll: 0
-      open: 0
-    - transform: {fileID: 0}
-      parallaxRate: {x: 0.9, y: 0}
-      autoScroll: 0
-      open: 0
-    signalIndex: 0
-    foldOut: 0
-    active: 0
-    close: 0
-    edit: 1
-    add: 0
-  peekPlus:
-    enable: 0
-    ignoreClamps: 0
-    speed: 10
-    distance: {x: 5, y: 5}
-    controllerTypeX: 0
-    controllerTypeY: 0
-    inputLeft: {fileID: 0}
-    inputRight: {fileID: 0}
-    inputUp: {fileID: 0}
-    inputDown: {fileID: 0}
-    horizontalStick: {fileID: 0}
-    verticalStick: {fileID: 0}
-    foldOut: 0
-    close: 0
-    edit: 0
-    add: 0
-  parallaxFinite:
-    enable: 0
-    parallax: []
-    signalIndex: 0
-    foldOut: 1
-    active: 0
-    close: 0
-    edit: 0
-    add: 0
-  resolutionScaling:
-    enable: 0
-    resolution: {fileID: 0}
-    foldOut: 0
-    close: 0
-    edit: 0
-    add: 0
-  speedZoom:
-    enable: 0
-    list: []
-    signalIndex: 0
-    foldOut: 0
-    active: 0
-    close: 0
-    edit: 0
-    add: 0
-  cinematics:
-    enable: 0
-    cines: []
-    add: 0
-    edit: 0
-    close: 0
-    foldOut: 0
-    view: 1
-  worldBounds:
-    enable: 0
-    bounds: []
-    add: 0
-    edit: 0
-    close: 0
-    foldOut: 0
-    view: 1
-    select: -1
-    signalIndex: 0
-    active: 0
-  worldClamp:
-    enable: 1
-    clampCenterOnly: 0
-    easeIntoWall: 1
-    bounds:
-      position: {x: -42, y: -19.25}
-      size: {x: 692, y: 48}
-    edit: 1
-    close: 0
-    foldOut: 0
-    view: 1
-  pixelPerfect: {fileID: 0}
-  enablePixelPerfect: 0
-  pixelFoldOut: 1
-  zoomTrigger:
-    enable: 0
-    zooms: []
-    add: 0
-    edit: 0
-    close: 0
-    foldOut: 0
-    view: 1
-  basicTrigger:
-    enable: 0
-    basics: []
-    add: 0
-    edit: 0
-    close: 0
-    foldOut: 0
-    view: 1
-  slowMotionTrigger:
-    enable: 0
-    slowMotions: []
-    add: 0
-    edit: 0
-    close: 0
-    foldOut: 0
-    view: 1
---- !u!114 &1441547301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441547298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 1
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 1
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_AllowHDROutput: 1
-  m_UseScreenCoordOverride: 0
-  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
-  m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
---- !u!20 &1441547302
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441547298}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.05490196, g: 0.08235294, b: 0.10980392, a: 1}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 7.257546
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 983
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!81 &1441547303
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441547298}
-  m_Enabled: 1
 --- !u!1001 &1467045436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14205,49 +13710,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2138457087467511849, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
-      propertyPath: time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2138457087467511849, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
-      propertyPath: foldOut
-      value: 1
+    - target: {fileID: 1817237210846444443, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: tree.scrollIndex
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 5159096889297201077, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: defaultProjectile.projectile
       value: 
       objectReference: {fileID: 814065384}
-    - target: {fileID: 5777290511072127128, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
-      propertyPath: foldOut
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5777290511072127128, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
-      propertyPath: jumpHeight
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881420209112145141, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
-      propertyPath: abilityFoldOut
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881420209112145141, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
-      propertyPath: abilities.walk.speed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881420209112145141, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
-      propertyPath: abilities.walk.foldOut
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881420209112145141, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
-      propertyPath: abilities.gravity.jumpTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881420209112145141, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
-      propertyPath: abilities.gravity.jumpHeight
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: m_Name
       value: Player_v3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6902215293381504703, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14290,19 +13767,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 5366989507221002962, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6902215293381504703, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1441547299}
-    m_AddedComponents: []
+      addedObject: {fileID: 2108122410}
   m_SourcePrefab: {fileID: 100100000, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
---- !u!4 &1467045437 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6902215293381504703, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
-  m_PrefabInstance: {fileID: 1467045436}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1780518531
 GameObject:
   m_ObjectHideFlags: 0
@@ -24002,6 +23473,93 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2108122394 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+  m_PrefabInstance: {fileID: 1467045436}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2108122410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108122394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc5a25c181809f4493d523a8a014665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHealth: 0
+  initialized: 0
+  variableName: name
+  currentValue: 10
+  minValue: 0
+  maxValue: 100
+  save: 0
+  broadcastValue: 0
+  isScriptableObject: 0
+  saveManually: 0
+  soReference: {fileID: 0}
+  characterDirectionX: 1
+  callDamageEffect: 0
+  positionOffset: 1
+  worldEffect: 
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onMinValue:
+    m_PersistentCalls:
+      m_Calls: []
+  onMaxValue:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueIncreased:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueDecreased:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadConditionTrue:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadConditionFalse:
+    m_PersistentCalls:
+      m_Calls: []
+  onSceneStart:
+    m_PersistentCalls:
+      m_Calls: []
+  saveFloat:
+    value: 0
+  foldOut: 1
+  eventFoldOut: 0
+  minFoldOut: 0
+  maxFoldOut: 0
+  changedFoldOut: 0
+  increasedFoldOut: 0
+  decreasedFoldOut: 0
+  changedGOFoldOut: 0
+  shieldFoldOut: 0
+  impactFoldOut: 0
+  damageFoldOut: 0
+  damageEffectFoldOut: 0
+  loadFoldOutTrue: 0
+  loadFoldOutFalse: 0
+  sceneStartFoldOut: 0
+  createSO: 0
+  recoveryTime: 0.1
+  counter: 0
+  hasShield: 0
+  readImpactOnly: 0
+  shieldDirection: 1
+  impactWE: 
+  character: {fileID: 0}
+  onShield:
+    m_PersistentCalls:
+      m_Calls: []
+  onImpact:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -24011,3 +23569,5 @@ SceneRoots:
   - {fileID: 1309203796}
   - {fileID: 1467045436}
   - {fileID: 814065383}
+  - {fileID: 1113993172}
+  - {fileID: 1338813367}

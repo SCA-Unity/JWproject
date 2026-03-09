@@ -12,7 +12,7 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
-        // FlareEngine Player ½Ã½ºÅÛ°ú ¿ì¼± ¿¬µ¿
+        // FlareEngine Player ï¿½Ã½ï¿½ï¿½Û°ï¿½ ï¿½ì¼± ï¿½ï¿½ï¿½ï¿½
         Transform mainPlayer = Player.PlayerTransform();
         if (mainPlayer != null)
         {
@@ -20,7 +20,7 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            // ¿¹Àü ¹æ½Ä(ÅÂ±×)µµ ¹é¾÷¿ëÀ¸·Î À¯Áö
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½(ï¿½Â±ï¿½)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
             if (playerObj != null)
                 player = playerObj.transform;
@@ -33,7 +33,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (player == null)
         {
-            // ÇÃ·¹ÀÌ¾î°¡ »ç¶óÁ³°Å³ª ¾ÆÁ÷ ÃÊ±âÈ­ ¾È µÇ¾úÀ» ¶§´Â ´Ù½Ã ½Ãµµ
+            // ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­ ï¿½ï¿½ ï¿½Ç¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½Ãµï¿½
             Transform mainPlayer = Player.PlayerTransform();
             if (mainPlayer != null)
                 player = mainPlayer;
