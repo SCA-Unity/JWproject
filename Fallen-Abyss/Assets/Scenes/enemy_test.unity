@@ -160,7 +160,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5881420209112145141, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
   m_PrefabInstance: {fileID: 1274461555}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1274461556}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a95127ac67a976649aaa7fc47b2dde44, type: 3}
@@ -20527,6 +20527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_v3
       objectReference: {fileID: 0}
+    - target: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6902215293381504703, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 55.04
@@ -20570,8 +20574,98 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1274461557}
   m_SourcePrefab: {fileID: 100100000, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+--- !u!1 &1274461556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+  m_PrefabInstance: {fileID: 1274461555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1274461557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274461556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc5a25c181809f4493d523a8a014665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHealth: 0
+  initialized: 0
+  variableName: name
+  currentValue: 10
+  minValue: 0
+  maxValue: 100
+  save: 0
+  broadcastValue: 0
+  isScriptableObject: 0
+  saveManually: 0
+  soReference: {fileID: 0}
+  characterDirectionX: 1
+  callDamageEffect: 0
+  positionOffset: 1
+  worldEffect: 
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onMinValue:
+    m_PersistentCalls:
+      m_Calls: []
+  onMaxValue:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueIncreased:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueDecreased:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadConditionTrue:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadConditionFalse:
+    m_PersistentCalls:
+      m_Calls: []
+  onSceneStart:
+    m_PersistentCalls:
+      m_Calls: []
+  saveFloat:
+    value: 0
+  foldOut: 0
+  eventFoldOut: 0
+  minFoldOut: 0
+  maxFoldOut: 0
+  changedFoldOut: 0
+  increasedFoldOut: 0
+  decreasedFoldOut: 0
+  changedGOFoldOut: 0
+  shieldFoldOut: 0
+  impactFoldOut: 0
+  damageFoldOut: 0
+  damageEffectFoldOut: 0
+  loadFoldOutTrue: 0
+  loadFoldOutFalse: 0
+  sceneStartFoldOut: 0
+  createSO: 0
+  recoveryTime: 0.1
+  counter: 0
+  hasShield: 0
+  readImpactOnly: 0
+  shieldDirection: 1
+  impactWE: 
+  character: {fileID: 0}
+  onShield:
+    m_PersistentCalls:
+      m_Calls: []
+  onImpact:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1283025423
 GameObject:
   m_ObjectHideFlags: 0
