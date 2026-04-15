@@ -22,6 +22,7 @@ namespace TwoBitMachines.FlareEngine.AI
 
                 [System.NonSerialized] private ContactFilter2D filter = new ContactFilter2D();
                 [System.NonSerialized] private List<Collider2D> list = new List<Collider2D>();
+                [System.NonSerialized] private HashSet<Transform> uniqueTargets = new HashSet<Transform>();
                 [System.NonSerialized] private bool success = false;
 
                 public override NodeState RunNodeLogic (Root root)
@@ -53,18 +54,40 @@ namespace TwoBitMachines.FlareEngine.AI
                         root.signals.Set("meleeCombo", true);
                         root.signals.Set(animationSignal, true);
 
+                        uniqueTargets.Clear();
                         int size = colliderRef.OverlapCollider(filter, list);
                         for (int i = 0; i < size; i++)
                         {
-                                if (list[i].transform == this.transform)
+                                Transform target = ResolveDamageTarget(list[i].transform);
+                                if (target == null || target == this.transform || !uniqueTargets.Add(target))
                                         continue;
+
                                 float direction = colliderRef.transform.position.x < list[i].transform.position.x ? 1f : -1f;
                                 Vector2 newForceDirection = new Vector2(forceDirection.x * direction, forceDirection.y);
-                                Health.IncrementHealth(transform, list[i].transform, -damage, newForceDirection);
+                                Health.IncrementHealth(transform, target, -damage, newForceDirection);
                         }
 
                         FlipCollider(root.direction, colliderRef.transform);
                         return success ? NodeState.Success : NodeState.Running;
+                }
+
+
+                private Transform ResolveDamageTarget (Transform hitTransform)
+                {
+                        if (hitTransform == null)
+                                return null;
+
+                        if (Health.IsDamageable(hitTransform))
+                                return hitTransform;
+
+                        Transform current = hitTransform.parent;
+                        while (current != null)
+                        {
+                                if (Health.IsDamageable(current))
+                                        return current;
+                                current = current.parent;
+                        }
+                        return null;
                 }
 
                 public void FlipCollider (float direction, Transform transform)
