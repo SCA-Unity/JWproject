@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 6938181492727002293}
   - component: {fileID: 3640385466987041003}
   - component: {fileID: 5176959388356435568}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 4796859970918024187}
   - component: {fileID: 5031186500222903078}
   - component: {fileID: 8948247300682450983}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Vfx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1281,7 +1281,7 @@ MonoBehaviour:
     combo:
     - velX: 0
       velY: 0
-      damage: 0
+      damage: 1
       earlyTime: 0
       earlyNext: 0
       isLocked: 0
@@ -1316,7 +1316,7 @@ MonoBehaviour:
       optionsFoldOut: 1
     - velX: 0
       velY: 0
-      damage: 0
+      damage: 1
       earlyTime: 0
       earlyNext: 0
       isLocked: 0
@@ -1351,7 +1351,7 @@ MonoBehaviour:
       optionsFoldOut: 1
     - velX: 0
       velY: 0
-      damage: 0
+      damage: 1
       earlyTime: 0
       earlyNext: 0
       isLocked: 0
@@ -1443,6 +1443,7 @@ GameObject:
   - component: {fileID: 9122553252467310993}
   - component: {fileID: 716653733200294158}
   - component: {fileID: 3333333333333333333}
+  - component: {fileID: 5469403325563063616}
   m_Layer: 9
   m_Name: Player_v3
   m_TagString: Player
@@ -1610,7 +1611,7 @@ MonoBehaviour:
   abilities:
     walk:
       walk: 1
-      speed: 6
+      speed: 8
       smooth: 1
       impedeChange: 0
       runType: 0
@@ -1657,7 +1658,7 @@ MonoBehaviour:
       onCoolDownFoldOut: 0
       useRightOnly: 0
       useLeftOnly: 0
-      foldOut: 1
+      foldOut: 0
       eventFoldOut: 1
       groundFoldOut: 1
       notGroundFoldOut: 1
@@ -1820,7 +1821,7 @@ MonoBehaviour:
     stateFoldOut: 1
     signalFoldOut: 1
     signalIndex: 0
-    scrollIndex: 85
+    scrollIndex: 45
     signalRef:
       all:
       - name: airGlide
@@ -2479,7 +2480,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6147014072521976915}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0d68b03635dcb44ebc90263e80962c3, type: 3}
   m_Name: 
@@ -2492,7 +2493,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6147014072521976915}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5fa2f79168b6d841a7bc2b2cf90ca84, type: 3}
   m_Name: 
@@ -2506,7 +2507,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6147014072521976915}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb693dcc98d6e144d94b23bbd922422e, type: 3}
   m_Name: 
@@ -2631,7 +2632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5383d1075e7d23a4ca9946690d39d22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 5881420209112145141}
   blockKey: 106
   blockDuration: 0.5
   lockInputsDuringBlock: 1
@@ -2689,6 +2690,88 @@ MonoBehaviour:
       m_Calls: []
   saveFloat:
     value: 0
+  foldOut: 1
+  eventFoldOut: 0
+  minFoldOut: 0
+  maxFoldOut: 0
+  changedFoldOut: 0
+  increasedFoldOut: 0
+  decreasedFoldOut: 0
+  changedGOFoldOut: 0
+  shieldFoldOut: 0
+  impactFoldOut: 0
+  damageFoldOut: 0
+  damageEffectFoldOut: 0
+  loadFoldOutTrue: 0
+  loadFoldOutFalse: 0
+  sceneStartFoldOut: 0
+  createSO: 0
+  recoveryTime: 0.4
+  counter: 0
+  hasShield: 0
+  readImpactOnly: 0
+  shieldDirection: 1
+  impactWE: 
+  character: {fileID: 0}
+  onShield:
+    m_PersistentCalls:
+      m_Calls: []
+  onImpact:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5469403325563063616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc5a25c181809f4493d523a8a014665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHealth: 0
+  initialized: 0
+  variableName: name
+  currentValue: 10
+  minValue: 0
+  maxValue: 100
+  save: 0
+  broadcastValue: 0
+  isScriptableObject: 0
+  saveManually: 0
+  soReference: {fileID: 0}
+  characterDirectionX: 1
+  callDamageEffect: 0
+  positionOffset: 1
+  worldEffect: 
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onMinValue:
+    m_PersistentCalls:
+      m_Calls: []
+  onMaxValue:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueIncreased:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueDecreased:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadConditionTrue:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadConditionFalse:
+    m_PersistentCalls:
+      m_Calls: []
+  onSceneStart:
+    m_PersistentCalls:
+      m_Calls: []
+  saveFloat:
+    value: 0
   foldOut: 0
   eventFoldOut: 0
   minFoldOut: 0
@@ -2705,7 +2788,7 @@ MonoBehaviour:
   loadFoldOutFalse: 0
   sceneStartFoldOut: 0
   createSO: 0
-  recoveryTime: 0.25
+  recoveryTime: 0.1
   counter: 0
   hasShield: 0
   readImpactOnly: 0
