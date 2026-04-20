@@ -32,7 +32,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 990625340707798196}
   m_Father: {fileID: 6902215293381504703}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &211568628806012741
@@ -1441,6 +1442,8 @@ GameObject:
   - component: {fileID: 4591407161908096344}
   - component: {fileID: 9122553252467310993}
   - component: {fileID: 716653733200294158}
+  - component: {fileID: 4444444444444444444}
+  - component: {fileID: 3333333333333333333}
   m_Layer: 9
   m_Name: Player_v3
   m_TagString: Player
@@ -1461,7 +1464,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 990625340707798196}
   - {fileID: 2868839854395337365}
   - {fileID: 5391726412740783077}
   - {fileID: 3297878060200573951}
@@ -1725,6 +1727,22 @@ MonoBehaviour:
       signalIndex: 0
     branch:
     - nodes: []
+      sprite: Death
+      signal: death
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
+    - nodes: []
+      sprite: Hurt
+      signal: hurt
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
+    - nodes: []
       sprite: Block
       signal: block
       add: 0
@@ -1804,6 +1822,8 @@ MonoBehaviour:
     - velXLeft
     - alwaysTrue
     - roll
+    - hurt
+    - death
     - block
     - attack
     - specialAttack
@@ -2635,6 +2655,130 @@ MonoBehaviour:
   blockDuration: 0.5
   lockInputsDuringBlock: 1
   forceStopXDuringBlock: 1
+--- !u!114 &4444444444444444444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e9f9f1d4cb142e6b9d22022f7ab6fcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  hurtSignal: hurt
+  deathSignal: death
+  hurtDuration: 0.2
+--- !u!114 &3333333333333333333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147014072521976915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc5a25c181809f4493d523a8a014665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHealth: 0
+  initialized: 0
+  variableName: PlayerHealth
+  currentValue: 3
+  minValue: 0
+  maxValue: 3
+  save: 0
+  broadcastValue: 0
+  isScriptableObject: 1
+  saveManually: 0
+  soReference: {fileID: 11400000, guid: 5e5077cf102b1874d95d20954093e240, type: 2}
+  characterDirectionX: 1
+  callDamageEffect: 0
+  positionOffset: 1
+  worldEffect: 
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4444444444444444444}
+        m_TargetAssemblyTypeName: TwoBitMachines.FlareEngine.PlayerDamageAnimationSignal,
+          Assembly-CSharp
+        m_MethodName: OnDamaged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMinValue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4444444444444444444}
+        m_TargetAssemblyTypeName: TwoBitMachines.FlareEngine.PlayerDamageAnimationSignal,
+          Assembly-CSharp
+        m_MethodName: OnDeath
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMaxValue:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueIncreased:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueDecreased:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadConditionTrue:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadConditionFalse:
+    m_PersistentCalls:
+      m_Calls: []
+  onSceneStart:
+    m_PersistentCalls:
+      m_Calls: []
+  saveFloat:
+    value: 0
+  foldOut: 0
+  eventFoldOut: 0
+  minFoldOut: 0
+  maxFoldOut: 0
+  changedFoldOut: 0
+  increasedFoldOut: 0
+  decreasedFoldOut: 0
+  changedGOFoldOut: 0
+  shieldFoldOut: 0
+  impactFoldOut: 0
+  damageFoldOut: 0
+  damageEffectFoldOut: 0
+  loadFoldOutTrue: 0
+  loadFoldOutFalse: 0
+  sceneStartFoldOut: 0
+  createSO: 0
+  recoveryTime: 0.25
+  counter: 0
+  hasShield: 0
+  readImpactOnly: 0
+  shieldDirection: 1
+  impactWE: 
+  character: {fileID: 0}
+  onShield:
+    m_PersistentCalls:
+      m_Calls: []
+  onImpact:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7421906572565296983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2692,11 +2836,11 @@ Transform:
   m_GameObject: {fileID: 8155799299834673593}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6902215293381504703}
+  m_Father: {fileID: 2868839854395337365}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &4217268661699793624
 CircleCollider2D:
