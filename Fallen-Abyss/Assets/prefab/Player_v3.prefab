@@ -1281,7 +1281,7 @@ MonoBehaviour:
     combo:
     - velX: 0
       velY: 0
-      damage: 0
+      damage: 1
       earlyTime: 0
       earlyNext: 0
       isLocked: 0
@@ -1316,7 +1316,7 @@ MonoBehaviour:
       optionsFoldOut: 1
     - velX: 0
       velY: 0
-      damage: 0
+      damage: 1
       earlyTime: 0
       earlyNext: 0
       isLocked: 0
@@ -1351,7 +1351,7 @@ MonoBehaviour:
       optionsFoldOut: 1
     - velX: 0
       velY: 0
-      damage: 0
+      damage: 1
       earlyTime: 0
       earlyNext: 0
       isLocked: 0
@@ -1727,14 +1727,6 @@ MonoBehaviour:
       signalIndex: 0
     branch:
     - nodes: []
-      sprite: Death
-      signal: death
-      add: 0
-      active: 0
-      delete: 0
-      foldOut: 1
-      signalIndex: 0
-    - nodes: []
       sprite: Hurt
       signal: hurt
       add: 0
@@ -1803,7 +1795,7 @@ MonoBehaviour:
       signal: velX
       add: 0
       active: 0
-      delete: 0
+      delete: 1
       foldOut: 1
       signalIndex: 0
     - nodes: []
@@ -1831,15 +1823,14 @@ MonoBehaviour:
     - dashX
     - dashing
     - attack1
-    - attack2
-    - attack3
+    - hurt
     search: 
     active: 0
     createState: 0
     stateFoldOut: 1
     signalFoldOut: 1
     signalIndex: 0
-    scrollIndex: 85
+    scrollIndex: 86
     signalRef:
       all:
       - name: airGlide
@@ -2132,6 +2123,9 @@ MonoBehaviour:
         use: 1
         canDelete: 1
       - name: attack3
+        use: 1
+        canDelete: 1
+      - name: hurt
         use: 1
         canDelete: 1
       foldOutVelocity: 0
@@ -2667,9 +2661,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9f9f1d4cb142e6b9d22022f7ab6fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 5881420209112145141}
   hurtSignal: hurt
   deathSignal: death
+  hurtStartDelay: 0.2
   hurtDuration: 0.2
 --- !u!114 &3333333333333333333
 MonoBehaviour:
@@ -2686,9 +2681,9 @@ MonoBehaviour:
   isHealth: 0
   initialized: 0
   variableName: PlayerHealth
-  currentValue: 3
+  currentValue: 10
   minValue: 0
-  maxValue: 3
+  maxValue: 10
   save: 0
   broadcastValue: 0
   isScriptableObject: 1
@@ -2750,13 +2745,13 @@ MonoBehaviour:
       m_Calls: []
   saveFloat:
     value: 0
-  foldOut: 0
-  eventFoldOut: 0
+  foldOut: 1
+  eventFoldOut: 1
   minFoldOut: 0
   maxFoldOut: 0
   changedFoldOut: 0
   increasedFoldOut: 0
-  decreasedFoldOut: 0
+  decreasedFoldOut: 1
   changedGOFoldOut: 0
   shieldFoldOut: 0
   impactFoldOut: 0
@@ -2766,7 +2761,7 @@ MonoBehaviour:
   loadFoldOutFalse: 0
   sceneStartFoldOut: 0
   createSO: 0
-  recoveryTime: 0.25
+  recoveryTime: 1
   counter: 0
   hasShield: 0
   readImpactOnly: 0
