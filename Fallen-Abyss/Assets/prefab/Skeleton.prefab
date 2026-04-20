@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 1053733334371456381}
   - component: {fileID: 7013660054940952263}
   - component: {fileID: 7188591976360008680}
+  - component: {fileID: 264362100161753820}
   m_Layer: 8
   m_Name: Skeleton
   m_TagString: Untagged
@@ -634,7 +635,7 @@ MonoBehaviour:
   propertyIndex: 0
   rendererSprite: {fileID: 0}
   settingRenderer: 0
-  spriteIndex: 4
+  spriteIndex: 1
   scrollIndex: 0
   sprites:
   - property: []
@@ -1336,7 +1337,7 @@ MonoBehaviour:
     menu: 1
     signalIndex: 0
   - action:
-    - node: {fileID: 7188591976360008680}
+    - node: {fileID: 264362100161753820}
       onSuccess: Patrol
       onFailure: Patrol
       goToSuccess: 0
@@ -1991,6 +1992,80 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   material: {fileID: 2100000, guid: 950df9dcbc53ccd43999d87310eb9d6d, type: 2}
 --- !u!114 &7188591976360008680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2595189223940278870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d84b4b0e2acb34596f0dd2b39c1225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: Clock
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  type: 0
+  wait: 3
+  min: 2
+  max: 5
+  dontReset: 0
+  waitAnimation: Die
+  onBeginClock:
+    m_PersistentCalls:
+      m_Calls: []
+  onFinishClock:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2595189223940278870}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  eventsFoldOut: 1
+  beginFoldOut: 0
+  finishFoldOut: 1
+--- !u!114 &264362100161753820
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
