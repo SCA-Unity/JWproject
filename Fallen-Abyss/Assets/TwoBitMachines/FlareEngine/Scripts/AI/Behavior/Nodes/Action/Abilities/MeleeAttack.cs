@@ -35,7 +35,7 @@ namespace TwoBitMachines.FlareEngine.AI
                         {
                                 success = false;
                                 filter.useLayerMask = true;
-                                filter.useTriggers = true;
+                                filter.useTriggers = false; // include normal hurtbox colliders; trigger-only filtering can miss body colliders
                                 filter.layerMask = layer;
                                 if (enableCollider == MeleeCollider.EnableOnStart)
                                 {
