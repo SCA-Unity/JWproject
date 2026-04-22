@@ -34288,7 +34288,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1151341349007832765, guid: b2fd2b5612269b743bb4ef77befa474d, type: 3}
       propertyPath: sprites.Array.data[1].frameIndex
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1151341349007832765, guid: b2fd2b5612269b743bb4ef77befa474d, type: 3}
       propertyPath: sprites.Array.data[1].frame.Array.data[4].eventFoldOut

@@ -1727,6 +1727,14 @@ MonoBehaviour:
       signalIndex: 0
     branch:
     - nodes: []
+      sprite: Death
+      signal: death
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
+    - nodes: []
       sprite: Hurt
       signal: hurt
       add: 0
@@ -2262,7 +2270,7 @@ MonoBehaviour:
     frameIndex: 0
     signalIndex: 0
     active: 0
-    foldOut: 1
+    foldOut: 0
     addTransition: 0
     deleteTransition: 0
     transitionFoldOut: 0
@@ -2327,6 +2335,21 @@ MonoBehaviour:
     deleteTransition: 0
     transitionFoldOut: 0
   - name: SpecialAttack
+    hasTransition: 0
+    hasChangedDirection: 0
+    transition: []
+    randomAnimations: []
+    isRandom: 0
+    canSync: 0
+    syncID: 0
+    frameIndex: 0
+    signalIndex: 0
+    active: 0
+    foldOut: 0
+    addTransition: 0
+    deleteTransition: 0
+    transitionFoldOut: 0
+  - name: Death
     hasTransition: 0
     hasChangedDirection: 0
     transition: []
@@ -2656,7 +2679,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6147014072521976915}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e9f9f1d4cb142e6b9d22022f7ab6fcd, type: 3}
   m_Name: 
@@ -2712,17 +2735,16 @@ MonoBehaviour:
   onMinValue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4444444444444444444}
-        m_TargetAssemblyTypeName: TwoBitMachines.FlareEngine.PlayerDamageAnimationSignal,
-          Assembly-CSharp
-        m_MethodName: OnDeath
-        m_Mode: 0
+      - m_Target: {fileID: 1817237210846444443}
+        m_TargetAssemblyTypeName: TwoBitMachines.TwoBitSprite.SpriteEngineBase, Assembly-CSharp
+        m_MethodName: SetSignal
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: death
           m_BoolArgument: 0
         m_CallState: 2
   onMaxValue:
@@ -2747,10 +2769,10 @@ MonoBehaviour:
     value: 0
   foldOut: 1
   eventFoldOut: 1
-  minFoldOut: 0
+  minFoldOut: 1
   maxFoldOut: 0
   changedFoldOut: 0
-  increasedFoldOut: 0
+  increasedFoldOut: 1
   decreasedFoldOut: 1
   changedGOFoldOut: 0
   shieldFoldOut: 0
