@@ -11,11 +11,7 @@ namespace TwoBitMachines.FlareEngine
         public Player player;
 
         [Header("Signals")]
-        public string hurtSignal = "hurt";
         public string deathSignal = "death";
-
-        [Header("Hurt")]
-        [Min(0f)] public float hurtDuration = 0.2f;
 
         [Header("Death Sequence (PlayerDeath-style)")]
         [Min(0f)] public float deathTime = 3f;
@@ -27,7 +23,6 @@ namespace TwoBitMachines.FlareEngine
         public UnityEvent onDeathBegin;
         public UnityEvent onDeathTransitionBegin;
 
-        private float hurtUntil;
         private float deathCounter;
         private bool deadSequence;
         private bool inTransition;
@@ -60,16 +55,7 @@ namespace TwoBitMachines.FlareEngine
             if (deadSequence)
             {
                 player.signals.Set(deathSignal, true);
-                player.signals.Set(hurtSignal, false);
                 RunDeathSequence();
-            }
-            else if (Time.time < hurtUntil)
-            {
-                player.signals.Set(hurtSignal, true);
-            }
-            else
-            {
-                player.signals.Set(hurtSignal, false);
             }
         }
 
@@ -79,9 +65,6 @@ namespace TwoBitMachines.FlareEngine
             {
                 return;
             }
-
-            hurtUntil = Time.time + hurtDuration;
-            player.signals.Set(hurtSignal, true);
         }
 
         public void OnDeath(ImpactPacket impact)
@@ -105,7 +88,6 @@ namespace TwoBitMachines.FlareEngine
             }
 
             player.signals.Set(deathSignal, true);
-            player.signals.Set(hurtSignal, false);
             onDeathBegin?.Invoke();
         }
 
