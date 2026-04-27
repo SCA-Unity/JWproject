@@ -13898,6 +13898,142 @@ PrefabInstance:
       propertyPath: defaultProjectile.projectile
       value: 
       objectReference: {fileID: 814065384}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.foldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: shake.foldOut
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: follow.foldOut
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: parallax.foldOut
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: worldClamp.foldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: worldClamp.bounds.size.x
+      value: 184.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: worldClamp.bounds.position.y
+      value: -19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[1].open
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[2].open
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[0].select
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[1].select
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[2].select
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[1].clampTop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[1].clampRight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[2].clampRight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[0].bounds.size.x
+      value: 60.350002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[1].bounds.size.x
+      value: 137.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[1].bounds.size.y
+      value: 30.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[1].eventsFoldOut
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[2].bounds.size.x
+      value: 137.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[2].bounds.size.y
+      value: 30.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[3].bounds.size.x
+      value: 137.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[3].bounds.size.y
+      value: 30.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[0].bounds.position.x
+      value: 18.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[0].bounds.position.y
+      value: -16.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[1].bounds.position.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[1].bounds.position.y
+      value: -17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[2].bounds.position.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[2].bounds.position.y
+      value: -17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[3].bounds.position.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[3].bounds.position.y
+      value: -17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[3].multipleTargets.foldOut
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: rooms.rooms.Array.data[1].onEnter.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: m_Name
       value: Player_v3
