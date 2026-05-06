@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 6938181492727002293}
   - component: {fileID: 3640385466987041003}
   - component: {fileID: 5176959388356435568}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 4796859970918024187}
   - component: {fileID: 5031186500222903078}
   - component: {fileID: 8948247300682450983}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Vfx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1611,7 +1611,7 @@ MonoBehaviour:
   abilities:
     walk:
       walk: 1
-      speed: 6
+      speed: 8
       smooth: 1
       impedeChange: 0
       runType: 0
@@ -1658,7 +1658,7 @@ MonoBehaviour:
       onCoolDownFoldOut: 0
       useRightOnly: 0
       useLeftOnly: 0
-      foldOut: 1
+      foldOut: 0
       eventFoldOut: 1
       groundFoldOut: 1
       notGroundFoldOut: 1
@@ -1803,7 +1803,7 @@ MonoBehaviour:
       signal: velX
       add: 0
       active: 0
-      delete: 1
+      delete: 0
       foldOut: 1
       signalIndex: 0
     - nodes: []
@@ -1831,14 +1831,15 @@ MonoBehaviour:
     - dashX
     - dashing
     - attack1
-    - hurt
+    - attack2
+    - attack3
     search: 
     active: 0
     createState: 0
     stateFoldOut: 1
     signalFoldOut: 1
     signalIndex: 0
-    scrollIndex: 86
+    scrollIndex: 5
     signalRef:
       all:
       - name: airGlide
@@ -2133,9 +2134,6 @@ MonoBehaviour:
       - name: attack3
         use: 1
         canDelete: 1
-      - name: hurt
-        use: 1
-        canDelete: 1
       foldOutVelocity: 0
       foldOutWall: 0
       foldOutWorld: 0
@@ -2270,7 +2268,7 @@ MonoBehaviour:
     frameIndex: 0
     signalIndex: 0
     active: 0
-    foldOut: 0
+    foldOut: 1
     addTransition: 0
     deleteTransition: 0
     transitionFoldOut: 0
@@ -2335,21 +2333,6 @@ MonoBehaviour:
     deleteTransition: 0
     transitionFoldOut: 0
   - name: SpecialAttack
-    hasTransition: 0
-    hasChangedDirection: 0
-    transition: []
-    randomAnimations: []
-    isRandom: 0
-    canSync: 0
-    syncID: 0
-    frameIndex: 0
-    signalIndex: 0
-    active: 0
-    foldOut: 0
-    addTransition: 0
-    deleteTransition: 0
-    transitionFoldOut: 0
-  - name: Death
     hasTransition: 0
     hasChangedDirection: 0
     transition: []
@@ -2515,7 +2498,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6147014072521976915}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0d68b03635dcb44ebc90263e80962c3, type: 3}
   m_Name: 
@@ -2528,7 +2511,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6147014072521976915}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5fa2f79168b6d841a7bc2b2cf90ca84, type: 3}
   m_Name: 
@@ -2542,7 +2525,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6147014072521976915}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb693dcc98d6e144d94b23bbd922422e, type: 3}
   m_Name: 
@@ -2667,7 +2650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5383d1075e7d23a4ca9946690d39d22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 5881420209112145141}
   blockKey: 106
   blockDuration: 0.5
   lockInputsDuringBlock: 1
@@ -2679,16 +2662,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6147014072521976915}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e9f9f1d4cb142e6b9d22022f7ab6fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5881420209112145141}
+  player: {fileID: 0}
   hurtSignal: hurt
   deathSignal: death
-  hurtStartDelay: 0.2
   hurtDuration: 0.2
+  deathTime: 3
+  transitionTime: 0.9
+  disableColliderOnDeath: 1
+  blockInputOnDeath: 1
+  resetHealthOnTransition: 1
+  resetHealthValue: 3
+  onDeathBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeathTransitionBegin:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3333333333333333333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2704,9 +2698,9 @@ MonoBehaviour:
   isHealth: 0
   initialized: 0
   variableName: PlayerHealth
-  currentValue: 10
+  currentValue: 3
   minValue: 0
-  maxValue: 10
+  maxValue: 3
   save: 0
   broadcastValue: 0
   isScriptableObject: 1
@@ -2735,16 +2729,17 @@ MonoBehaviour:
   onMinValue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1817237210846444443}
-        m_TargetAssemblyTypeName: TwoBitMachines.TwoBitSprite.SpriteEngineBase, Assembly-CSharp
-        m_MethodName: SetSignal
-        m_Mode: 5
+      - m_Target: {fileID: 4444444444444444444}
+        m_TargetAssemblyTypeName: TwoBitMachines.FlareEngine.PlayerDamageAnimationSignal,
+          Assembly-CSharp
+        m_MethodName: OnDeath
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: death
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   onMaxValue:
@@ -2768,12 +2763,12 @@ MonoBehaviour:
   saveFloat:
     value: 0
   foldOut: 1
-  eventFoldOut: 1
-  minFoldOut: 1
+  eventFoldOut: 0
+  minFoldOut: 0
   maxFoldOut: 0
   changedFoldOut: 0
-  increasedFoldOut: 1
-  decreasedFoldOut: 1
+  increasedFoldOut: 0
+  decreasedFoldOut: 0
   changedGOFoldOut: 0
   shieldFoldOut: 0
   impactFoldOut: 0
@@ -2783,7 +2778,7 @@ MonoBehaviour:
   loadFoldOutFalse: 0
   sceneStartFoldOut: 0
   createSO: 0
-  recoveryTime: 1
+  recoveryTime: 0.25
   counter: 0
   hasShield: 0
   readImpactOnly: 0

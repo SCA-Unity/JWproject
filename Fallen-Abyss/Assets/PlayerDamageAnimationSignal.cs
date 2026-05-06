@@ -1,5 +1,6 @@
 using UnityEngine;
 using TwoBitMachines.FlareEngine.ThePlayer;
+using UnityEngine.Events;
 
 namespace TwoBitMachines.FlareEngine
 {
@@ -12,20 +13,38 @@ namespace TwoBitMachines.FlareEngine
         [Header("Signals")]
         public string hurtSignal = "hurt";
         public string deathSignal = "death";
+        [Min(0f)] public float hurtDuration = 0.2f;
 
-        [Header("Timing")]
-        [Min(0f)] public float hurtStartDelay = 0.1f; // 피격 후 hurt 시작 지연시간
-        [Min(0f)] public float hurtDuration = 0.2f;   // hurt 유지 시간
+        [Header("Death Sequence (PlayerDeath-style)")]
+        [Min(0f)] public float deathTime = 3f;
+        [Min(0f)] public float transitionTime = 0.9f;
+        public bool disableColliderOnDeath = true;
+        public bool blockInputOnDeath = true;
+        public bool resetHealthOnTransition = true;
+        public float resetHealthValue = 3f;
+        public UnityEvent onDeathBegin;
+        public UnityEvent onDeathTransitionBegin;
 
-        private float hurtStartAt;
+        private float deathCounter;
         private float hurtUntil;
-        private bool dead;
+        private bool deadSequence;
+        private bool inTransition;
+        private BoxCollider2D cachedCollider;
+        private Health health;
 
         private void Awake()
         {
             if (player == null)
             {
                 player = GetComponent<Player>();
+            }
+            if (cachedCollider == null)
+            {
+                cachedCollider = GetComponent<BoxCollider2D>();
+            }
+            if (health == null)
+            {
+                health = GetComponent<Health>();
             }
         }
 
@@ -36,51 +55,99 @@ namespace TwoBitMachines.FlareEngine
                 return;
             }
 
-            if (dead)
+            if (deadSequence)
             {
                 player.signals.Set(deathSignal, true);
-                player.signals.Set(hurtSignal, false);
-                return;
+                RunDeathSequence();
             }
 
-            float now = Time.time;
-            bool inHurtWindow = now >= hurtStartAt && now < hurtUntil;
-            player.signals.Set(hurtSignal, inHurtWindow);
+            if (hurtUntil > Time.time)
+            {
+                player.signals.Set(hurtSignal, true);
+            }
         }
 
         public void OnDamaged(ImpactPacket impact)
         {
-            if (dead || player == null || impact.damageValue >= 0)
+            if (deadSequence || player == null || impact.damageValue >= 0)
             {
                 return;
             }
 
-            float startTime = Time.time + hurtStartDelay;
-            float endTime = startTime + hurtDuration;
-
-            // 연속 피격 시 hurt 창을 자연스럽게 연장
-            if (startTime > hurtStartAt)
-            {
-                hurtStartAt = startTime;
-            }
-            if (endTime > hurtUntil)
-            {
-                hurtUntil = endTime;
-            }
+            hurtUntil = Time.time + hurtDuration;
         }
 
         public void OnDeath(ImpactPacket impact)
         {
-            if (player == null)
+            if (player == null || deadSequence)
             {
                 return;
             }
 
-            dead = true;
-            hurtStartAt = 0f;
-            hurtUntil = 0f;
+            deathCounter = 0f;
+            inTransition = false;
+            deadSequence = true;
+
+            if (blockInputOnDeath)
+            {
+                player.BlockInput(true);
+            }
+            if (disableColliderOnDeath && cachedCollider != null)
+            {
+                cachedCollider.enabled = false;
+            }
+
             player.signals.Set(deathSignal, true);
-            player.signals.Set(hurtSignal, false);
+            onDeathBegin?.Invoke();
+        }
+
+        private void RunDeathSequence()
+        {
+            deathCounter += Time.deltaTime;
+
+            if (!inTransition)
+            {
+                if (deathCounter < deathTime)
+                {
+                    return;
+                }
+
+                if (transitionTime <= 0f)
+                {
+                    FinishDeathSequence();
+                    return;
+                }
+
+                inTransition = true;
+                deathCounter = 0f;
+                onDeathTransitionBegin?.Invoke();
+                return;
+            }
+
+            if (deathCounter >= transitionTime)
+            {
+                FinishDeathSequence();
+            }
+        }
+
+        private void FinishDeathSequence()
+        {
+            deadSequence = false;
+            inTransition = false;
+            deathCounter = 0f;
+
+            if (blockInputOnDeath)
+            {
+                player.BlockInput(false);
+            }
+            if (disableColliderOnDeath && cachedCollider != null)
+            {
+                cachedCollider.enabled = true;
+            }
+            if (resetHealthOnTransition && health != null)
+            {
+                health.SetValue(resetHealthValue);
+            }
         }
     }
 }

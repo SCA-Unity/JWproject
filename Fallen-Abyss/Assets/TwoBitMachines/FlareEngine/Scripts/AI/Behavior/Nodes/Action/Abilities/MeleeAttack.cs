@@ -16,6 +16,7 @@ namespace TwoBitMachines.FlareEngine.AI
                 [SerializeField] public LayerMask layer;
                 [SerializeField] public string animationSignal;
                 [SerializeField] public float damage = 1f;
+                [SerializeField] public bool dealDamageContinuously = true;
                 [SerializeField] public MeleeCollider enableCollider;
                 [SerializeField] public Vector2 forceDirection = Vector2.right;
                 [SerializeField] public Vector2 velocity;
@@ -34,9 +35,7 @@ namespace TwoBitMachines.FlareEngine.AI
                         if (nodeSetup == NodeSetup.NeedToInitialize)
                         {
                                 success = false;
-                                filter.useLayerMask = true;
-                                filter.useTriggers = false; // include normal hurtbox colliders; trigger-only filtering can miss body colliders
-                                filter.layerMask = layer;
+                                ConfigureFilter();
                                 if (enableCollider == MeleeCollider.EnableOnStart)
                                 {
                                         colliderRef.enabled = true;
@@ -54,6 +53,21 @@ namespace TwoBitMachines.FlareEngine.AI
                         root.signals.Set("meleeCombo", true);
                         root.signals.Set(animationSignal, true);
 
+                        if (dealDamageContinuously)
+                        {
+                                DealDamageNow();
+                        }
+
+                        FlipCollider(root.direction, colliderRef.transform);
+                        return success ? NodeState.Success : NodeState.Running;
+                }
+
+                public void DealDamageNow ()
+                {
+                        if (colliderRef == null)
+                                return;
+
+                        ConfigureFilter();
                         uniqueTargets.Clear();
                         int size = colliderRef.OverlapCollider(filter, list);
                         for (int i = 0; i < size; i++)
@@ -66,9 +80,13 @@ namespace TwoBitMachines.FlareEngine.AI
                                 Vector2 newForceDirection = new Vector2(forceDirection.x * direction, forceDirection.y);
                                 Health.IncrementHealth(transform, target, -damage, newForceDirection);
                         }
+                }
 
-                        FlipCollider(root.direction, colliderRef.transform);
-                        return success ? NodeState.Success : NodeState.Running;
+                private void ConfigureFilter ()
+                {
+                        filter.useLayerMask = true;
+                        filter.useTriggers = false; // include normal hurtbox colliders; trigger-only filtering can miss body colliders
+                        filter.layerMask = layer;
                 }
 
 
@@ -116,16 +134,17 @@ namespace TwoBitMachines.FlareEngine.AI
                 {
                         if (parent.Bool("showInfo"))
                         {
-                                Labels.InfoBoxTop(120, "Perform a melee attack. If velocity is non zero, the y velocity will be treated as a jump force. CompleteAttack() must be called once the animation is complete, or the FSM will get stuck on this state. This method is available on the Melee Attack class. Signals: meleeCombo, customSignal" +
+                                        Labels.InfoBoxTop(120, "Perform a melee attack. If velocity is non zero, the y velocity will be treated as a jump force. CompleteAttack() must be called once the animation is complete, or the FSM will get stuck on this state. This method is available on the Melee Attack class. Signals: meleeCombo, customSignal" +
                                         "\n \nReturns Running, Success, Failure");
                         }
 
-                        FoldOut.Box(7, color, offsetY: -2);
+                        FoldOut.Box(8, color, offsetY: -2);
                         parent.Field("Collider2D", "colliderRef");
                         parent.Field("Collider Enable", "enableCollider");
                         parent.Field("Layer", "layer");
                         parent.Field("Animation Signal", "animationSignal");
                         parent.Field("Damage", "damage");
+                        parent.Field("Continuous Damage", "dealDamageContinuously");
                         parent.Field("Force", "forceDirection");
                         parent.Field("Velocity", "velocity");
                         Layout.VerticalSpacing(3);

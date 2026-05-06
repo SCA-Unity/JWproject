@@ -731,12 +731,25 @@ MonoBehaviour:
       eventFoldOut: 0
     - onEnterFrame:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: TwoBitMachines.TwoBitSprite.SpriteEngineUA,
+              Assembly-CSharp
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       sprite: {fileID: 21300000, guid: 2c5ce848148293b4ab8396450d89a900, type: 3}
       rate: 0.1
       add: 0
       delete: 0
-      eventFoldOut: 0
+      eventFoldOut: 1
     - onEnterFrame:
         m_PersistentCalls:
           m_Calls: []
@@ -744,15 +757,28 @@ MonoBehaviour:
       rate: 0.1
       add: 0
       delete: 0
-      eventFoldOut: 0
+      eventFoldOut: 1
     - onEnterFrame:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 905089532451776072}
+            m_TargetAssemblyTypeName: TwoBitMachines.FlareEngine.AI.MeleeAttack,
+              Assembly-CSharp
+            m_MethodName: DealDamageNow
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       sprite: {fileID: 21300000, guid: d93fc5888f2208c4381ec929c0bab03a, type: 3}
       rate: 0.1
       add: 0
       delete: 0
-      eventFoldOut: 0
+      eventFoldOut: 1
     - onEnterFrame:
         m_PersistentCalls:
           m_Calls:
@@ -790,7 +816,7 @@ MonoBehaviour:
     hasTransition: 0
     hasChangedDirection: 0
     active: 0
-    frameIndex: 0
+    frameIndex: 4
     signalIndex: 0
     globalRate: 0
     transitionFoldOut: 0
@@ -1492,9 +1518,9 @@ MonoBehaviour:
   loopSequence: 1
   resetOnComplete: 0
   point:
-  - {x: 61, y: -9}
-  - {x: 70.81, y: -9}
-  oldPosition: {x: 60.75, y: -9, z: 0}
+  - {x: -7, y: 2.5}
+  - {x: 2.8099976, y: 2.5}
+  oldPosition: {x: -7.25, y: 2.5, z: 0}
 --- !u!114 &882588649406625989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1828,6 +1854,7 @@ MonoBehaviour:
     m_Bits: 512
   animationSignal: attack1
   damage: 1
+  dealDamageContinuously: 0
   enableCollider: 0
   forceDirection: {x: 1, y: 0}
   velocity: {x: 0, y: 0}
