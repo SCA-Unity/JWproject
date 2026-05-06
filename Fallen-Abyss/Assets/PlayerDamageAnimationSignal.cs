@@ -11,7 +11,9 @@ namespace TwoBitMachines.FlareEngine
         public Player player;
 
         [Header("Signals")]
+        public string hurtSignal = "hurt";
         public string deathSignal = "death";
+        [Min(0f)] public float hurtDuration = 0.2f;
 
         [Header("Death Sequence (PlayerDeath-style)")]
         [Min(0f)] public float deathTime = 3f;
@@ -24,6 +26,7 @@ namespace TwoBitMachines.FlareEngine
         public UnityEvent onDeathTransitionBegin;
 
         private float deathCounter;
+        private float hurtUntil;
         private bool deadSequence;
         private bool inTransition;
         private BoxCollider2D cachedCollider;
@@ -57,6 +60,11 @@ namespace TwoBitMachines.FlareEngine
                 player.signals.Set(deathSignal, true);
                 RunDeathSequence();
             }
+
+            if (hurtUntil > Time.time)
+            {
+                player.signals.Set(hurtSignal, true);
+            }
         }
 
         public void OnDamaged(ImpactPacket impact)
@@ -65,6 +73,8 @@ namespace TwoBitMachines.FlareEngine
             {
                 return;
             }
+
+            hurtUntil = Time.time + hurtDuration;
         }
 
         public void OnDeath(ImpactPacket impact)
