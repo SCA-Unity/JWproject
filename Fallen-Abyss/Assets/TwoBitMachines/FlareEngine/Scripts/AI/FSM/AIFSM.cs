@@ -50,7 +50,17 @@ namespace TwoBitMachines.FlareEngine
 
         private void RunStates()
         {
-
+            if (currentState == null)
+            {
+                if (state.Count > 0 && state[0] != null)
+                {
+                    currentState = state[0];
+                }
+                else
+                {
+                    return;
+                }
+            }
             Vector2 position = transform.position;
 
             string nextState = null;
@@ -71,10 +81,18 @@ namespace TwoBitMachines.FlareEngine
 
             for (int i = 0; i < alwaysState.Count; i++)
             {
-                if (alwaysState[i].enabled)
+                AIState always = alwaysState[i];
+                if (always == null || !always.enabled)
                 {
-                    root.RunFSM(alwaysState[i], position, ref velocity, ref signals.characterDirection, out string none, false);
+                    continue;
                 }
+
+                if (always.action == null || always.action.Count == 0)
+                {
+                    continue;
+                }
+
+                root.RunFSM(always, position, ref velocity, ref signals.characterDirection, out string none, false);
             }
         }
 
@@ -83,18 +101,21 @@ namespace TwoBitMachines.FlareEngine
         {
             for (int i = 0; i < state.Count; i++)
             {
-                if (state[i].stateName == stateName)
+                AIState target = state[i];
+                if (target == null || target.stateName != stateName)
                 {
-                    if (currentState != null && currentState.stateName != stateName)
-                    {
-                        Debug.Log($"=======[AIFSM:{name}] {currentState.stateName} -> {stateName}");
-                        root.previousStateName = currentState.stateName;
-                    }
-                    currentState?.Reset();
-                    state[i].Reset();
-                    currentState = state[i];
-                    return;
+                    continue;
                 }
+
+                if (currentState != null && currentState.stateName != stateName)
+                {
+                    Debug.Log($"=======[AIFSM:{name}] {currentState.stateName} -> {stateName}");
+                    root.previousStateName = currentState.stateName;
+                }
+                currentState?.Reset();
+                target.Reset();
+                currentState = target;
+                return;
             }
         }
 
@@ -107,18 +128,20 @@ namespace TwoBitMachines.FlareEngine
 
             for (int i = 0; i < state.Count; i++)
             {
-                if (state[i].stateName == stateName)
+                AIState target = state[i];
+                if (target == null || target.stateName != stateName)
                 {
-                    if (currentState != null && currentState.stateName != stateName)
-                    {
-                        root.previousStateName = currentState.stateName;
-
-                    }
-                    currentState?.Reset();
-                    state[i].Reset();
-                    currentState = state[i];
-                    return;
+                    continue;
                 }
+
+                if (currentState != null && currentState.stateName != stateName)
+                {
+                    root.previousStateName = currentState.stateName;
+                }
+                currentState?.Reset();
+                target.Reset();
+                currentState = target;
+                return;
             }
         }
 
@@ -126,17 +149,20 @@ namespace TwoBitMachines.FlareEngine
         {
             for (int i = 0; i < state.Count; i++) // change state
             {
-                if (state[i].stateName == stateName)
+                AIState target = state[i];
+                if (target == null || target.stateName != stateName)
                 {
-                    if (currentState != null && currentState.stateName != stateName)
-                    {
-                        root.previousStateName = currentState.stateName;
-                    }
-                    currentState?.ResetSkip();
-                    state[i].ResetSkip();
-                    currentState = state[i];
-                    return;
+                    continue;
                 }
+
+                if (currentState != null && currentState.stateName != stateName)
+                {
+                    root.previousStateName = currentState.stateName;
+                }
+                currentState?.ResetSkip();
+                target.ResetSkip();
+                currentState = target;
+                return;
             }
         }
 
@@ -158,7 +184,7 @@ namespace TwoBitMachines.FlareEngine
 
             if (resetState.action.Count == 0)
             {
-                if (resetToFirst && state.Count > 0)
+                if (resetToFirst && state.Count > 0 && state[0] != null)
                 {
                     currentState?.Reset();
                     currentState = state[0];
@@ -177,7 +203,7 @@ namespace TwoBitMachines.FlareEngine
             }
             for (int i = 0; i < alwaysState.Count; i++)
             {
-                alwaysState[i].Reset();
+                alwaysState[i]?.Reset();
             }
         }
     }
