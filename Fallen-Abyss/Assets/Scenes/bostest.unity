@@ -2723,7 +2723,7 @@ MonoBehaviour:
   deleteAsk: 0
   showInfo: 0
   failed: 0
-  foldOut: 1
+  foldOut: 0
   inspect: 0
   comments: 0
   isDragged: 0
