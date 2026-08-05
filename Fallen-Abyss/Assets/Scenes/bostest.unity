@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,28 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &96019984 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
-  m_PrefabInstance: {fileID: 727048995}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &215439391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6902215293381504703, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
   m_PrefabInstance: {fileID: 727048995}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &215439407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96019984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80f7adeb93c07aa45b1e15132af353e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &260431148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -160,6 +142,14 @@ PrefabInstance:
     - target: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 787946561dfcb7940bf3a1e4021550e2, type: 2}
+    - target: {fileID: 3626916397498700004, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
       propertyPath: m_LocalScale.x
@@ -261,9 +251,6 @@ PrefabInstance:
       addedObject: {fileID: 260431171}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 260431170}
-    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 260431169}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
       insertIndex: -1
@@ -271,9 +258,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
       insertIndex: -1
       addedObject: {fileID: 260431167}
-    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 260431166}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
       insertIndex: -1
       addedObject: {fileID: 260431165}
@@ -289,6 +273,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
       insertIndex: -1
       addedObject: {fileID: 260431174}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 260431176}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
 --- !u!1 &260431149 stripped
 GameObject:
@@ -781,7 +768,7 @@ MonoBehaviour:
     signal: 0
     changeState: 0
     deleteAsk: 0
-    foldOut: 0
+    foldOut: 1
     active: 0
     delete: 0
     add: 0
@@ -806,19 +793,10 @@ MonoBehaviour:
       deleteAsk: 0
       delete: 0
       add: 0
-    - node: {fileID: 260431170}
-      onSuccess: Patrol
-      onFailure: Patrol
-      goToSuccess: 0
-      goToFailure: 1
-      foldOut: 0
-      deleteAsk: 0
-      delete: 0
-      add: 0
     - node: {fileID: 260431169}
-      onSuccess: Patrol
+      onSuccess: Attack
       onFailure: Patrol
-      goToSuccess: 0
+      goToSuccess: 1
       goToFailure: 1
       foldOut: 0
       deleteAsk: 0
@@ -836,7 +814,7 @@ MonoBehaviour:
     signal: 0
     changeState: 0
     deleteAsk: 0
-    foldOut: 0
+    foldOut: 1
     active: 0
     delete: 0
     add: 0
@@ -853,19 +831,10 @@ MonoBehaviour:
       delete: 0
       add: 0
     - node: {fileID: 260431167}
-      onSuccess: Patrol
-      onFailure: Chase
-      goToSuccess: 0
-      goToFailure: 1
-      foldOut: 0
-      deleteAsk: 0
-      delete: 0
-      add: 0
-    - node: {fileID: 260431166}
       onSuccess: Chase
       onFailure: Chase
-      goToSuccess: 0
-      goToFailure: 0
+      goToSuccess: 1
+      goToFailure: 1
       foldOut: 0
       deleteAsk: 0
       delete: 0
@@ -919,7 +888,7 @@ MonoBehaviour:
     signal: 0
     changeState: 0
     deleteAsk: 0
-    foldOut: 0
+    foldOut: 1
     active: 0
     delete: 0
     add: 0
@@ -954,7 +923,16 @@ MonoBehaviour:
     menu: 1
     signalIndex: 0
   alwaysState:
-  - action: []
+  - action:
+    - node: {fileID: 260431176}
+      onSuccess: 
+      onFailure: 
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
     stateName: Direction
     defaultSignal: 
     cantInterrupt: 0
@@ -2579,68 +2557,6 @@ MonoBehaviour:
           m_StringArgument: death
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &260431166
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260431149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96d84b4b0e2acb34596f0dd2b39c1225, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeSetup: 0
-  nodeState: 0
-  nodeType: 1
-  nodeParent: {fileID: 0}
-  completed: 0
-  nameType: Clock
-  fsmChild: 
-  fsmIndex: 0
-  selectCounter: 10
-  failedCounter: 10
-  interruptCounter: 10
-  rectSize: {x: 0, y: 0}
-  rectPosition: {x: 0, y: 0}
-  add: 0
-  active: 0
-  delete: 0
-  deleteAsk: 0
-  showInfo: 0
-  failed: 0
-  foldOut: 1
-  inspect: 0
-  comments: 0
-  isDragged: 0
-  wasDragged: 0
-  rectActive: 0
-  copySelected: 0
-  hideChildren: 0
-  interruptCheck: 0
-  inspectSelected: 0
-  lookingForChild: 0
-  childActive: 0
-  openNext: 1
-  canHaveChildren: 1
-  refName: []
-  message: []
-  type: 0
-  wait: 1
-  min: 2
-  max: 5
-  dontReset: 0
-  waitAnimation: 
-  onBeginClock:
-    m_PersistentCalls:
-      m_Calls: []
-  onFinishClock:
-    m_PersistentCalls:
-      m_Calls: []
-  eventsFoldOut: 1
-  beginFoldOut: 1
-  finishFoldOut: 1
 --- !u!114 &260431167
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2819,61 +2735,6 @@ MonoBehaviour:
   xVelRef: 0
   crossedThreshold: 0
   refreshTarget: 1
---- !u!114 &260431170
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260431149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb2d7549e6884f040a147156b3b3d482, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeSetup: 0
-  nodeState: 0
-  nodeType: 3
-  nodeParent: {fileID: 0}
-  completed: 0
-  nameType: FindTarget
-  fsmChild: 
-  fsmIndex: 0
-  selectCounter: 10
-  failedCounter: 10
-  interruptCounter: 10
-  rectSize: {x: 0, y: 0}
-  rectPosition: {x: 0, y: 0}
-  add: 0
-  active: 0
-  delete: 0
-  deleteAsk: 0
-  showInfo: 0
-  failed: 0
-  foldOut: 1
-  inspect: 0
-  comments: 0
-  isDragged: 0
-  wasDragged: 0
-  rectActive: 0
-  copySelected: 0
-  hideChildren: 0
-  interruptCheck: 0
-  inspectSelected: 0
-  lookingForChild: 0
-  childActive: 0
-  openNext: 1
-  canHaveChildren: 1
-  refName:
-  - Player
-  message: []
-  target: {fileID: 260431154}
-  findType: 0
-  radius: 6
-  mirror: 0
-  offset: {x: 0, y: 0}
-  distance: {x: 0, y: 0}
-  territory: {fileID: 0}
 --- !u!114 &260431171
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2924,7 +2785,7 @@ MonoBehaviour:
   message: []
   target: {fileID: 260431154}
   findType: 0
-  radius: 100
+  radius: 5
   mirror: 0
   offset: {x: 0.5, y: 0}
   distance: {x: 0, y: 0}
@@ -2947,6 +2808,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   melee: {fileID: 1094726671}
+  hitbox: {fileID: 1574879367}
+--- !u!114 &260431176
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260431149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77faa461683f4241a138e1aa42fd5f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: FlipChildrenObjects
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  flipOn: 1
+  flipScaleX: 1
+  flipPositionX: 0
+  mirrorAngle: 0
+  positionXDirection: 1
+  scaleXDirection: -1
+  spriteRenderer: {fileID: 0}
 --- !u!1 &431008025
 GameObject:
   m_ObjectHideFlags: 0
@@ -15776,10 +15692,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6902215293381504703, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 431008030}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 215439407}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
 --- !u!1 &731540866
 GameObject:
