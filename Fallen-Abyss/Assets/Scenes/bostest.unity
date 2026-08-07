@@ -726,7 +726,7 @@ MonoBehaviour:
   selectPosition: {x: 0, y: 0}
   ScrollPosition: {x: 0, y: 0}
   startHoldPoint: {x: 0, y: 0}
-  stateActionIndex: {x: 1, y: 1}
+  stateActionIndex: {x: 1, y: 0}
   state:
   - action:
     - node: {fileID: 260431156}
@@ -2838,9 +2838,9 @@ MonoBehaviour:
   active: 0
   delete: 0
   deleteAsk: 0
-  showInfo: 0
+  showInfo: 1
   failed: 0
-  foldOut: 1
+  foldOut: 0
   inspect: 0
   comments: 0
   isDragged: 0
