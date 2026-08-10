@@ -273,9 +273,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
       insertIndex: -1
       addedObject: {fileID: 260431174}
-    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 260431176}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
 --- !u!1 &260431149 stripped
 GameObject:
@@ -923,16 +920,7 @@ MonoBehaviour:
     menu: 1
     signalIndex: 0
   alwaysState:
-  - action:
-    - node: {fileID: 260431176}
-      onSuccess: 
-      onFailure: 
-      goToSuccess: 0
-      goToFailure: 0
-      foldOut: 0
-      deleteAsk: 0
-      delete: 0
-      add: 0
+  - action: []
     stateName: Direction
     defaultSignal: 
     cantInterrupt: 0
@@ -2809,60 +2797,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   melee: {fileID: 1094726671}
   hitbox: {fileID: 1574879367}
---- !u!114 &260431176
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260431149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77faa461683f4241a138e1aa42fd5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeSetup: 0
-  nodeState: 0
-  nodeType: 1
-  nodeParent: {fileID: 0}
-  completed: 0
-  nameType: FlipChildrenObjects
-  fsmChild: 
-  fsmIndex: 0
-  selectCounter: 10
-  failedCounter: 10
-  interruptCounter: 10
-  rectSize: {x: 0, y: 0}
-  rectPosition: {x: 0, y: 0}
-  add: 0
-  active: 0
-  delete: 0
-  deleteAsk: 0
-  showInfo: 1
-  failed: 0
-  foldOut: 0
-  inspect: 0
-  comments: 0
-  isDragged: 0
-  wasDragged: 0
-  rectActive: 0
-  copySelected: 0
-  hideChildren: 0
-  interruptCheck: 0
-  inspectSelected: 0
-  lookingForChild: 0
-  childActive: 0
-  openNext: 0
-  canHaveChildren: 1
-  refName: []
-  message: []
-  flipOn: 1
-  flipScaleX: 1
-  flipPositionX: 0
-  mirrorAngle: 0
-  positionXDirection: 1
-  scaleXDirection: -1
-  spriteRenderer: {fileID: 0}
 --- !u!1 &431008025
 GameObject:
   m_ObjectHideFlags: 0
