@@ -276,6 +276,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
       insertIndex: -1
       addedObject: {fileID: 260431172}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 260431175}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
 --- !u!1 &260431149 stripped
 GameObject:
@@ -479,9 +482,9 @@ MonoBehaviour:
   message: []
   target: {fileID: 260431154}
   findType: 0
-  radius: 5
+  radius: 2
   mirror: 0
-  offset: {x: 0, y: 0}
+  offset: {x: -3, y: 2}
   distance: {x: 0, y: 0}
   territory: {fileID: 0}
 --- !u!114 &260431156
@@ -726,7 +729,7 @@ MonoBehaviour:
   selectPosition: {x: 0, y: 0}
   ScrollPosition: {x: 0, y: 0}
   startHoldPoint: {x: 0, y: 0}
-  stateActionIndex: {x: 1, y: 0}
+  stateActionIndex: {x: 1, y: 1}
   state:
   - action:
     - node: {fileID: 260431156}
@@ -767,7 +770,7 @@ MonoBehaviour:
     editName: 0
     signal: 0
     changeState: 0
-    deleteAsk: 0
+    deleteAsk: 1
     foldOut: 1
     active: 0
     delete: 0
@@ -925,8 +928,17 @@ MonoBehaviour:
   alwaysState:
   - action:
     - node: {fileID: 260431172}
-      onSuccess:
-      onFailure:
+      onSuccess: 
+      onFailure: 
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 260431175}
+      onSuccess: 
+      onFailure: 
       goToSuccess: 0
       goToFailure: 0
       foldOut: 0
@@ -1098,7 +1110,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02000001, y: 0.53499997}
+  m_Offset: {x: 0.06456053, y: 0.44587952}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.475, y: -0.00952381}
@@ -1109,7 +1121,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 1.05}
+  m_Size: {x: 0.55046237, y: 0.87175906}
   m_EdgeRadius: 0
 --- !u!114 &260431161
 MonoBehaviour:
@@ -2785,11 +2797,60 @@ MonoBehaviour:
   message: []
   target: {fileID: 260431154}
   findType: 0
-  radius: 5
+  radius: 2
   mirror: 0
-  offset: {x: 0.5, y: 0}
+  offset: {x: -3, y: 2}
   distance: {x: 0, y: 0}
   territory: {fileID: 0}
+--- !u!114 &260431172
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260431149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2ae8cf584886441a30458779be0ff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: FlipSpriteByVelocity
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  spriteRenderer: {fileID: 260431176}
+  invert: 1
 --- !u!4 &260431173 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
@@ -2809,6 +2870,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   melee: {fileID: 1094726671}
   hitbox: {fileID: 1574879367}
+--- !u!114 &260431175
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260431149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77faa461683f4241a138e1aa42fd5f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: FlipChildrenObjects
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  flipOn: 0
+  flipScaleX: 1
+  flipPositionX: 0
+  mirrorAngle: 0
+  positionXDirection: 1
+  scaleXDirection: 1
+  spriteRenderer: {fileID: 0}
+--- !u!212 &260431176 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3626916397498700004, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+  m_PrefabInstance: {fileID: 260431148}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &431008025
 GameObject:
   m_ObjectHideFlags: 0
@@ -68728,55 +68848,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &260431172
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260431149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d2ae8cf584886441a30458779be0ff9, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  nodeSetup: 0
-  nodeState: 0
-  nodeType: 1
-  nodeParent: {fileID: 0}
-  completed: 0
-  nameType: FlipSpriteByVelocity
-  fsmChild:
-  fsmIndex: 0
-  selectCounter: 10
-  failedCounter: 10
-  interruptCounter: 10
-  rectSize: {x: 0, y: 0}
-  rectPosition: {x: 0, y: 0}
-  add: 0
-  active: 0
-  delete: 0
-  deleteAsk: 0
-  showInfo: 0
-  failed: 0
-  foldOut: 1
-  inspect: 0
-  comments: 0
-  isDragged: 0
-  wasDragged: 0
-  rectActive: 0
-  copySelected: 0
-  hideChildren: 0
-  interruptCheck: 0
-  inspectSelected: 0
-  lookingForChild: 0
-  childActive: 0
-  openNext: 0
-  canHaveChildren: 1
-  refName: []
-  message: []
-  spriteRenderer: {fileID: 0}
-  invert: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
