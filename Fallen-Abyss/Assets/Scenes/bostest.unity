@@ -266,9 +266,6 @@ PrefabInstance:
       addedObject: {fileID: 260431164}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 260431163}
-    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 260431162}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
       insertIndex: -1
@@ -279,6 +276,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
       insertIndex: -1
       addedObject: {fileID: 260431175}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 260431179}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 260431178}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 260431177}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
 --- !u!1 &260431149 stripped
 GameObject:
@@ -817,7 +823,7 @@ MonoBehaviour:
     signal: 0
     changeState: 0
     deleteAsk: 0
-    foldOut: 1
+    foldOut: 0
     active: 0
     delete: 0
     add: 0
@@ -854,7 +860,7 @@ MonoBehaviour:
     signal: 0
     changeState: 0
     deleteAsk: 0
-    foldOut: 1
+    foldOut: 0
     active: 0
     delete: 0
     add: 0
@@ -891,14 +897,32 @@ MonoBehaviour:
     signal: 0
     changeState: 0
     deleteAsk: 0
-    foldOut: 1
+    foldOut: 0
     active: 0
     delete: 0
     add: 0
     menu: 1
     signalIndex: 0
   - action:
-    - node: {fileID: 260431163}
+    - node: {fileID: 260431179}
+      onSuccess: 
+      onFailure: 
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 260431178}
+      onSuccess: 
+      onFailure: 
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 260431177}
       onSuccess: 
       onFailure: 
       goToSuccess: 0
@@ -919,7 +943,7 @@ MonoBehaviour:
     signal: 0
     changeState: 0
     deleteAsk: 0
-    foldOut: 1
+    foldOut: 0
     active: 0
     delete: 0
     add: 0
@@ -998,7 +1022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHealth: 0
   initialized: 0
-  variableName: name
+  variableName: BossHealth
   currentValue: 10
   minValue: 0
   maxValue: 100
@@ -1013,20 +1037,32 @@ MonoBehaviour:
   worldEffect: 
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 260431150}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: d_take_hit
+          m_BoolArgument: 0
+        m_CallState: 2
   onMinValue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 260431149}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 260431150}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: death
           m_BoolArgument: 0
         m_CallState: 2
   onMaxValue:
@@ -1052,8 +1088,8 @@ MonoBehaviour:
   foldOut: 1
   eventFoldOut: 1
   minFoldOut: 1
-  maxFoldOut: 0
-  changedFoldOut: 0
+  maxFoldOut: 1
+  changedFoldOut: 1
   increasedFoldOut: 1
   decreasedFoldOut: 0
   changedGOFoldOut: 0
@@ -2371,68 +2407,6 @@ MonoBehaviour:
     color: {r: 0, g: 1, b: 0, a: 1}
     size: 0.25
     rays: 1
---- !u!114 &260431163
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260431149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f42f2b3ac1526247a5f30a629ad1f02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeSetup: 0
-  nodeState: 0
-  nodeType: 1
-  nodeParent: {fileID: 0}
-  completed: 0
-  nameType: OnEvent
-  fsmChild: 
-  fsmIndex: 0
-  selectCounter: 10
-  failedCounter: 10
-  interruptCounter: 10
-  rectSize: {x: 0, y: 0}
-  rectPosition: {x: 0, y: 0}
-  add: 0
-  active: 0
-  delete: 0
-  deleteAsk: 0
-  showInfo: 0
-  failed: 0
-  foldOut: 1
-  inspect: 0
-  comments: 0
-  isDragged: 0
-  wasDragged: 0
-  rectActive: 0
-  copySelected: 0
-  hideChildren: 0
-  interruptCheck: 0
-  inspectSelected: 0
-  lookingForChild: 0
-  childActive: 0
-  openNext: 0
-  canHaveChildren: 1
-  refName: []
-  message: []
-  onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 260431150}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: d_take_hit
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &260431164
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2494,7 +2468,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 260431149}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2929,6 +2903,176 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3626916397498700004, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
   m_PrefabInstance: {fileID: 260431148}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &260431177
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260431149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8fb28ec13d4264c924f6003a2d23ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: AnimationSignal
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  signalName: d_take_hit
+  useWorldFloat: 0
+  failedSignalName: 
+  variable: {fileID: 0}
+  logic: 0
+  compareTo: 0
+  compareFloat: 0
+  compareVariable: {fileID: 0}
+--- !u!114 &260431178
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260431149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f42f2b3ac1526247a5f30a629ad1f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: OnEvent
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 260431150}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: d_take_hit
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &260431179
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260431149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de7e723fd0c18bf44855a22b138368ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: DamageEffect
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  duration: 0.5
+  slowSpeed: 1
+  damageRate: 0
+  animationSignal: d_take_hit
+  tagName: 
+  startOnEnter: 1
 --- !u!1 &431008025
 GameObject:
   m_ObjectHideFlags: 0
@@ -15658,6 +15802,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1817237210846444443, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: tree.scrollIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2138457087467511849, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: time
       value: 1
@@ -15758,7 +15906,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6902215293381504703, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 431008030}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1502540616}
   m_SourcePrefab: {fileID: 100100000, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
 --- !u!1 &731540866
 GameObject:
@@ -62604,6 +62755,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1502540600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+  m_PrefabInstance: {fileID: 727048995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1502540616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502540600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f7adeb93c07aa45b1e15132af353e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1574879366
 GameObject:
   m_ObjectHideFlags: 0
