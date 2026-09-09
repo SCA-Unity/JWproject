@@ -278,13 +278,10 @@ PrefabInstance:
       addedObject: {fileID: 260431175}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 260431179}
-    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 260431178}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 260431177}
+      addedObject: {fileID: 260431179}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
 --- !u!1 &260431149 stripped
 GameObject:
@@ -897,35 +894,26 @@ MonoBehaviour:
     signal: 0
     changeState: 0
     deleteAsk: 0
-    foldOut: 0
+    foldOut: 1
     active: 0
     delete: 0
     add: 0
     menu: 1
     signalIndex: 0
   - action:
-    - node: {fileID: 260431179}
-      onSuccess: 
-      onFailure: 
-      goToSuccess: 0
-      goToFailure: 0
-      foldOut: 0
-      deleteAsk: 0
-      delete: 0
-      add: 0
     - node: {fileID: 260431178}
-      onSuccess: 
-      onFailure: 
+      onSuccess: Chase
+      onFailure: Patrol
       goToSuccess: 0
       goToFailure: 0
       foldOut: 0
       deleteAsk: 0
       delete: 0
       add: 0
-    - node: {fileID: 260431177}
-      onSuccess: 
-      onFailure: 
-      goToSuccess: 0
+    - node: {fileID: 260431179}
+      onSuccess: Chase
+      onFailure: Patrol
+      goToSuccess: 1
       goToFailure: 0
       foldOut: 0
       deleteAsk: 0
@@ -943,7 +931,7 @@ MonoBehaviour:
     signal: 0
     changeState: 0
     deleteAsk: 0
-    foldOut: 0
+    foldOut: 1
     active: 0
     delete: 0
     add: 0
@@ -1038,31 +1026,31 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 260431150}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 260431158}
+        m_TargetAssemblyTypeName: TwoBitMachines.FlareEngine.AIFSM, Assembly-CSharp
+        m_MethodName: ChangeState
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: d_take_hit
+          m_StringArgument: Hit
           m_BoolArgument: 0
         m_CallState: 2
   onMinValue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 260431150}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 260431158}
+        m_TargetAssemblyTypeName: TwoBitMachines.FlareEngine.AIFSM, Assembly-CSharp
+        m_MethodName: ChangeState
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: death
+          m_StringArgument: Death
           m_BoolArgument: 0
         m_CallState: 2
   onMaxValue:
@@ -2435,7 +2423,7 @@ MonoBehaviour:
   add: 0
   active: 0
   delete: 0
-  deleteAsk: 0
+  deleteAsk: 1
   showInfo: 0
   failed: 0
   foldOut: 1
@@ -2455,7 +2443,7 @@ MonoBehaviour:
   refName: []
   message: []
   type: 0
-  wait: 0.5
+  wait: 1
   min: 2
   max: 5
   dontReset: 0
@@ -2478,7 +2466,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  eventsFoldOut: 1
+  eventsFoldOut: 0
   beginFoldOut: 0
   finishFoldOut: 1
 --- !u!114 &260431165
@@ -2903,61 +2891,6 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3626916397498700004, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
   m_PrefabInstance: {fileID: 260431148}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &260431177
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260431149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a8fb28ec13d4264c924f6003a2d23ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeSetup: 0
-  nodeState: 0
-  nodeType: 1
-  nodeParent: {fileID: 0}
-  completed: 0
-  nameType: AnimationSignal
-  fsmChild: 
-  fsmIndex: 0
-  selectCounter: 10
-  failedCounter: 10
-  interruptCounter: 10
-  rectSize: {x: 0, y: 0}
-  rectPosition: {x: 0, y: 0}
-  add: 0
-  active: 0
-  delete: 0
-  deleteAsk: 0
-  showInfo: 0
-  failed: 0
-  foldOut: 1
-  inspect: 0
-  comments: 0
-  isDragged: 0
-  wasDragged: 0
-  rectActive: 0
-  copySelected: 0
-  hideChildren: 0
-  interruptCheck: 0
-  inspectSelected: 0
-  lookingForChild: 0
-  childActive: 0
-  openNext: 0
-  canHaveChildren: 1
-  refName: []
-  message: []
-  signalName: d_take_hit
-  useWorldFloat: 0
-  failedSignalName: 
-  variable: {fileID: 0}
-  logic: 0
-  compareTo: 0
-  compareFloat: 0
-  compareVariable: {fileID: 0}
 --- !u!114 &260431178
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3029,7 +2962,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 260431149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de7e723fd0c18bf44855a22b138368ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 96d84b4b0e2acb34596f0dd2b39c1225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nodeSetup: 0
@@ -3037,7 +2970,7 @@ MonoBehaviour:
   nodeType: 1
   nodeParent: {fileID: 0}
   completed: 0
-  nameType: DamageEffect
+  nameType: Clock
   fsmChild: 
   fsmIndex: 0
   selectCounter: 10
@@ -3063,16 +2996,25 @@ MonoBehaviour:
   inspectSelected: 0
   lookingForChild: 0
   childActive: 0
-  openNext: 0
+  openNext: 1
   canHaveChildren: 1
   refName: []
   message: []
-  duration: 0.5
-  slowSpeed: 1
-  damageRate: 0
-  animationSignal: d_take_hit
-  tagName: 
-  startOnEnter: 1
+  type: 0
+  wait: 0.5
+  min: 2
+  max: 5
+  dontReset: 0
+  waitAnimation: 
+  onBeginClock:
+    m_PersistentCalls:
+      m_Calls: []
+  onFinishClock:
+    m_PersistentCalls:
+      m_Calls: []
+  eventsFoldOut: 0
+  beginFoldOut: 0
+  finishFoldOut: 0
 --- !u!1 &431008025
 GameObject:
   m_ObjectHideFlags: 0
@@ -15822,6 +15764,22 @@ PrefabInstance:
       propertyPath: dashDistance
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3333333333333333333, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: foldOut
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333333333333333333, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: maxFoldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333333333333333333, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: eventFoldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333333333333333333, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: changedFoldOut
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5159096889297201077, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: defaultProjectile.projectile
       value: 
@@ -15840,7 +15798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5881420209112145141, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: abilities.walk.speed
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5881420209112145141, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: abilities.walk.foldOut
@@ -15909,7 +15867,19 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1502540616}
+      addedObject: {fileID: 1502540632}
+    - targetCorrespondingSourceObject: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1502540633}
+    - targetCorrespondingSourceObject: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1502540634}
+    - targetCorrespondingSourceObject: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1502540635}
+    - targetCorrespondingSourceObject: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1502540636}
   m_SourcePrefab: {fileID: 100100000, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
 --- !u!1 &731540866
 GameObject:
@@ -62760,7 +62730,55 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
   m_PrefabInstance: {fileID: 727048995}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1502540616
+--- !u!114 &1502540632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502540600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f7adeb93c07aa45b1e15132af353e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1502540633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502540600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f7adeb93c07aa45b1e15132af353e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1502540634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502540600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f7adeb93c07aa45b1e15132af353e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1502540635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502540600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f7adeb93c07aa45b1e15132af353e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1502540636
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
