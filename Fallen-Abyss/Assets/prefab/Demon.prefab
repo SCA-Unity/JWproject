@@ -1,0 +1,3051 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1968947869050961483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9190646827364243415}
+  - component: {fileID: 7678768690231158095}
+  m_Layer: 8
+  m_Name: MeleeHitbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9190646827364243415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968947869050961483}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.595, y: 0.244, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 685751671179187539}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &7678768690231158095
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968947869050961483}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.1377242}
+  serializedVersion: 2
+  m_Radius: 0.36227578
+--- !u!1 &4563172373049077322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5887794345757230695}
+  - component: {fileID: 1995340064803452725}
+  m_Layer: 8
+  m_Name: Melee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5887794345757230695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4563172373049077322}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 685751671179187539}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1995340064803452725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4563172373049077322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86212f74d75b15d4c8d0d5c245a22833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeName: Melee Name
+  collider2DRef: {fileID: 7678768690231158095}
+  melee:
+    layer:
+      serializedVersion: 2
+      m_Bits: 512
+    input: {fileID: 0}
+    input2: {fileID: 0}
+    delayTime: 0.25
+    earlyTime: 0.25
+    hitToContinue: 0
+    oneHitPerCombo: 0
+    enableCollider: 0
+    combo: []
+    trigger: 1
+    trigger2: 1
+    attackFromSleep: 1
+    cancelOtherAttacks: 0
+    active: 0
+    foldOut: 1
+    comboFoldOut: 0
+    inputFoldOut: 1
+    propertiesFoldOut: 0
+    eventsFoldOut: 0
+    signalIndex: 0
+  block:
+    canBlock: 0
+    canRecoil: 0
+    cancelCombo: 0
+    stopVelocityX: 0
+    canDeflect: 0
+    blockSignal: 
+    recoilTag: 
+    recoilVelocity: 10
+    recoilDuration: 0.1
+    input: {fileID: 0}
+    inputTwo: {fileID: 0}
+    blockLayer:
+      serializedVersion: 2
+      m_Bits: 0
+    mustHold: 0
+    foldOut: 0
+  onCoolDown:
+    m_PersistentCalls:
+      m_Calls: []
+  coolDown: 1
+  pause: 0
+  attackNow: 0
+  foldOut: 0
+  blockFoldOut: 0
+--- !u!1001 &7264801378948377182
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_Name
+      value: Demon
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 787946561dfcb7940bf3a1e4021550e2, type: 2}
+    - target: {fileID: 3626916397498700004, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 108.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9190646827364243415}
+    - targetCorrespondingSourceObject: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5887794345757230695}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6007773186857024473}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7530188952084302441}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2365197874287271263}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2080028186095022701}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6119826173693746844}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7169487700377163787}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5313795686272405776}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8915105881252929004}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3008216287109913968}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6715558254212115985}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 111193521685517367}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8627209108561484281}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8633358263190714683}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8588371154296738945}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4763576316039251378}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3930696881566293040}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8034603927478025124}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2524818524423287391}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5536302744483754022}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1816282083862524445}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5694586711770734071}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5592972568910094751}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6805418796198012106}
+  m_SourcePrefab: {fileID: -8435245712485981826, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+--- !u!1 &317993114025573686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+  m_PrefabInstance: {fileID: 7264801378948377182}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &6007773186857024473
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.06456053, y: 0.44587952}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.475, y: -0.00952381}
+    oldSize: {x: 0.8, y: 1.05}
+    newSize: {x: 0.8, y: 1.05}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.55046237, y: 0.87175906}
+  m_EdgeRadius: 0
+--- !u!114 &7530188952084302441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc5a25c181809f4493d523a8a014665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHealth: 0
+  initialized: 0
+  variableName: BossHealth
+  currentValue: 10
+  minValue: 0
+  maxValue: 100
+  save: 0
+  broadcastValue: 0
+  isScriptableObject: 0
+  saveManually: 0
+  soReference: {fileID: 0}
+  characterDirectionX: 1
+  callDamageEffect: 0
+  positionOffset: 1
+  worldEffect: 
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2365197874287271263}
+        m_TargetAssemblyTypeName: TwoBitMachines.FlareEngine.AIFSM, Assembly-CSharp
+        m_MethodName: ChangeState
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Hit
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMinValue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2365197874287271263}
+        m_TargetAssemblyTypeName: TwoBitMachines.FlareEngine.AIFSM, Assembly-CSharp
+        m_MethodName: ChangeState
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Death
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMaxValue:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueIncreased:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueDecreased:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadConditionTrue:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadConditionFalse:
+    m_PersistentCalls:
+      m_Calls: []
+  onSceneStart:
+    m_PersistentCalls:
+      m_Calls: []
+  saveFloat:
+    value: 0
+  foldOut: 1
+  eventFoldOut: 1
+  minFoldOut: 1
+  maxFoldOut: 1
+  changedFoldOut: 1
+  increasedFoldOut: 1
+  decreasedFoldOut: 0
+  changedGOFoldOut: 0
+  shieldFoldOut: 0
+  impactFoldOut: 0
+  damageFoldOut: 0
+  damageEffectFoldOut: 0
+  loadFoldOutTrue: 0
+  loadFoldOutFalse: 0
+  sceneStartFoldOut: 0
+  createSO: 0
+  recoveryTime: 0.1
+  counter: 0
+  hasShield: 0
+  readImpactOnly: 0
+  shieldDirection: 1
+  impactWE: 
+  character: {fileID: 0}
+  onShield:
+    m_PersistentCalls:
+      m_Calls: []
+  onImpact:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2365197874287271263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a6abfb407f89240b4fe45a1f0a99e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  world:
+    climbSlopes: 0
+    rotateToSlope: 0
+    rectifyInAir: 0
+    collideWorldOnly: 0
+    horizontalCorners: 0
+    useMovingPlatform: 0
+    useMovingPlatformMomentum: 1
+    rotateToWall: 0
+    useBridges: 1
+    jumpThroughEdge: 1
+    maxSlopeAngle: 45
+    rotateRate: 0.5
+    crushedWE: 
+    skipDownEdge: 0
+    onCrushed:
+      m_PersistentCalls:
+        m_Calls: []
+    box:
+      rays: {x: 3, y: 2}
+    rotateTo: 0
+    foldOut: 0
+    eventsFoldOut: 0
+    crushedFoldOut: 0
+  signals:
+    spriteEngine: {fileID: 0}
+  turnOffSignals: 0
+  pushBackActive: 0
+  executeInLateUpdate: 0
+  mainFoldOut: 0
+  canUseTool: 1
+  onToolSet:
+    m_PersistentCalls:
+      m_Calls: []
+  setVelocity: {x: 0, y: 0}
+  root: {fileID: 2080028186095022701}
+  thisIsPlayer: 0
+  resetToActive: 0
+  movingPlatformGravity: 0
+  gravity:
+    jumpHeight: 4
+    jumpTime: 0.75
+    multiplier: 1.5
+    terminalVelocity: 40
+  damage:
+    layer:
+      serializedVersion: 2
+      m_Bits: 0
+    direction: 0
+    canDealDamage: 0
+    pauseTimer: 0
+    damage: 1
+    force: 1
+    counter: 0
+    damageFoldOut: 0
+    pauseDamage: 0
+    pauseDamageTimer: 0
+  data:
+  - {fileID: 5313795686272405776}
+  - {fileID: 3008216287109913968}
+  - {fileID: 6715558254212115985}
+  - {fileID: 2524818524423287391}
+  tempChildren: []
+  units: []
+  inspectNode: {fileID: 0}
+  nodeMessage:
+    position: {x: 0, y: 0}
+    size: {x: 0, y: 0}
+    message: 
+    isDragged: 0
+  oldGUIMatrix:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  tempNameType: 
+  inspectNameType: 
+  barIndex: 0
+  tempUnits: 0
+  menuIndex: 0
+  deleteIndex: 0
+  signalIndex: -1
+  panX: 0
+  panY: 0
+  snapToGrid: 10
+  scaling: 1
+  add: 0
+  active: 0
+  foldOut: 0
+  foundNodes: 0
+  settingsFoldOut: 0
+  showNodeMessage: 0
+  isSelectingNodes: 0
+  blackboardFoldOut: 0
+  collisionSettings: 0
+  aNodeIsBeingDragged: 0
+  window: {fileID: 0}
+  selectSize: {x: 0, y: 0}
+  selectPosition: {x: 0, y: 0}
+  ScrollPosition: {x: 0, y: 0}
+  startHoldPoint: {x: 0, y: 0}
+  stateActionIndex: {x: 1, y: 1}
+  state:
+  - action:
+    - node: {fileID: 6119826173693746844}
+      onSuccess: Patrol
+      onFailure: Patrol
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 7169487700377163787}
+      onSuccess: Chase
+      onFailure: Patrol
+      goToSuccess: 1
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 8915105881252929004}
+      onSuccess: Chase
+      onFailure: Patrol
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    stateName: Patrol
+    defaultSignal: Animation Signal
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 0
+    childIndex: 0
+    type: 0
+    showStateExtra: 0
+    editName: 0
+    signal: 0
+    changeState: 0
+    deleteAsk: 1
+    foldOut: 1
+    active: 0
+    delete: 0
+    add: 0
+    menu: 1
+    signalIndex: 0
+  - action:
+    - node: {fileID: 111193521685517367}
+      onSuccess: Patrol
+      onFailure: Patrol
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 8627209108561484281}
+      onSuccess: Attack
+      onFailure: Patrol
+      goToSuccess: 1
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 8633358263190714683}
+      onSuccess: Attack
+      onFailure: Patrol
+      goToSuccess: 1
+      goToFailure: 1
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    stateName: Chase
+    defaultSignal: Animation Signal
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 0
+    childIndex: 0
+    type: 0
+    showStateExtra: 0
+    editName: 0
+    signal: 0
+    changeState: 0
+    deleteAsk: 0
+    foldOut: 1
+    active: 0
+    delete: 0
+    add: 0
+    menu: 1
+    signalIndex: 0
+  - action:
+    - node: {fileID: 8588371154296738945}
+      onSuccess: Patrol
+      onFailure: Patrol
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 4763576316039251378}
+      onSuccess: Chase
+      onFailure: Chase
+      goToSuccess: 1
+      goToFailure: 1
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    stateName: Attack
+    defaultSignal: Animation Signal
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 0
+    childIndex: 0
+    type: 0
+    showStateExtra: 0
+    editName: 0
+    signal: 0
+    changeState: 0
+    deleteAsk: 0
+    foldOut: 0
+    active: 0
+    delete: 0
+    add: 0
+    menu: 1
+    signalIndex: 0
+  - action:
+    - node: {fileID: 3930696881566293040}
+      onSuccess: Patrol
+      onFailure: Patrol
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 8034603927478025124}
+      onSuccess: Patrol
+      onFailure: Patrol
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    stateName: Death
+    defaultSignal: Animation Signal
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 0
+    childIndex: 0
+    type: 0
+    showStateExtra: 0
+    editName: 0
+    signal: 0
+    changeState: 0
+    deleteAsk: 0
+    foldOut: 1
+    active: 0
+    delete: 0
+    add: 0
+    menu: 1
+    signalIndex: 0
+  - action:
+    - node: {fileID: 5592972568910094751}
+      onSuccess: Chase
+      onFailure: Patrol
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 6805418796198012106}
+      onSuccess: Chase
+      onFailure: Patrol
+      goToSuccess: 1
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    stateName: Hit
+    defaultSignal: Animation Signal
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 0
+    childIndex: 0
+    type: 2
+    showStateExtra: 0
+    editName: 0
+    signal: 0
+    changeState: 0
+    deleteAsk: 0
+    foldOut: 1
+    active: 0
+    delete: 0
+    add: 0
+    menu: 1
+    signalIndex: 0
+  alwaysState:
+  - action:
+    - node: {fileID: 1816282083862524445}
+      onSuccess: 
+      onFailure: 
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 5694586711770734071}
+      onSuccess: 
+      onFailure: 
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    stateName: Direction
+    defaultSignal: 
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 1
+    childIndex: 0
+    type: 0
+    showStateExtra: 0
+    editName: 0
+    signal: 0
+    changeState: 0
+    deleteAsk: 0
+    foldOut: 1
+    active: 0
+    delete: 0
+    add: 0
+    menu: 0
+    signalIndex: 0
+  resetState:
+    action: []
+    stateName: State Name
+    defaultSignal: Signal
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 1
+    childIndex: 0
+    type: 0
+    showStateExtra: 0
+    editName: 0
+    signal: 0
+    changeState: 0
+    deleteAsk: 0
+    foldOut: 0
+    active: 0
+    delete: 0
+    add: 0
+    menu: 1
+    signalIndex: -1
+  resetToFirst: 0
+--- !u!114 &2080028186095022701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1353c2b8524781a42a64ea27a9fd7d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 0
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: Root
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 0
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  canInterrupt: 0
+  onInterrupt: 0
+  children: []
+  defaultSignal: Signal
+  useSignal: 0
+  currentChildIndex: 0
+  pause: 0
+--- !u!114 &6119826173693746844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f42f2b3ac1526247a5f30a629ad1f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: OnEvent
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 1
+  canHaveChildren: 1
+  refName: []
+  message: []
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8416008904421484438}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: d_walk
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7169487700377163787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2d7549e6884f040a147156b3b3d482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 3
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: FindTarget
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 1
+  canHaveChildren: 1
+  refName:
+  - Player
+  message: []
+  target: {fileID: 5313795686272405776}
+  findType: 0
+  radius: 5
+  mirror: 0
+  offset: {x: 0, y: 2}
+  distance: {x: 0, y: 0}
+  territory: {fileID: 0}
+--- !u!114 &5313795686272405776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c035ee5e169a2c4187de1497e45f669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataName: Player
+  blackboardType: 0
+  hasNoTargets: 0
+  foldOut: 1
+  delete: 0
+  deleteAsk: 0
+  refName: []
+  type: 0
+  offset: {x: 0, y: 0}
+  randomIndex: 0
+--- !u!114 &8915105881252929004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8721728c037742b4782cf8e4d0d09632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: FollowTarget
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 1
+  canHaveChildren: 1
+  refName:
+  - PatrolPoints
+  message: []
+  target: {fileID: 3008216287109913968}
+  axis: 1
+  speed: 1.5
+  findDistance: 0.1
+  hasGravity: 0
+  pauseTimer: 0
+  pauseOnChange: 0
+  startIndex: 0
+  xVelRef: 0
+  crossedThreshold: 0
+  refreshTarget: 1
+--- !u!114 &3008216287109913968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0df15e5f7a376534da118db32be34cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataName: PatrolPoints
+  blackboardType: 0
+  hasNoTargets: 0
+  foldOut: 1
+  delete: 0
+  deleteAsk: 0
+  refName: []
+  findType: 2
+  randomOffset: {x: 0, y: 0}
+  loopSequence: 1
+  resetOnComplete: 0
+  point:
+  - {x: 53, y: -8}
+  - {x: 116, y: -8}
+  oldPosition: {x: 108.5, y: -10.5, z: 0}
+--- !u!114 &6715558254212115985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd6fcfb4e17af7479520cf00c02ac35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataName: Pathfinding
+  blackboardType: 0
+  hasNoTargets: 0
+  foldOut: 1
+  delete: 0
+  deleteAsk: 0
+  refName: []
+  followSpeed: 5
+  ceilingSpeed: 5
+  ladderSpeed: 5
+  wallSpeed: 5
+  ignoreUnits: 1
+  pauseAfterJump: 0
+  map: {fileID: 0}
+  stateMachine:
+  - foldOut: 0
+  - foldOut: 0
+  - foldOut: 0
+  - foldOut: 0
+  - foldOut: 0
+  - foldOut: 0
+  - foldOut: 0
+--- !u!114 &111193521685517367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f42f2b3ac1526247a5f30a629ad1f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: OnEvent
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 1
+  canHaveChildren: 1
+  refName: []
+  message: []
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8416008904421484438}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: d_walk
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8627209108561484281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2d7549e6884f040a147156b3b3d482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 3
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: FindTarget
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 1
+  canHaveChildren: 1
+  refName:
+  - Player
+  message: []
+  target: {fileID: 5313795686272405776}
+  findType: 0
+  radius: 5
+  mirror: 0
+  offset: {x: 0, y: 2}
+  distance: {x: 0, y: 0}
+  territory: {fileID: 0}
+--- !u!114 &8633358263190714683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8721728c037742b4782cf8e4d0d09632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: FollowTarget
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 1
+  canHaveChildren: 1
+  refName:
+  - Player
+  message: []
+  target: {fileID: 5313795686272405776}
+  axis: 1
+  speed: 2
+  findDistance: 4
+  hasGravity: 0
+  pauseTimer: 0
+  pauseOnChange: 0
+  startIndex: 0
+  xVelRef: 0
+  crossedThreshold: 0
+  refreshTarget: 1
+--- !u!114 &8588371154296738945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f42f2b3ac1526247a5f30a629ad1f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: OnEvent
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 0
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 1
+  canHaveChildren: 1
+  refName: []
+  message: []
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8416008904421484438}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: d_cleave
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4763576316039251378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797b0ad4304058c4890405a249972e7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: MeleeAttack
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 1
+  canHaveChildren: 1
+  refName: []
+  message: []
+  colliderRef: {fileID: 7678768690231158095}
+  layer:
+    serializedVersion: 2
+    m_Bits: 64
+  animationSignal: attack
+  damage: 1
+  dealDamageContinuously: 1
+  enableCollider: 0
+  forceDirection: {x: 2, y: 0}
+  velocity: {x: 0, y: 0}
+--- !u!114 &3930696881566293040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f42f2b3ac1526247a5f30a629ad1f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: OnEvent
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 1
+  canHaveChildren: 1
+  refName: []
+  message: []
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8416008904421484438}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: death
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8034603927478025124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d84b4b0e2acb34596f0dd2b39c1225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: Clock
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 1
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  type: 0
+  wait: 1
+  min: 2
+  max: 5
+  dontReset: 0
+  waitAnimation: 
+  onBeginClock:
+    m_PersistentCalls:
+      m_Calls: []
+  onFinishClock:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 317993114025573686}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  eventsFoldOut: 0
+  beginFoldOut: 0
+  finishFoldOut: 1
+--- !u!114 &2524818524423287391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a36dd35e8f73254fa4a4d1c787ffc54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataName: path
+  blackboardType: 1
+  hasNoTargets: 0
+  foldOut: 1
+  delete: 0
+  deleteAsk: 0
+  refName: []
+  layerWorld:
+    serializedVersion: 2
+    m_Bits: 64
+  maxJumpHeight: 4
+  maxJumpDistance: 4
+  cellSize: 1
+  ladder: []
+  ceiling: []
+  moving: []
+  bridge: []
+  wall: []
+  fall: []
+  bounds:
+    position: {x: 66, y: -10}
+    size: {x: 10, y: 5}
+  linesX: 10
+  linesY: 5
+  grid:
+  - x: 0
+    y: 0
+    height: 5
+    position: {x: 66.5, y: -9.5}
+    air: 0
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 1
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 1
+    y: 0
+    height: 5
+    position: {x: 67.5, y: -9.5}
+    air: 0
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 1
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 2
+    y: 0
+    height: 5
+    position: {x: 68.5, y: -9.5}
+    air: 0
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 1
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 3
+    y: 0
+    height: 5
+    position: {x: 69.5, y: -9.5}
+    air: 0
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 1
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 4
+    y: 0
+    height: 5
+    position: {x: 70.5, y: -9.5}
+    air: 0
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 1
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 5
+    y: 0
+    height: 5
+    position: {x: 71.5, y: -9.5}
+    air: 0
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 1
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 6
+    y: 0
+    height: 5
+    position: {x: 72.5, y: -9.5}
+    air: 0
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 1
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 7
+    y: 0
+    height: 5
+    position: {x: 73.5, y: -9.5}
+    air: 0
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 1
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 8
+    y: 0
+    height: 5
+    position: {x: 74.5, y: -9.5}
+    air: 0
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 1
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 9
+    y: 0
+    height: 5
+    position: {x: 75.5, y: -9.5}
+    air: 0
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 1
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 0
+    y: 1
+    height: 4
+    position: {x: 66.5, y: -8.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 1
+    y: 1
+    height: 4
+    position: {x: 67.5, y: -8.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 2
+    y: 1
+    height: 4
+    position: {x: 68.5, y: -8.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 3
+    y: 1
+    height: 4
+    position: {x: 69.5, y: -8.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 4
+    y: 1
+    height: 4
+    position: {x: 70.5, y: -8.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 5
+    y: 1
+    height: 4
+    position: {x: 71.5, y: -8.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 6
+    y: 1
+    height: 4
+    position: {x: 72.5, y: -8.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 7
+    y: 1
+    height: 4
+    position: {x: 73.5, y: -8.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 8
+    y: 1
+    height: 4
+    position: {x: 74.5, y: -8.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 9
+    y: 1
+    height: 4
+    position: {x: 75.5, y: -8.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 0
+    y: 2
+    height: 3
+    position: {x: 66.5, y: -7.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 1
+    y: 2
+    height: 3
+    position: {x: 67.5, y: -7.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 2
+    y: 2
+    height: 3
+    position: {x: 68.5, y: -7.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 3
+    y: 2
+    height: 3
+    position: {x: 69.5, y: -7.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 4
+    y: 2
+    height: 3
+    position: {x: 70.5, y: -7.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 5
+    y: 2
+    height: 3
+    position: {x: 71.5, y: -7.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 6
+    y: 2
+    height: 3
+    position: {x: 72.5, y: -7.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 7
+    y: 2
+    height: 3
+    position: {x: 73.5, y: -7.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 8
+    y: 2
+    height: 3
+    position: {x: 74.5, y: -7.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 9
+    y: 2
+    height: 3
+    position: {x: 75.5, y: -7.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 0
+    y: 3
+    height: 2
+    position: {x: 66.5, y: -6.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 1
+    y: 3
+    height: 2
+    position: {x: 67.5, y: -6.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 2
+    y: 3
+    height: 2
+    position: {x: 68.5, y: -6.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 3
+    y: 3
+    height: 2
+    position: {x: 69.5, y: -6.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 4
+    y: 3
+    height: 2
+    position: {x: 70.5, y: -6.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 5
+    y: 3
+    height: 2
+    position: {x: 71.5, y: -6.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 6
+    y: 3
+    height: 2
+    position: {x: 72.5, y: -6.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 7
+    y: 3
+    height: 2
+    position: {x: 73.5, y: -6.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 8
+    y: 3
+    height: 2
+    position: {x: 74.5, y: -6.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 9
+    y: 3
+    height: 2
+    position: {x: 75.5, y: -6.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 0
+    y: 4
+    height: 1
+    position: {x: 66.5, y: -5.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 1
+    y: 4
+    height: 1
+    position: {x: 67.5, y: -5.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 2
+    y: 4
+    height: 1
+    position: {x: 68.5, y: -5.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 3
+    y: 4
+    height: 1
+    position: {x: 69.5, y: -5.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 4
+    y: 4
+    height: 1
+    position: {x: 70.5, y: -5.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 5
+    y: 4
+    height: 1
+    position: {x: 71.5, y: -5.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 6
+    y: 4
+    height: 1
+    position: {x: 72.5, y: -5.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 7
+    y: 4
+    height: 1
+    position: {x: 73.5, y: -5.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 8
+    y: 4
+    height: 1
+    position: {x: 74.5, y: -5.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  - x: 9
+    y: 4
+    height: 1
+    position: {x: 75.5, y: -5.5}
+    air: 1
+    wall: 0
+    exact: 0
+    block: 0
+    ladder: 0
+    moving: 0
+    ground: 0
+    bridge: 0
+    isFall: 0
+    ceiling: 0
+    isOccupied: 0
+    leftCorner: 0
+    rightCorner: 0
+    edgeOfCorner: 0
+    jumpThroughGround: 0
+    nextToWall: 0
+    wallLeft: 0
+    neighbor: []
+  neighbor: []
+  unit: []
+  showPaths: 1
+  addLadders: 0
+  addWalls: 0
+  addCeilings: 0
+  addBridge: 0
+  createPaths: 0
+  connections:
+  - position: {x: 66.5, y: -9.5}
+    color: {r: 0, g: 1, b: 0, a: 1}
+    size: 0.25
+    rays: 1
+  - position: {x: 67.5, y: -9.5}
+    color: {r: 0, g: 1, b: 0, a: 1}
+    size: 0.25
+    rays: 1
+  - position: {x: 68.5, y: -9.5}
+    color: {r: 0, g: 1, b: 0, a: 1}
+    size: 0.25
+    rays: 1
+  - position: {x: 69.5, y: -9.5}
+    color: {r: 0, g: 1, b: 0, a: 1}
+    size: 0.25
+    rays: 1
+  - position: {x: 70.5, y: -9.5}
+    color: {r: 0, g: 1, b: 0, a: 1}
+    size: 0.25
+    rays: 1
+  - position: {x: 71.5, y: -9.5}
+    color: {r: 0, g: 1, b: 0, a: 1}
+    size: 0.25
+    rays: 1
+  - position: {x: 72.5, y: -9.5}
+    color: {r: 0, g: 1, b: 0, a: 1}
+    size: 0.25
+    rays: 1
+  - position: {x: 73.5, y: -9.5}
+    color: {r: 0, g: 1, b: 0, a: 1}
+    size: 0.25
+    rays: 1
+  - position: {x: 74.5, y: -9.5}
+    color: {r: 0, g: 1, b: 0, a: 1}
+    size: 0.25
+    rays: 1
+  - position: {x: 75.5, y: -9.5}
+    color: {r: 0, g: 1, b: 0, a: 1}
+    size: 0.25
+    rays: 1
+--- !u!114 &5536302744483754022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f45c6e9266e854989b038ecb85ca05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  melee: {fileID: 1995340064803452725}
+  hitbox: {fileID: 7678768690231158095}
+--- !u!114 &1816282083862524445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2ae8cf584886441a30458779be0ff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: FlipSpriteByVelocity
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  spriteRenderer: {fileID: 6234291825097538234}
+  invert: 1
+--- !u!114 &5694586711770734071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77faa461683f4241a138e1aa42fd5f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: FlipChildrenObjects
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  flipOn: 0
+  flipScaleX: 1
+  flipPositionX: 0
+  mirrorAngle: 0
+  positionXDirection: 1
+  scaleXDirection: 1
+  spriteRenderer: {fileID: 0}
+--- !u!114 &5592972568910094751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f42f2b3ac1526247a5f30a629ad1f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: OnEvent
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8416008904421484438}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: d_take_hit
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6805418796198012106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317993114025573686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d84b4b0e2acb34596f0dd2b39c1225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: Clock
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 1
+  canHaveChildren: 1
+  refName: []
+  message: []
+  type: 0
+  wait: 0.5
+  min: 2
+  max: 5
+  dontReset: 0
+  waitAnimation: 
+  onBeginClock:
+    m_PersistentCalls:
+      m_Calls: []
+  onFinishClock:
+    m_PersistentCalls:
+      m_Calls: []
+  eventsFoldOut: 0
+  beginFoldOut: 0
+  finishFoldOut: 0
+--- !u!4 &685751671179187539 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+  m_PrefabInstance: {fileID: 7264801378948377182}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &6234291825097538234 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3626916397498700004, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+  m_PrefabInstance: {fileID: 7264801378948377182}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8416008904421484438 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1160356261127867848, guid: 33bd10da2f579694d85ea7d7c12a7004, type: 3}
+  m_PrefabInstance: {fileID: 7264801378948377182}
+  m_PrefabAsset: {fileID: 0}
