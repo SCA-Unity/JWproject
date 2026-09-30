@@ -12084,6 +12084,10 @@ PrefabInstance:
       propertyPath: foldOut
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2138457087467511849, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: dashDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5159096889297201077, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: defaultProjectile.projectile
       value: 
@@ -12102,7 +12106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5881420209112145141, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: abilities.walk.speed
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5881420209112145141, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: abilities.walk.foldOut
@@ -12902,30 +12906,6 @@ PrefabInstance:
     - target: {fileID: 3293690865745037869, guid: b2fd2b5612269b743bb4ef77befa474d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5954437923660063693, guid: b2fd2b5612269b743bb4ef77befa474d, type: 3}
-      propertyPath: oldPosition.x
-      value: 60.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5954437923660063693, guid: b2fd2b5612269b743bb4ef77befa474d, type: 3}
-      propertyPath: oldPosition.y
-      value: -39.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5954437923660063693, guid: b2fd2b5612269b743bb4ef77befa474d, type: 3}
-      propertyPath: point.Array.data[0].x
-      value: 60.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5954437923660063693, guid: b2fd2b5612269b743bb4ef77befa474d, type: 3}
-      propertyPath: point.Array.data[0].y
-      value: -39.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5954437923660063693, guid: b2fd2b5612269b743bb4ef77befa474d, type: 3}
-      propertyPath: point.Array.data[1].x
-      value: 71.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5954437923660063693, guid: b2fd2b5612269b743bb4ef77befa474d, type: 3}
-      propertyPath: point.Array.data[1].y
-      value: -39.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

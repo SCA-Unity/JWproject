@@ -9910,6 +9910,10 @@ PrefabInstance:
       propertyPath: foldOut
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2138457087467511849, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: dashDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5159096889297201077, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: defaultProjectile.projectile
       value: 
@@ -9928,7 +9932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5881420209112145141, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: abilities.walk.speed
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5881420209112145141, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: abilities.walk.foldOut

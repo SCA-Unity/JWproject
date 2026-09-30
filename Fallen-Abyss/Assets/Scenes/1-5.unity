@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13538,6 +13537,10 @@ PrefabInstance:
       propertyPath: tree.scrollIndex
       value: 85
       objectReference: {fileID: 0}
+    - target: {fileID: 2138457087467511849, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: dashDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5159096889297201077, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: defaultProjectile.projectile
       value: 
@@ -13685,6 +13688,14 @@ PrefabInstance:
     - target: {fileID: 5176959388356435568, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: rooms.rooms.Array.data[1].onEnter.m_PersistentCalls.m_Calls.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881420209112145141, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: abilities.walk.speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881420209112145141, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: abilities.walk.foldOut
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6147014072521976915, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: m_Name
