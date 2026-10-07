@@ -1464,11 +1464,11 @@ MonoBehaviour:
   colliderRef: {fileID: 7678768690231158095}
   layer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 512
   animationSignal: attack
   damage: 1
   dealDamageContinuously: 1
-  enableCollider: 0
+  enableCollider: 1
   forceDirection: {x: 2, y: 0}
   velocity: {x: 0, y: 0}
 --- !u!114 &3930696881566293040
@@ -2805,7 +2805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72f45c6e9266e854989b038ecb85ca05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  melee: {fileID: 1995340064803452725}
+  meleeAttack: {fileID: 4763576316039251378}
   hitbox: {fileID: 7678768690231158095}
 --- !u!114 &1816282083862524445
 MonoBehaviour:

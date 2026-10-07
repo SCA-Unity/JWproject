@@ -1,18 +1,21 @@
 using UnityEngine;
-using TwoBitMachines.FlareEngine;
+using TwoBitMachines.FlareEngine.AI;
 
 public class Boss_AttackEventsReceiver : MonoBehaviour
 {
-    [SerializeField] private Melee melee;
+    [SerializeField] private MeleeAttack meleeAttack;
     [SerializeField] private Collider2D hitbox;
 
     private void Awake()
     {
-        if (melee == null)
-            melee = GetComponent<Melee>();
+        if (meleeAttack == null)
+            meleeAttack = GetComponent<MeleeAttack>();
 
-        if (melee == null)
-            melee = GetComponentInParent<Melee>();
+        if (meleeAttack == null)
+            meleeAttack = GetComponentInParent<MeleeAttack>();
+
+        if (hitbox == null && meleeAttack != null)
+            hitbox = meleeAttack.colliderRef;
 
         if (hitbox != null)
             hitbox.enabled = false;
@@ -21,6 +24,7 @@ public class Boss_AttackEventsReceiver : MonoBehaviour
     // 공격 시작
     public void StartAttack()
     {
+        DisableHitbox();
         Debug.Log("Boss Attack Start");
     }
 
@@ -41,8 +45,10 @@ public class Boss_AttackEventsReceiver : MonoBehaviour
     // 공격 종료 (Flare Engine에 알림)
     public void CompleteAttack()
     {
-        if (melee != null)
-            melee.CompleteAttack();
+        DisableHitbox();
+
+        if (meleeAttack != null)
+            meleeAttack.CompleteAttack();
 
         Debug.Log("Boss Attack Complete");
     }

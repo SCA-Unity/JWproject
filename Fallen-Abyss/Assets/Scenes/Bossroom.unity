@@ -12868,6 +12868,22 @@ PrefabInstance:
       propertyPath: dashDistance
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3333333333333333333, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: minFoldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333333333333333333, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: eventFoldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333333333333333333, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: changedFoldOut
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333333333333333333, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
+      propertyPath: decreasedFoldOut
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5159096889297201077, guid: 78465c3391d2d664293e1fb8ed545f9e, type: 3}
       propertyPath: defaultProjectile.projectile
       value: 
@@ -13520,6 +13536,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2365197874287271263, guid: ae96fa1bf65acd9499e2f72954ffc2de, type: 3}
+      propertyPath: state.Array.data[2].foldOut
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3008216287109913968, guid: ae96fa1bf65acd9499e2f72954ffc2de, type: 3}
       propertyPath: oldPosition.x
       value: 113
@@ -13539,6 +13559,10 @@ PrefabInstance:
     - target: {fileID: 3008216287109913968, guid: ae96fa1bf65acd9499e2f72954ffc2de, type: 3}
       propertyPath: point.Array.data[1].y
       value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763576316039251378, guid: ae96fa1bf65acd9499e2f72954ffc2de, type: 3}
+      propertyPath: layer.m_Bits
+      value: 576
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

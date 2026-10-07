@@ -53,18 +53,19 @@ namespace TwoBitMachines.FlareEngine.AI
                         root.signals.Set("meleeCombo", true);
                         root.signals.Set(animationSignal, true);
 
-                        if (dealDamageContinuously)
+                        FlipCollider(root.direction, colliderRef.transform);
+
+                        if (dealDamageContinuously && !success)
                         {
                                 DealDamageNow();
                         }
 
-                        FlipCollider(root.direction, colliderRef.transform);
                         return success ? NodeState.Success : NodeState.Running;
                 }
 
                 public void DealDamageNow ()
                 {
-                        if (colliderRef == null)
+                        if (colliderRef == null || !colliderRef.enabled || !colliderRef.gameObject.activeInHierarchy)
                                 return;
 
                         ConfigureFilter();
